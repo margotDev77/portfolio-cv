@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margot CV | Portfolio 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="CSS/atomic.css">
+    <link rel="stylesheet" href="CSS/portfolio-3d.css">
+    <script src="java.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="styesheet" href="Médias/syle.js">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <div id="info-banner">
+        Ce site n'est pas encore responsive. Merci de le consulter sur un ordinateur.
+    </div>
+
+    <header class="headerFlex">
+        <div class="logo"><a href="index.html">
+                <img id="logo" src="Medias/dwwm-logo.png" alt="Logo" class="logo-size"></a>
+        </div>
+        <div class="home-menu">
+            <nav>
+                <ul class="menu typo-1 font-size">
+                    <li class="open-btn button-more"><a>Portfolio</a></li>
+                    <li class="button-more"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bloc-mode">
+            <div class="menu-color-theme">
+                <button id="theme-toggle"><i id="theme-icon" class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="Flex3d">
+            <div class="mediasFlex">
+
+                <div class="container-medias-3d blocPositif">
+                    <div class="content-info3d">
+                        <div class="info-3d typo-1 font-size">Carfi3D model 1</div>
+                    </div>
+
+                    <div class="personnage car">
+                        <div id="div-canvas-car">
+                            <canvas id="canvas-car"></canvas>
+                        </div>
+                        <div class="buttons">
+
+                            <button data-char="car" data-animation="frontLightAction" class="button-action">
+                                <span class="color-feu lightRotate material-symbols-outlined">
+                                    backlight_high
+                                </span>
+                            </button>
+
+                            <button data-char="car" data-animation="headLightAction" class="button-action"><span
+                                    class="color-feu2 lightRotate material-symbols-outlined">
+                                    backlight_high
+                                </span></button>
+
+
+                            <button data-char="car" data-animation="essieuAction" class="button-action">
+                                <i class="color-start fa-solid fa-power-off"></i>
+                            </button>
+
+                            <button data-char="car" data-animation="leftClignoAction"
+                                class="button-action color-cligno">
+                                <i class="fa-solid fa-circle-arrow-left"></i>
+                            </button>
+
+                            <button data-char="car" data-animation="rightClignoAction"
+                                class="button-action color-cligno">
+                                <i class="fa-solid fa-circle-arrow-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container-medias-3d blocPositif">
+                    <div class="content-info3d">
+                        <div class="info-3d typo-1 font-size">Bague rose coeur</div>
+                    </div>
+                    <div class="personnage ring">
+                        <div id="div-canvas-ring">
+                            <canvas id="canvas-ring"></canvas>
+                        </div>
+                        <!-- <div class="buttons">
+                            <button data-char="ring" data-animation="salto">1</button>
+                            <button data-char="ring" data-animation="tourni">2</button>
+                            <button data-char="ring" data-animation="pointe">3</button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="container-medias-3d blocPositif">
+                    <div class="content-info3d">
+                        <div class="info-3d typo-1 font-size">Boite bague</div>
+                    </div>
+                    <div class="content-image">
+                        <img src="Medias/portfolio/boite-bague.jpeg" class="bloc-medias">
+                    </div>
+                </div>
+
+                <div class="container-medias-3d blocPositif">
+                    <div class="content-info3d">
+                        <div class="info-3d typo-1 font-size">Donjon de Coucy</div>
+                    </div>
+                    <div class="content-image">
+                        <img src="Medias/portfolio/donjon-imp.jpg" class="bloc-medias-donjon">
+                    </div>
+                </div>
+
+                <div class="container-medias-3d blocPositif">
+                    <div class="content-info3d">
+                        <div class="info-3d typo-1 font-size">Texte illusion</div>
+                    </div>
+                    <div class="content-image">
+                        <video width="250" autoplay loop muted>
+                            <source src="Medias/portfolio/dual-txt-illusion.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="container-medias-3d blocPositif">
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <div class="debordement-menu">
+        <div id="fixedFooter" class="content-menu fixed">
+            <div class="headerFlex-hamburger typo-1 font-size">
+                <div class="logo-hamburger"><a href="index.html">
+                        <img src="Medias/dwwm-logo.png" class="logo-size-hamburger"></a>
+                </div>
+                <div class="home-menu-hamburger">
+                    <nav>
+                        <ul class="menu-hamburger typo-1">
+                            <li class="open-btn-tel"><a>Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bloc-mode-footer">
+                    <div class="menu-color-theme-footer">
+                        <li><a href="portfolio-3d-dark.html"><span class="color-mode-footer material-symbols-outlined">
+                                    dark_mode
+                                </span></a></li>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <div class="button-close fillIn"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="container">
+                <div class="top">
+                    <h1 class="typo-1 font-size-middle-titre font-weight-gros-titre color-fd-clear">Portfolio</h1>
+                </div>
+                <div class="package-container">
+                    <div class="packages">
+                        <h1 class="typo-1 color-accent">Web</h1>
+                        <ul class="list typo-courante font-size">
+                            <li>front-end</li>
+                            <li>back-end</li>
+                            <li>motion design</li>
+                            <li>montage vidéo</li>
+                        </ul>
+                        <a href="portfolio-web.html" class="button-pop color-fd-clear typo-1">Voir</a>
+                    </div>
+                    <div class="packages">
+                        <h1 class="typo-1 color-accent">Print</h1>
+                        <ul class="list typo-courante font-size">
+                            <li>identité visuelle</li>
+                            <li>mise en page</li>
+                            <li>packaging</li>
+                            <li>plv</li>
+                        </ul>
+                        <a href="portfolio-print.html" class="button-pop color-fd-clear typo-1">Voir</a>
+                    </div>
+                    <div class="packages">
+                        <h1 class="typo-1 color-accent">3D</h1>
+                        <ul class="list typo-courante">
+                            <li>modélisation</li>
+                            <li>imp résine</li>
+                            <li>imp filament</li>
+                            <li>post traitement</li>
+                        </ul>
+                        <a href="portfolio-3d.html" class="button-pop color-fd-clear typo-1">Voir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+        "imports" : {
+            "three" : "./node_modules/three/build/three.module.js",
+            "GLTFLoader" : "./node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+            "OrbitControls": "./node_modules/three/examples/jsm/controls/OrbitControls.js"
+        }
+        }
+    </script>
+    <script src="scripts3D/main3D.js" type="module"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('theme-toggle');
+            const icon = document.getElementById('theme-icon');
+            const logo = document.getElementById('logo');
+            const body = document.body;
+
+            function updateIcon(isDark) {
+                if (isDark) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+
+            function updateLogo(isDark) {
+                logo.src = isDark ? 'Medias/dwwm-logo-blanc.png' : 'Medias/dwwm-logo.png';
+            }
+
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                updateIcon(true);
+                updateLogo(true);
+            }
+
+            if (window.globalScenes && Array.isArray(window.globalScenes)) {
+                window.globalScenes.forEach(scene => {
+                    scene.applyThemeModeToScene(savedTheme === 'dark');
+                });
+            }
+            else {
+                updateIcon(false);
+                updateLogo(false);
+            }
+
+            toggleButton.addEventListener('click', () => {
+                const isDark = body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateIcon(isDark);
+                updateLogo(isDark);
+
+                if (window.globalScenes && Array.isArray(window.globalScenes)) {
+                    window.globalScenes.forEach(scene => {
+                        scene.applyThemeModeToScene(isDark);
+                    });
+                }
+
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
