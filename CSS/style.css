@@ -27,7 +27,7 @@
 }
 
 .portrait-size {
-  width: 40vh;
+  width: 80%;
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -54,6 +54,7 @@ li {
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 .social-icons {
@@ -87,11 +88,12 @@ li {
   font-size: 35px;
   background-color: var(--bg-color);
   box-shadow: var(--shadow-less-btn);
-  transform: scale(0.98);
 }
 
 .social-icons a:hover {
   box-shadow: var(--shadow-more-btn);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 /******************************************** telecharger cv ********************************************/
@@ -99,7 +101,6 @@ li {
 .containerDownload {
   display: flex;
   width: 100%;
-
 }
 
 
@@ -114,6 +115,7 @@ li {
 .btn-download {
   text-decoration: none;
   font-size: 55px;
+  margin: 30px 0;
 }
 
 .btn-download:hover {
@@ -125,11 +127,16 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 60%;
   height: 15vh;
   position: relative;
   overflow: hidden;
   border-top: 4px solid var(--txt-color);
+}
+
+.center-elements {
+  justify-content: center;
+  align-items: center;
 }
 
 .contentDownload-img img {
@@ -145,7 +152,6 @@ li {
 }
 
 /******************************************** anim portfolio ********************************************/
-
 
 .contentAnim {
   display: flex;
@@ -1064,10 +1070,10 @@ ul {
 }
 
 .st1 {
-   fill: var(--st1-fill);
+  fill: var(--st1-fill);
 }
 
-#kernelBack{
+#kernelBack {
   fill: var(--kernel-fill);
 }
 
@@ -1117,19 +1123,264 @@ ul {
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 
-  body {
+  /******************************************** page cv tablette ********************************************/
+
+  .bloc-border-cv {
+    display: flex;
+    width: calc(100%/2);
+    height: 35vh;
+    border-radius: 5vh;
+  }
+
+  .portrait-size {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  li {
+    line-height: 25px;
+  }
+
+  .social-flex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  @keyframes apparition {
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+
+  }
+
+  .social-icons a {
+    display: flex;
+    width: 4vh;
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--icon-social-color);
+    border-radius: 15px;
+    font-size: 30px;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-less-btn);
+  }
+
+  /******************************************** telecharger cv tablette ********************************************/
+
+  .contentDownload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+  }
+
+  .btn-download {
+    text-decoration: none;
+    font-size: 65px;
+    margin: 20px 0;
+  }
+
+  .contentDownload-img {
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  /******************************************** anim portfolio tablette ********************************************/
+
+  .contentAnim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  /******************************************** formation tablette ********************************************/
+
+
+  .titre-size {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formation-bloc {
+    align-items: flex-start;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .formation-bloc h2 {
+    text-align: center;
+  }
+
+  .formation-bloc i {
+    margin-right: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cdui-bloc {
+    line-height: 2vh;
+  }
+
+  .infograph-bloc {
+    line-height: 2vh;
+  }
+
+  .archi-bloc {
+    line-height: 2vh;
+  }
+
+  /******************************************** competences tablettes ********************************************/
+
+  /************************** blocs tablette *************************/
+
+  .bloc-color-competence-2 {
+    display: none;
+  }
+
+  .content-column-comp {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .column-comp {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .column-comp-print {
+    width: 100%;
+  }
+
+  .column-print-img {
+    display: none;
+  }
+
+  body.dark-mode .column-print-img {
+    display: none;
+  }
+
+  .column-print {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .line-space {
+    width: 50%;
+  }
+
+  .container-os {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 30px 0;
+  }
+
+  .content-os {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px 10px 50px;
+    border-radius: 30px;
+    background-color: var(--bg-logiciel-color);
+  }
+
+  .column-web {
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container-anim-logiciel {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .content-logiciel {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /******************************* 3D tablette *******************************/
+
+  .bloc-img-3D {
+    display: flex;
+    width: 100%;
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: #2270bd;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .size-img-3D {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .content-3d-button {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bloc-logiciel-3d {
+    width: 100%;
+  }
+
+  .bloc-3d-button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
 
+  /******************************* interets tablette *******************************/
+
+  .content-interet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .container-image {
+    width: 300px;
+  }
+
+  .container-image image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content-btn {
+    width: 100%;
+  }
+
+  .listBtn li {
+    height: 50px;
+  }
 
 }
-
-
-
-
 
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 

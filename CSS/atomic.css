@@ -1,23 +1,3 @@
-#info-banner {
-  background-color: #ffd900;
-  color: #000;
-  padding: 5px;
-  text-align: center;
-  font-weight: bold;
-  font-family: sans-serif;
-}
-
-#info-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-}
-body {
-  padding-top: 50px; /* pour ne pas cacher le contenu */
-}
-
 
 /************ font ************/
 .typo-1 {
@@ -122,9 +102,9 @@ body {
   --shadow-negatif: inset 0px 0px 4px rgba(255, 255, 255, 0),
     inset 7px 7px 15px rgba(55, 84, 170, .15),
     inset -7px -7px 20px rgba(255, 255, 255, 0.75);
-/*************** kernel centre interet ************/
-     --kernel-fill: #565254;
-     --st1-fill: #ebeff3;
+  /*************** kernel centre interet ************/
+  --kernel-fill: #565254;
+  --st1-fill: #ebeff3;
 }
 
 .color-accent {
@@ -228,8 +208,8 @@ body.dark-mode {
   --shadow-positif: -3px -3px 9px #3a3b42, -3px -3px 15px #3a3b4226, 3px 3px 5px #00000013, 3px 3px 9px #0000003b, 3px 3px 8px 0 #21222466, 3px 3px 15px 0 #000000d2;
   --shadow-negatif: inset 14px 14px 12px 0 #21222466, inset -3px -3px 5px 0 #393b3d, inset 2px 2px 5px 0 #000000c7, inset 1px 1px 16px -13px #393b3d;
   /*************** kernel centre interet ************/
-     --kernel-fill: #ebeff3;
-     --st1-fill: #565254;
+  --kernel-fill: #ebeff3;
+  --st1-fill: #565254;
 }
 
 #theme-toggle {
@@ -265,8 +245,8 @@ section {
   opacity: 0;
   animation: apparHeader 0.5s ease-in forwards;
   margin: 0 100px;
-  /* padding: 5px 0; */
- padding: 40px 0 5px 0;
+  padding: 5px 0;
+  gap: 15px;
 }
 
 @keyframes apparHeader {
@@ -327,12 +307,13 @@ button {
   border-radius: 20px;
   background-color: var(--bg-color);
   box-shadow: var(--shadow-more-btn);
-  transform: scale(0.98);
 }
 
 .button-more:hover {
   box-shadow: var(--shadow-more-btn-hover);
   color: var(--accent-color);
+  transform: scale(0.98);
+  transition: all 0.3s ease;
 }
 
 .button-less {
@@ -343,12 +324,13 @@ button {
   border-radius: 20px;
   box-shadow: var(--shadow-less-btn);
   background-color: var(--bg-color);
-  transform: scale(0.98);
 }
 
 .button-less:hover {
   box-shadow: var(--shadow-less-btn-hover);
   color: var(--accent-color);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 
@@ -361,7 +343,7 @@ button {
 
 .color-mode {
   color: var(--middle-color);
-  padding-top: 0.5vh;
+  padding-top: 5px;
 }
 
 .menu-color-theme {
@@ -607,12 +589,13 @@ ul {
   border-radius: 50px;
   background-color: var(--bg-color);
   box-shadow: var(--shadow-less-btn);
-  transform: scale(0.98);
 }
 
 .button-pop:hover {
   box-shadow: var(--shadow-less-btn-hover);
   color: var(--accent-color);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 .package-container {
@@ -675,44 +658,145 @@ footer {
     background-color: #2270bd;
   }
 
-  .headerFlex {
-  display: flex;
-  background-color: var(--bg-color);
-  /* width: 100%; */
-  /* height: 6vh; */
-  border-radius: 0 0 35px 35px;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: var(--shadow-header);
-  transform: translateY(-100px);
-  opacity: 0;
-  animation: apparHeader 0.5s ease-in forwards;
-  margin: 0 100px;
-  /* padding: 5px 0; */
- padding: 40px 0 5px 0;
-}
-
-  @keyframes apparHeader {
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  /************ font size tablette ************/
+  .font-size {
+    font-size: 13px;
   }
 
+  .font-size-courante {
+    font-size: 15px;
+  }
+
+  .font-size-titre {
+    font-size: 17px;
+  }
+
+  .font-size-middle {
+    font-size: 24px;
+  }
+
+  .font-size-middle-titre {
+    font-size: 27px;
+  }
+
+  .font-size-gros-titre {
+    font-size: 40px;
+  }
+
+  .font-size-big {
+    font-size: 80px;
+  }
+
+  /************ line height ************/
+  .line-height {
+    line-height: 3vh;
+  }
+
+  .headerFlex {
+    display: flex;
+    background-color: var(--bg-color);
+    /* width: 100%; */
+    /* height: 6vh; */
+    border-radius: 0 0 35px 35px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-header);
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: apparHeader 0.5s ease-in forwards;
+    margin: 0 100px;
+    padding: 5px 0;
+    gap:12px;
+  }
 
   .logo {
-    display: flex;
-    flex-basis: 10%;
     margin-left: 30px;
   }
 
   .logo-size {
-    width: 15vh;
+    width: 12vh;
   }
 
+  .menu {
+    gap: 20px;
+  }
+
+  .bloc-mode {
+  margin-right: 30px;
+}
+
   .color-mode {
-    color: var(--middle-color);
-    padding-top: 0.5vh;
+    padding-top: 5px;
+  }
+
+  /****************************************** container shadow/taille tablette ****************************************/
+
+  .cvFlex {
+    display: flex;
+    gap: 50px;
+    padding: 25px 0;
+  }
+
+  .bloc-max {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-radius: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .bloc-tiers {
+    display: flex;
+    width: 100%;
+    border-radius: 40px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .bloc-middle {
+    display: flex;
+    width: calc(100%/2);
+    padding: 20px;
+    border-radius: 40px;
+    /* justify-content: center; */
+    flex-direction: column;
+  }
+
+  .bloc-petit {
+    display: flex;
+    width: calc(100%/3);
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 20px;
+  }
+
+  .blocPositif {
+    box-shadow: var(--shadow-positif);
+    background-color: var(--bg-color);
+    transform: translateX(20);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .blocPositif.visible {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateX(1);
+  }
+
+  .blocNegatif {
+    box-shadow: var(--shadow-negatif);
+    background-color: var(--bg-color);
+    transform: scale(1.05);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .blocNegatif.visible {
+    opacity: 1;
+    transform: scale(1);
   }
 
 

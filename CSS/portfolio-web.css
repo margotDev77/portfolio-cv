@@ -110,7 +110,6 @@ body {
 
 }
 
-
 .container-medias:nth-child(even) {
   display: flex;
   justify-content: center;
@@ -643,7 +642,7 @@ button {
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
 
 
   .headerFlex-horizontal {
@@ -670,7 +669,7 @@ button {
   }
 
 
-  /***************************************** portfolio web *****************************************/
+  /***************************************** portfolio web tablette *****************************************/
 
   .headerFlex-2 {
     display: flex;
@@ -689,14 +688,6 @@ button {
     align-items: center;
   }
 
-  .bloc-border-gallery {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-
-  }
-
   .bloc-gallery {
     display: flex;
     width: 100%;
@@ -704,203 +695,193 @@ button {
     align-items: center;
   }
 
-  .filterFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3vh;
-    margin: 3vh;
-  }
-
-  .filter-content {
-    display: flex;
-    width: 100%;
-    border-radius: 2vh;
-    align-items: center;
-    justify-content: center;
-    height: 6vh;
-    margin: 3vh;
-    margin-bottom: 3vh;
-    box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 #ffffff, inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px #6f8197;
-  }
-
   .home-menu-2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
+    gap: 0;
   }
 
   .filter-btn {
-    display: flex;
-    margin-right: 1vh;
-    margin-left: 1vh;
-    border-radius: 1.2vh;
-    padding: 1.2vh;
-    box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 12px;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-more-btn);
+    transform: scale(0.98);
     transition: background-color 0.1s ease;
     cursor: pointer;
   }
 
-  .filter-btn:hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--accent-color);
-    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
-    transform: scale(0.98);
-  }
-
-  .filter-btn.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--accent-color);
-    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
-    transform: scale(0.98);
-  }
-
   .mediasFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
+    margin: 25px 0;
+    gap: 50px;
   }
 
   .container-medias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(90%/3);
-    border-radius: 2vh;
-    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
-    aspect-ratio: 1/1;
-    margin: 1vh;
-  }
-
-  .container-medias:nth-child(even) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 #ffffff, inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px #6f8197;
-  }
-
-  .bloc-medias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .medias-size {
-    display: flex;
+    width: calc(90%/2);
+    border-radius: 4vh;
   }
 
   .info-web {
-    display: flex;
-    height: 25vh;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: absolute;
-    font-size: 1.1vh;
+    margin-top: 0;
   }
 
-  /***************************************** algo web *****************************************/
+  /***************************************** visionneuse img tablette *****************************************/
+
+
+  .galleryViz {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .galleryViz-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .galleryViz-item img:hover {
+    transform: scale(0.97);
+    border-color: var(--accent-color);
+  }
+
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(122, 122, 122, 0.3);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(35px);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .lightbox-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .close-bttn {
+    top: -70px;
+    right: 30px;
+  }
+
+  .lightbox-media-container img,
+  .lightbox-media-container video {
+    max-width: 95%;
+    border-radius: 25px;
+    /* padding:15px;
+    background-color: #ebeff3; */
+  }
+
+  .media-info {
+    margin-top: 25px;
+    font-size: 18px;
+    color: var(--txt-main-color);
+  }
+
+
+  /***************************************** carrousel jeu tablette *****************************************/
+
+
+  .galleryViz {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .galleryCarousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .galleryCarousel-item img:hover {
+    transform: scale(0.97);
+    border-color: var(--accent-color);
+  }
+
+  .owl-carousel .item img {
+    max-width: 80%;
+    border-radius: 25px;
+  }
+
+  .owl-carousel .item {
+    display: flex;
+    justify-content: center;
+  }
+
+  #lightboxCarousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(50%);
+    pointer-events: none;
+  }
+
+  #lightboxCarousel .owl-nav button {
+    pointer-events: all;
+    color: #ebeff3;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #lightboxCarousel .owl-nav button:hover {
+    color: var(--txt-accent-color);
+    transform: scale(0.95);
+  }
+
+  #lightboxCarousel .owl-nav button.owl-prev {
+    position: static;
+  }
+
+  #lightboxCarousel .owl-nav button.owl-next {
+    position: static;
+  }
+
+
+  .info-carousel {
+    top: 40%;
+    left: 30%;
+  }
+
+
+  /***************************************** algo web tablette *****************************************/
 
   .algo-content {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 1vh;
-    width: 85%;
-    height: 85%;
-    background-color: #0f0f0f;
-    border-radius: 20px;
-    font-family: "VT323", monospace;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #80ff80cc;
-    text-shadow:
-      0 0 1ex #33ff33,
-      0 0 2px #ffffffcc;
-  }
-
-
-  .contenair-algo {
-    display: flex;
-    width: 100%;
-    height: 80%;
-  }
-
-  .bloc-option {
-    display: flex;
-    height: 70%;
-    position: absolute;
-    flex-direction: column;
-    margin-top: 1vh;
-  }
-
-  .line {
-    display: flex;
-    padding-left: 30px;
-  }
-
-  .line-tab {
-    display: flex;
-    padding-left: 45px;
-  }
-
-  .line-tab2 {
-    display: flex;
-    flex-direction: row;
-    padding-left: 60px;
-  }
-
-  .line-content-button {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-right: 15px;
-  }
-
-  button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    color: inherit;
+    font-size: 18px;
   }
 
   .openAlgo-btn {
-    font-weight: 600;
-    font-size: 20px;
-    color: #80ff80cc;
-    text-shadow:
-      0 0 1ex #33ff33,
-      0 0 2px #ffffffcc;
-    animation: buttonArrow 0.7s ease-in infinite;
-    opacity: 1;
-    transform: translateX(-10px);
+    font-size: 18px;
   }
-
-  @keyframes buttonArrow {
-    100% {
-      transform: translateX(0);
-    }
-  }
-
 
   .screenAlgo-content {
     background-color: #0f0f0f;
     padding: 2vh;
     width: 65%;
-    height: 60%;
+    height: 65%;
     max-width: 80%;
-    border-radius: 3vh;
+    border-radius: 35px;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -909,180 +890,27 @@ button {
     animation: apparScreenAlgo 0.3s ease-in forwards;
   }
 
-  @keyframes apparScreenAlgo {
-    100% {
-      opacity: 1;
-      transform: scaleX(1);
-    }
-  }
-
-
-  .clock-content {
-    display: flex;
-    height: 3vh;
-    padding: 0 0 1vh 1vh;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .txt-clock {
-    padding: 3px;
-    text-align: center;
-  }
-
-  #dateAlgo {
-    padding: 3px;
-  }
-
-  .fontAlgo {
-    font-family: "VT323", monospace;
-    letter-spacing: 1px;
-  }
-
   .fontSize1 {
-    font-size: 20px;
-  }
-
-  .fontSize2 {
     font-size: 18px;
   }
 
-  .colorAlgo {
-    color: #80ff80cc;
-    text-shadow:
-      0 0 1ex #33ff33,
-      0 0 2px #ffffffcc;
+  .fontSize2 {
+    font-size: 16px;
   }
 
   .button-back {
-    cursor: pointer;
-    font-size: 2vh;
-    margin: 2vh;
-  }
-
-  .quest-content {
-    display: flex;
-    align-items: center;
-  }
-
-  .quest-column {
-    flex-direction: column;
-  }
-
-  .quest-content-smiley {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-
-  .txt-smiley {
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-    padding: 3px;
-    font-size: 60px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  .txt-commence {
-    padding: 3px;
-    margin: 0 2vh 0 0;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-
-  .btn {
-    padding: 3px;
-    margin: 0 1vh 0 1vh;
-    cursor: pointer;
     font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    transition: transform 0.3s ease;
-    color: #cacacaee;
-    text-shadow:
-      0 0 1ex #cacacaee,
-      0 0 2px #ffffffcc;
-  }
-
-  .btn:hover {
-    transition: transform 0.3s ease;
-    color: #80ff80cc;
-    text-shadow:
-      0 0 1ex #33ff33,
-      0 0 2px #ffffffcc;
-  }
-
-
-  .question {
-    display: flex;
-    text-align: center;
-  }
-
-  .indentation {
-    margin-left: 2vh;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .container-quest {
-    display: flex;
-    height: 80%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 1vh;
-  }
-
-  .back-btn-content {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    margin: 20px;
   }
 
   /***************************************** appli web *****************************************/
 
 
-  .bloc-icon-app {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1vh;
-    align-items: center;
-    justify-content: center;
-  }
 
 
-  .img-back-size {
-    height: 17vh;
-  }
-
-  .bloc-border {
-    display: flex;
-    width: 100%;
-    height: 80vh;
-    border: 2px solid #6f8197;
-    margin: 7vh;
-    border-radius: 5vh;
-  }
-
-  /***************************************** portfolio 3d *****************************************/
 
 
-  .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, 0%);
-    width: 40vh;
-    height: 27vh;
 
-  }
 
 }
 
@@ -1174,6 +1002,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
 
   .filter-btn {
