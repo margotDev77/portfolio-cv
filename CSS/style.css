@@ -1115,9 +1115,6 @@ ul {
   margin: 0 auto;
 }
 
-
-
-
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
 
@@ -1140,6 +1137,11 @@ ul {
 
   li {
     line-height: 25px;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .social-flex {
@@ -1216,11 +1218,13 @@ ul {
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .formation-bloc {
     align-items: flex-start;
     text-align: center;
+    padding: 0;
     gap: 20px;
   }
 
@@ -1363,7 +1367,7 @@ ul {
 
 
   .container-image {
-    width: 300px;
+    width: 160px;
   }
 
   .container-image image {

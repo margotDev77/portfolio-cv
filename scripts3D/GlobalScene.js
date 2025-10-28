@@ -7,15 +7,16 @@ import Personnage3D from "./Personnage3D.js";
 
 
 export default class GlobalScene {
-    constructor({ jeu, idCanvas, divCanvasCssSelector, gltfPersonnages, colorLights, isOrbitControls, cameraCoordonnees, cameraCoordonneesMobile } = {}) {
+    constructor({ jeu, idCanvas, divCanvasCssSelector, gltfPersonnages, colorLights, isOrbitControls, cameraCoordonnees, cameraCoordonneesTablette } = {}) {
         this.jeu = jeu;
         this.divCanvas = document.querySelector(divCanvasCssSelector);
         this.gltfPersonnages = gltfPersonnages;
         this.personnages3D = {};
         this.cameraCoordonnees = cameraCoordonnees;
-        this.cameraCoordonneesMobile = cameraCoordonneesMobile;
+        this.cameraCoordonneesTablette = cameraCoordonneesTablette;
 
-        this.sizeMobile = 1200;
+        this.sizeTablette = 1024
+        this.sizeMobile = 600;
 
         this.createScene();
         this.createCamera();
@@ -82,9 +83,9 @@ export default class GlobalScene {
     }
 
     setCameraPositionMobile() {
-        this.camera.position.z = this.cameraCoordonneesMobile.z;
-        this.camera.position.y = this.cameraCoordonneesMobile.y;
-        this.camera.position.x = this.cameraCoordonneesMobile.x;
+        this.camera.position.z = this.cameraCoordonneesTablette.z;
+        this.camera.position.y = this.cameraCoordonneesTablette.y;
+        this.camera.position.x = this.cameraCoordonneesTablette.x;
     }
 
     setCameraPosition() {
@@ -216,7 +217,7 @@ export default class GlobalScene {
 
     setPositionPersonnage() {
         for (let personnage of this.personnages3D) {
-            if (window.innerWidth < this.sizeMobile) {
+            if (window.innerWidth < this.sizeTablette) {
                 personnage.setCameraPositionMobileVersion();
             } else {
                 personnage.setCameraPositionLaptopVersion();
@@ -229,7 +230,7 @@ export default class GlobalScene {
         this.setSizeRenderer();
         this.camera.aspect = this.getRatio();
         this.camera.updateProjectionMatrix();
-        if (event.target.innerWidth < this.sizeMobile) {
+        if (event.target.innerWidth < this.sizeTablette) {
             this.setCameraPositionMobile();
         } else {
             this.setCameraPosition();

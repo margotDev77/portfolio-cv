@@ -4,11 +4,11 @@ import { GLTFLoader } from "GLTFLoader";
 import { degToRad } from "./utile.js";
 
 export default class Personnage3D {
-    constructor({ globalScene, name, gltfPath, cubeTexture, coordonnees = { x: 0, y: 0, z: 0 }, coordonneesMobile = { x: 0, y: 0, z: 0 }, rotation = { x: 0, y: 0, z: 0 } }) {
+    constructor({ globalScene, name, gltfPath, cubeTexture, coordonnees = { x: 0, y: 0, z: 0 }, coordonneesTablette = { x: 0, y: 0, z: 0 }, rotation = { x: 0, y: 0, z: 0 } }) {
         this.globalScene = globalScene;
         this.name = name;
         this.coordonnees = coordonnees;
-        this.coordonneesMobile = coordonneesMobile;
+        this.coordonneesTablette = coordonneesTablette;
         this.rotation = rotation;
 
         this.animationsAction = {};
@@ -41,7 +41,7 @@ export default class Personnage3D {
 
             this.updateTextureSceneGltf(gltf.scene, cubeTexture);
 
-            if (window.innerWidth < this.globalScene.sizeMobile) {
+            if (window.innerWidth < this.globalScene.sizeTablette) {
                 this.setPositionMobileVersion();
             } else {
                 this.setPositionLaptopVersion();
@@ -76,9 +76,9 @@ export default class Personnage3D {
 
     setPositionMobileVersion() {
         this.gltf.scene.position.set(
-            this.coordonneesMobile.x,
-            this.coordonneesMobile.y,
-            this.coordonneesMobile.z
+            this.coordonneesTablette.x,
+            this.coordonneesTablette.y,
+            this.coordonneesTablette.z
         );
     }
 

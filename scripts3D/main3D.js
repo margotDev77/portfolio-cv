@@ -11,7 +11,7 @@ const carScene = new GlobalScene({
   colorLights: 0xffffff,
   isOrbitControls: true,
   cameraCoordonnees: { x: -30, y: 30, z: 50 },
-  cameraCoordonneesMobile: { x: 0, y: 1, z: 3 }
+  cameraCoordonneesTablette: { x: -20, y: 30, z: 50 }
 });
 
 const ringScene = new GlobalScene({
@@ -23,7 +23,7 @@ const ringScene = new GlobalScene({
   colorLights: 0xffffff,
   isOrbitControls: true,
   cameraCoordonnees: { x: 1, y: 4, z: 3 },
-  cameraCoordonneesMobile: { x: 0, y: 1, z: 3 }
+  cameraCoordonneesTablette: { x: 1, y: 4, z: 2 }
 });
 
 function initAnimationButtons(globalScene) {

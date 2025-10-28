@@ -1,5 +1,3 @@
-
-
 .Flex3d {
   display: flex;
   justify-content: center;
@@ -15,7 +13,7 @@
   gap: 50px;
 }
 
-.bloc-medias{
+.bloc-medias {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +28,7 @@
   border-radius: 50px;
   aspect-ratio: 1/1;
   flex-direction: column;
+  position: relative;
 }
 
 
@@ -62,7 +61,7 @@
   margin-left: 40vh;
 }
 
-.size-video{
+.size-video {
   width: 95%;
 }
 
@@ -100,12 +99,13 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  position: absolute;
+  top: 40px;
 }
 
 .info-3d {
-  display: flex;
-  justify-content: center;
-  color: var(--txt-main-color);
+  font-size: 20px;
+  margin: 0;
 }
 
 .size-img-bague {
@@ -114,10 +114,15 @@
 
 .content-image {
   display: flex;
-  width: 40%;
-  height: 50vh;
+  width: 45%;
   justify-content: center;
   align-items: center;
+}
+
+.content-video {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
 }
 
 .bloc-medias-donjon {
@@ -132,252 +137,180 @@
 }
 
 
-
 .personnages {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    height: 86%;
-    margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 86%;
+  margin-left: 5%;
 }
 
 section h2 {
-    margin: 100px 0 50px 0;
-    font-size: 35px;
+  margin: 100px 0 50px 0;
+  font-size: 35px;
 }
 
 .personnages canvas {
-    cursor: grab;
+  cursor: grab;
 }
 
 .fichier canvas {
-    cursor: grab;
+  cursor: grab;
 }
 
 #div-canvas-car,
 #div-canvas-ring {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 }
 
 .personnage {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    justify-content: space-around;
-    font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-around;
+  font-size: 25px;
 }
 
 
 .buttons button {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    text-decoration: none;
-    border-radius: 20px;
-    box-shadow: var(--shadow-less-btn);
-    background-color: var(--bg-color);
-    transform: scale(0.98);
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: var(--shadow-less-btn);
+  background-color: var(--bg-color);
+  transform: scale(0.98);
 }
 
 .buttons button.active {
-    box-shadow: var(--shadow-less-btn-hover);
-    transition: all 0.2s ease;
+  box-shadow: var(--shadow-less-btn-hover);
+  transition: all 0.2s ease;
 }
 
 .buttons button:hover {
-    box-shadow: var(--shadow-less-btn-hover);
+  box-shadow: var(--shadow-less-btn-hover);
 }
 
 .color-warning {
-    color:darkorange;
+  color: darkorange;
 }
 
 .color-start {
-    color:crimson;
+  color: crimson;
 }
 
 .color-feu {
-    color: #7db70a;
+  color: #7db70a;
 }
 
 .color-feu2 {
-    color: dodgerblue;
+  color: dodgerblue;
 }
 
 .lightRotate {
-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .color-feu-stop span {
-    color: orange;
-    transform: rotate(180deg);
+  color: orange;
+  transform: rotate(180deg);
 }
 
 .color-cligno {
-    color: #7db70a;
+  color: #7db70a;
 }
 
 
 @media (max-width : 1200px) {
 
-    section {
-        background-color: blueviolet;
-        width: 100%;
-        margin-left: 0;
-    }
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
 
-    .personnages {
-        gap: 100px;
-    }
+  .personnages {
+    gap: 100px;
+  }
 
-    .personnage {
-        width: 40%;
-    }
+  .personnage {
+    width: 40%;
+  }
 
 }
 
 @media (max-width : 700px) {
 
-    section {
-        background-color: #ef7f1d;
-        width: 100%;
-    }
+  section {
+    width: 100%;
+  }
 
-    .personnages {
-        flex-direction: column;
-        align-items: center;
-        gap: 100px;
-    }
+  .personnages {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
 
-    .personnage {
-        width: 100%;
-    }
+  .personnage {
+    width: 100%;
+  }
 
 }
 
 @keyframes turn-loader {
-    0% {
-        transform: rotateZ(0deg);
-    }
+  0% {
+    transform: rotateZ(0deg);
+  }
 
-    100% {
-        transform: rotateZ(360deg);
-    }
+  100% {
+    transform: rotateZ(360deg);
+  }
 
 }
 
-
-
 .loader {
-    position: absolute;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border-top: 4px solid gray;
-    border-bottom: 4px solid gray;
-    border-left: 4px solid white;
-    border-right: 4px solid white;
-    animation: turn-loader 1000ms linear infinite;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border-top: 4px solid gray;
+  border-bottom: 4px solid gray;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  animation: turn-loader 1000ms linear infinite;
 }
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
 
-
-  .headerFlex-horizontal {
+  .Flex3d {
     display: flex;
-    background-color: #ebeff3;
-    width: 100%;
-    border-radius: 0 0 22px 22px;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    height: 5.5vh;
-    z-index: 1000;
-    box-shadow: 5px 5px 7px #00000063;
-    transform: translateY(-100px);
-    opacity: 0;
-    animation: apparHeader 0.5s ease-in forwards;
-  }
-
-  @keyframes apparHeader {
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  /***************************************** portfolio web *****************************************/
-
-  .headerFlex-2 {
-    display: flex;
-    background-color: #ebeff3;
-    width: 60%;
-    border-radius: 0vh 5vh 5vh 0vh;
-    align-items: center;
-    justify-content: center;
-    height: 6vh;
-    box-shadow: 5px 5px 7px #00000063;
-  }
-
-  .bloc-border-gallery {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .bloc-gallery {
-    display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
   }
 
   .mediasFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .container-medias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(90%/3);
-    border-radius: 2vh;
-    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
-    aspect-ratio: 1/1;
-    margin: 1vh;
-  }
-
-  .container-medias:nth-child(even) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 #ffffff, inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px #6f8197;
   }
 
   .bloc-medias {
@@ -387,58 +320,16 @@ transform: rotate(-90deg);
     width: 100%;
   }
 
-  .medias-size {
-    display: flex;
-  }
-
-  .info-web {
-    display: flex;
-    height: 25vh;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: absolute;
-    font-size: 1.1vh;
-  }
-
-  
-
- 
- 
-
-
-  /***************************************** portfolio 3d *****************************************/
-
-  .Flex3d {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4vh;
-  }
-
-
   .container-medias-3d {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    border-radius: 5vh;
-    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+    width: 100%;
+    border-radius: 50px;
     aspect-ratio: 1/1;
-    margin: 4vh;
     flex-direction: column;
-    transform: scale(0.95);
-    opacity: 0;
-    animation: appar 0.7s 0.1s ease-in forwards;
   }
 
-
-  @keyframes appar {
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-  }
 
   .bloc-gallery {
     display: flex;
@@ -456,8 +347,6 @@ transform: rotate(-90deg);
   .size-titre {
     display: flex;
     width: 100%;
-
-
   }
 
   .bloc-carousel {
@@ -469,45 +358,9 @@ transform: rotate(-90deg);
     margin-left: 40vh;
   }
 
-  .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, 0%);
-    width: 40vh;
-    height: 27vh;
-
+  .size-video {
+    width: 95%;
   }
-
-  .wrapper {
-    overflow: hidden;
-    position: relative;
-    border-radius: 5vh;
-    /* box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15); */
-  }
-
-  #items {
-    width: 10000px;
-    position: relative;
-    top: 0;
-    left: -400px;
-  }
-
-  #items.shifting {
-    transition: left 0.2s ease-out;
-  }
-
-  .slide {
-    width: 40vh;
-    cursor: pointer;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 1s;
-    position: inherit;
-  }
-
 
   .content {
     width: 40vh;
@@ -515,119 +368,30 @@ transform: rotate(-90deg);
     margin-top: 0px;
   }
 
-
-  .media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30vh;
-    height: 40vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: calc(50% - 150px);
-    top: 40px;
-    border-radius: 5vh;
-  }
-
-  .img-carousel-size {
-    display: flex;
-    width: 40vh;
-    height: auto;
-  }
-
-
-  .info-carousel {
-    letter-spacing: 2px;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-    padding: 0 0 2vh 0;
-    color: #757986;
-  }
-
   .content-info3d {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 20px;
   }
 
   .info-3d {
     display: flex;
     justify-content: center;
-  }
-
-  .control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 4vh;
-    margin-top: -20px;
-    z-index: 1;
-  }
-
-  .prev,
-  .next {
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: background-color 0.1s ease;
-    box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
-  }
-
-  .prev {
-    color: #757986;
-    left: -70px;
-  }
-
-  .next {
-    color: #757986;
-    right: -70px;
-  }
-
-  .prev:hover,
-  .next:hover {
-    transform: scale(0.98);
-    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
-  }
-
-  .content-scroll {
-    display: flex;
-    width: 40%;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .scroll-zone {
-    height: 300px;
-    overflow-y: scroll;
-    position: relative;
-    scrollbar-width: none;
-  }
-
-  #scroll-img {
-    position: sticky;
-    top: 0;
+    color: var(--txt-main-color);
+    font-size: 18px;
   }
 
   .size-img-bague {
     height: 300px;
   }
 
-
-
   .content-image {
-    display: flex;
-    width: 40%;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
+    width: 50%;
+  }
+
+  .content-video {
+    height: 45vh;
   }
 
   .bloc-medias-donjon {
@@ -642,21 +406,48 @@ transform: rotate(-90deg);
   }
 
 
-
-  .content-view {
-    overflow: hidden;
+  .personnages {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
   }
 
-  #viewer {
-    /* width: 100vw;
-  height: 100vh; */
-    touch-action: none;
+  section h2 {
+    margin: 100px 0 50px 0;
+    font-size: 35px;
   }
 
-  #canvas {
-    display: block;
-    width: 450px;
-    height: 450px;
+  #div-canvas-car,
+  #div-canvas-ring {
+    width: 100%;
+    height: 320px;
+  }
+
+  .buttons {
+    width: 100%;
+    font-size: 20px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+  @media (max-width : 1024px) {
+
+    section {
+      width: inherit;
+      margin: 0 100px;
+    }
+
+    .personnages {
+      gap: 100px;
+    }
+
+    .personnage {
+      width: 100%;
+      text-align: center;
+    }
+
   }
 
 
@@ -667,6 +458,25 @@ transform: rotate(-90deg);
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 
 @media only screen and (min-width: 320px) and (max-width: 600px) {
+
+  @media (max-width : 600px) {
+
+    section {
+      background-color: #ef7f1d;
+      width: 100%;
+    }
+
+    .personnages {
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .personnage {
+      width: 100%;
+    }
+
+  }
 
   .headerFlex-horizontal {
     display: none;
