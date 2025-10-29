@@ -733,6 +733,12 @@ footer {
     padding-top: 5px;
   }
 
+  /****************************************** boutton racourci portfolio web/print header ****************************************/
+
+  .content-rac-portfolio {
+    display: none;
+  }
+
   /****************************************** container shadow/taille tablette ****************************************/
 
   .cvFlex {
@@ -807,6 +813,8 @@ footer {
     display: none;
   }
 
+  #s
+
   /****************************************** footer tablette ****************************************/
 
   footer {
@@ -835,10 +843,7 @@ footer {
   }
 
   #scrollUp {
-    position: fixed;
-    bottom: 40px;
-    right: -100px;
-    font-size: 30px;
+    display: none;
   }
 
 
@@ -940,6 +945,10 @@ footer {
     display: none;
   }
 
+  #scrollUp {
+ display: none;
+}
+
   /********************************* header back *********************************/
   .debordement-menu {
     display: flex;
@@ -1002,6 +1011,7 @@ footer {
     display: inline-block;
     text-decoration: none;
     color: var(--txt-color);
+    cursor: pointer;
   }
 
   .menu-hamburger li a:hover {

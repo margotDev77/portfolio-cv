@@ -165,16 +165,6 @@
                     <div class="info-web typo-1 font-size text-color">site web Wordpress & WooCommerce</div>
                 </div>
 
-                <div class="container-medias image frontEnd">
-                    <div class="galleryViz">
-                        <div class="galleryViz-item" data-type="image" data-title="Image 2"
-                            data-description="Description de l'image 2" data-src="Medias/portfolio/atom-design-01.webp">
-                            <img src="Medias/portfolio/atom-design-01.webp" alt="Image 2" class="bloc-medias">
-                        </div>
-                    </div>
-                    <div class="info-web typo-1 font-size text-color">atomic design</div>
-                </div>
-
                 <div class="container-medias image motionDesign">
                     <div class="galleryViz">
                         <div class="galleryViz-item" data-type="image" data-title="Graphy Concept Animation"
@@ -187,6 +177,8 @@
                 </div>
 
                 <div class="container-medias image backEnd"></div>
+
+                <div class="container-medias image frontEnd"></div>
 
             </div>
         </section>
@@ -239,7 +231,7 @@
 
     </main>
 
-     <div class="popup-overlay">
+    <div class="popup-overlay">
         <div class="popup-content">
             <div class="button-close fillIn"><i class="fa-solid fa-circle-xmark"></i></div>
             <div class="container">
@@ -519,7 +511,9 @@
 
     <script>
 
-        /************************* visonneuse img video ****************************/
+
+
+        /************************* Visionneuse img / vidéo ****************************/
 
         const galleryItems = document.querySelectorAll(".galleryViz-item");
         const lightbox = document.getElementById("lightbox");
@@ -545,6 +539,7 @@
                     const video = document.createElement("video");
                     video.src = src;
                     video.controls = true;
+                    video.autoplay = true;
                     mediaContainer.appendChild(video);
                 }
 
@@ -553,20 +548,32 @@
 
                 lightbox.style.display = "flex";
                 document.body.classList.add("no-scroll");
-
-                lightbox.addEventListener("click", (event) => {
-                    if (event.target === lightbox) {
-                        lightbox.style.display = "none";
-                        document.body.classList.remove("no-scroll");
-                    }
-                });
             });
         });
 
-        closeBton.addEventListener("click", () => {
+        function closeLightbox() {
+            const video = mediaContainer.querySelector("video");
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+
+            mediaContainer.innerHTML = "";
+
             lightbox.style.display = "none";
             document.body.classList.remove("no-scroll");
+        }
+
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
         });
+
+        if (closeBton) {
+            closeBton.addEventListener("click", closeLightbox);
+        }
+
 
         $(document).ready(function () {
             const lightboxCarousel = document.getElementById("lightboxCarousel");
