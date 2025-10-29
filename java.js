@@ -18,26 +18,34 @@ elements.forEach(element => observer.observe(element));
 
 /************************************** pop up **************************************/
 
-var openBtn = document.querySelector(".open-btn");
-var overlay = document.querySelector(".popup-overlay");
-var closeBtn = document.querySelector(".fillIn");
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtns = document.querySelectorAll(".open-btn");
+  const overlay = document.querySelector(".popup-overlay");
+  const closeBtn = document.querySelector(".fillIn");
 
-openBtn.addEventListener("click", function () {
-  overlay.style.display = "flex";
-  document.body.classList.add("no-scroll");
-});
+  openBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+      document.body.classList.add("no-scroll");
+    });
+  });
 
-overlay.addEventListener("click", (event) => {
-  if (event.targets === overlay) {
-    overlay.style.display = "none";
-    document.body.classList.remove("no-scroll");
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      overlay.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    });
   }
+
 });
 
-closeBtn.addEventListener("click", function () {
-  overlay.style.display = "none";
-  document.body.classList.remove("no-scroll");
-});
 
 
 /************************************** header tel **************************************/

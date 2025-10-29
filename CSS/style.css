@@ -1397,6 +1397,136 @@ ul {
     background-color: #bd2277;
   }
 
+  /******************************************** formation telephone ********************************************/
+
+  .formation-bloc {
+    width: inherit;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cdui-bloc {
+    line-height: 3vh;
+  }
+
+  .infograph-bloc {
+    line-height: 3vh;
+  }
+
+  .archi-bloc {
+    line-height: 3vh;
+  }
+
+  /******************************************** competences telephone ********************************************/
+
+  /************************** blocs telephone *************************/
+
+  .boxs {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .bloc-color-competence-2 {
+    display: none;
+  }
+
+  .content-column-comp {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .column-comp {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .column-comp-print {
+    width: 100%;
+  }
+
+  .column-print-img {
+    display: none;
+  }
+
+  body.dark-mode .column-print-img {
+    display: none;
+  }
+
+  .column-print {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .line-space {
+    width: 50%;
+  }
+
+  .container-os {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 30px 0;
+  }
+
+  .content-os {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px 10px 50px;
+    border-radius: 30px;
+    background-color: var(--bg-logiciel-color);
+  }
+
+  .column-web {
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container-anim-logiciel {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .content-logiciel {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /******************************* 3D telephone *******************************/
+
+  .content-3d-button {
+    flex-direction: column;
+  }
+
+  .bloc-logiciel-3d {
+    width: 100%;
+  }
+
+  .bloc-3d-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /******************************* interets telephone *******************************/
+
+  .content-interet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-image {
+    width: 350px;
+  }
+
+  .listBtn li {
+  height: 50px;
+}
 
 
 

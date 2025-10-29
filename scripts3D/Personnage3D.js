@@ -4,11 +4,12 @@ import { GLTFLoader } from "GLTFLoader";
 import { degToRad } from "./utile.js";
 
 export default class Personnage3D {
-    constructor({ globalScene, name, gltfPath, cubeTexture, coordonnees = { x: 0, y: 0, z: 0 }, coordonneesTablette = { x: 0, y: 0, z: 0 }, rotation = { x: 0, y: 0, z: 0 } }) {
+    constructor({ globalScene, name, gltfPath, cubeTexture, coordonnees = { x: 0, y: 0, z: 0 }, coordonneesTablette = { x: 0, y: 0, z: 0 }, coordonneesMobile = { x: 0, y: 0, z: 0 }, rotation = { x: 0, y: 0, z: 0 } }) {
         this.globalScene = globalScene;
         this.name = name;
         this.coordonnees = coordonnees;
         this.coordonneesTablette = coordonneesTablette;
+        this.coordonneesMobile = coordonneesMobile;
         this.rotation = rotation;
 
         this.animationsAction = {};
@@ -42,7 +43,7 @@ export default class Personnage3D {
             this.updateTextureSceneGltf(gltf.scene, cubeTexture);
 
             if (window.innerWidth < this.globalScene.sizeTablette) {
-                this.setPositionMobileVersion();
+                this.setPositionTabletteVersion();
             } else {
                 this.setPositionLaptopVersion();
             }
@@ -74,7 +75,15 @@ export default class Personnage3D {
         });
     }
 
-    setPositionMobileVersion() {
+     setPositionLaptopVersion() {
+        this.gltf.scene.position.set(
+            this.coordonnees.x,
+            this.coordonnees.y,
+            this.coordonnees.z
+        );
+    }
+
+    setPositionTabletteVersion() {
         this.gltf.scene.position.set(
             this.coordonneesTablette.x,
             this.coordonneesTablette.y,
@@ -82,11 +91,11 @@ export default class Personnage3D {
         );
     }
 
-    setPositionLaptopVersion() {
+     setPositionMobileVersion() {
         this.gltf.scene.position.set(
-            this.coordonnees.x,
-            this.coordonnees.y,
-            this.coordonnees.z
+            this.coordonneesMobile.x,
+            this.coordonneesMobile.y,
+            this.coordonneesMobile.z
         );
     }
 

@@ -7,13 +7,14 @@ import Personnage3D from "./Personnage3D.js";
 
 
 export default class GlobalScene {
-    constructor({ jeu, idCanvas, divCanvasCssSelector, gltfPersonnages, colorLights, isOrbitControls, cameraCoordonnees, cameraCoordonneesTablette } = {}) {
+    constructor({ jeu, idCanvas, divCanvasCssSelector, gltfPersonnages, colorLights, isOrbitControls, cameraCoordonnees, cameraCoordonneesTablette, cameraCoordonneesMobile } = {}) {
         this.jeu = jeu;
         this.divCanvas = document.querySelector(divCanvasCssSelector);
         this.gltfPersonnages = gltfPersonnages;
         this.personnages3D = {};
         this.cameraCoordonnees = cameraCoordonnees;
         this.cameraCoordonneesTablette = cameraCoordonneesTablette;
+        this.cameraCoordonneesMobile = cameraCoordonneesMobile;
 
         this.sizeTablette = 1024
         this.sizeMobile = 600;
@@ -73,25 +74,46 @@ export default class GlobalScene {
         this.renderer.setSize(this.divCanvas.clientWidth, this.divCanvas.clientHeight);
     }
 
-    createCamera() {
+ /*    createCamera() {
         this.camera = new THREE.PerspectiveCamera(50, this.getRatio(), 0.1, 1000);
-        if (window.innerWidth < 1200) {
-            this.setCameraPositionMobile();
+        if (window.innerWidth < 1024) {
+            this.setCameraPositionTablette();
         } else {
             this.setCameraPosition();
         }
-    }
+    } */
 
-    setCameraPositionMobile() {
-        this.camera.position.z = this.cameraCoordonneesTablette.z;
-        this.camera.position.y = this.cameraCoordonneesTablette.y;
-        this.camera.position.x = this.cameraCoordonneesTablette.x;
+
+    createCamera() {
+    this.camera = new THREE.PerspectiveCamera(50, this.getRatio(), 0.1, 1000);
+
+    if (window.innerWidth < this.sizeMobile) {
+        this.setCameraPositionMobile();
+    } else if (window.innerWidth < this.sizeTablette) {
+        this.setCameraPositionTablette();
+    } else {
+        this.setCameraPosition();
     }
+}
+
+
 
     setCameraPosition() {
         this.camera.position.z = this.cameraCoordonnees.z;
         this.camera.position.y = this.cameraCoordonnees.y;
         this.camera.position.x = this.cameraCoordonnees.x;
+    }
+
+    setCameraPositionTablette() {
+        this.camera.position.z = this.cameraCoordonneesTablette.z;
+        this.camera.position.y = this.cameraCoordonneesTablette.y;
+        this.camera.position.x = this.cameraCoordonneesTablette.x;
+    }
+
+    setCameraPositionMobile() {
+        this.camera.position.z = this.cameraCoordonneesMobile.z;
+        this.camera.position.y = this.cameraCoordonneesMobile.y;
+        this.camera.position.x = this.cameraCoordonneesMobile.x;
     }
 
 
@@ -199,7 +221,7 @@ export default class GlobalScene {
                 gltfPath: personnage.gltf,
                 cubeTexture: texture,
                 coordonnees: personnage.coordonnees,
-                coordonneesMobile: personnage.coordonneesMobile,
+                coordonneesTablette: personnage.coordonneesTablette,
                 rotation: personnage.rotation,
                 initAnimation: personnage.initAnimation
             });
@@ -218,7 +240,7 @@ export default class GlobalScene {
     setPositionPersonnage() {
         for (let personnage of this.personnages3D) {
             if (window.innerWidth < this.sizeTablette) {
-                personnage.setCameraPositionMobileVersion();
+                personnage.setCameraPositionTabletteVersion();
             } else {
                 personnage.setCameraPositionLaptopVersion();
             }
@@ -231,7 +253,7 @@ export default class GlobalScene {
         this.camera.aspect = this.getRatio();
         this.camera.updateProjectionMatrix();
         if (event.target.innerWidth < this.sizeTablette) {
-            this.setCameraPositionMobile();
+            this.setCameraPositionTablette();
         } else {
             this.setCameraPosition();
         }
