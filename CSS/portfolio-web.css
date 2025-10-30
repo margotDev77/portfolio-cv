@@ -255,7 +255,7 @@ body {
 }
 
 .owl-carousel .item img {
-  max-width: 80%;
+  max-width: 75%;
   border-radius: 25px;
 }
 
@@ -267,23 +267,33 @@ body {
 #lightboxCarousel .owl-nav {
   position: absolute;
   top: 50%;
-  width: 100%;
+  left: 10%;
+  width: 80%;
   display: flex;
-  justify-content: space-between;
-  transform: translateY(50%);
+  justify-content: center;
   pointer-events: none;
+  gap: 90%;
 }
 
 #lightboxCarousel .owl-nav button {
   pointer-events: all;
   color: #ebeff3;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
   transition: 0.3s;
+  background: rgba(211, 211, 211, 0.3);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #lightboxCarousel .owl-nav button:hover {
-  color: var(--txt-accent-color);
+  color: #b2b1b1;
   transform: scale(0.95);
 }
 
@@ -303,12 +313,21 @@ body {
   padding: 10px 5px;
   border-radius: 10px;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 40%;
   background: rgba(211, 211, 211, 0.3);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(35px);
+  backdrop-filter: blur(5px);
   cursor: pointer;
+}
+
+#mediaTitleCarousel {
+  color: var(--txt-main-color);
+  font-weight: 800;
+}
+
+#mediaDescriptionCarousel {
+  color: var(--txt-main-color);
 }
 
 
@@ -640,7 +659,20 @@ button {
   margin-left: 1vh;
 }
 
+/**************************************************************** RESPONSIVE AVANT TABLETTE ****************************************************************/
 
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+
+.mediasFlex {
+  justify-content: space-between;
+}
+
+.container-medias {
+  width: calc(90%/2);
+}
+
+}
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
@@ -828,11 +860,12 @@ button {
   #lightboxCarousel .owl-nav {
     position: absolute;
     top: 50%;
-    width: 100%;
+    left:7%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(50%);
     pointer-events: none;
+    gap: 90%;
   }
 
   #lightboxCarousel .owl-nav button {
@@ -844,7 +877,7 @@ button {
   }
 
   #lightboxCarousel .owl-nav button:hover {
-    color: var(--txt-accent-color);
+    color: #b2b1b1;
     transform: scale(0.95);
   }
 
@@ -906,6 +939,16 @@ button {
   .img-back-size {
     width: 50%;
   }
+
+}
+
+/**************************************************************** RESPONSIVE entre TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 601px) and (max-width: 699px){
+
+.container-medias {
+    width: 100%;
+}
 
 }
 
@@ -1053,6 +1096,69 @@ button {
     margin-top: 25px;
     font-size: 18px;
     color: var(--txt-main-color);
+  }
+
+  /***************************************** carrousel jeu telephone *****************************************/
+
+
+  .galleryViz {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .galleryCarousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+
+  .owl-carousel .item img {
+    max-width: 90%;
+    border-radius: 25px;
+  }
+
+  #lightboxCarousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    gap: 90%;
+  }
+
+  #lightboxCarousel .owl-nav button {
+    pointer-events: all;
+    color: #ebeff3;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(211, 211, 211, 0.3);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    width: 30px;
+    height: 22px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #lightboxCarousel .owl-nav button:hover {
+    color: #b2b1b1;
+    transform: scale(0.95);
+  }
+
+  .info-carousel {
+    top: 40%;
+    left: 30%;
   }
 
 }

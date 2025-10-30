@@ -12,7 +12,7 @@ const carScene = new GlobalScene({
   isOrbitControls: true,
   cameraCoordonnees: { x: -30, y: 30, z: 50 },
   cameraCoordonneesTablette: { x: -20, y: 30, z: 50 },
-  cameraCoordonneesMobile: {x: -10, y: 30, z: 50 }
+  cameraCoordonneesMobile: {x: -10, y: 20, z: 65 }
 });
 
 const ringScene = new GlobalScene({

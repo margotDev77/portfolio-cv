@@ -71,7 +71,6 @@
     </header>
 
     <main>
-
         <section class="filterFlex">
             <div class="filter-content">
                 <div class="home-menu-2 typo-1 font-size text-color">
@@ -208,10 +207,10 @@
                         <img src="Medias/portfolio/carousel-jeu/game-select-car.png" alt="Image 2">
                     </div>
                     <div class="item" data-title="FOULE CONTACT - City Drift"
-                        data-description="Page de selection de la radio">
+                        data-description="Page de sélection de la radio">
                         <img src="Medias/portfolio/carousel-jeu/game-select-radio.png" alt="Image 3">
                     </div>
-                    <div class="item" data-title="FOULE CONTACT - City Drift" data-description="Depart jeu">
+                    <div class="item" data-title="FOULE CONTACT - City Drift" data-description="Départ jeu">
                         <img src="Medias/portfolio/carousel-jeu/game-start.png" alt="Image 4">
                     </div>
                     <div class="item" data-title="FOULE CONTACT - City Drift" data-description="Collision jeu">
@@ -511,8 +510,6 @@
 
     <script>
 
-
-
         /************************* Visionneuse img / vidéo ****************************/
 
         const galleryItems = document.querySelectorAll(".galleryViz-item");
@@ -574,14 +571,13 @@
             closeBton.addEventListener("click", closeLightbox);
         }
 
-
+        // Init Owl Carousel
         $(document).ready(function () {
             const lightboxCarousel = document.getElementById("lightboxCarousel");
             const closeBtonCarousel = document.getElementById("closeBtonCarousel");
             const mediaTitleCarousel = document.getElementById("mediaTitleCarousel");
             const mediaDescriptionCarousel = document.getElementById("mediaDescriptionCarousel");
 
-            // Init Owl Carousel
             const $carousel = $("#carouselContainer");
             $carousel.owlCarousel({
                 items: 1,
@@ -595,33 +591,30 @@
                 ]
             });
 
-            // Ouvrir la visionneuse (ex: quand tu cliques sur un bouton ou vignette)
             document.querySelectorAll(".open-carousel").forEach(btn => {
                 btn.addEventListener("click", () => {
                     lightboxCarousel.style.display = "flex";
                     document.body.classList.add("no-scroll");
 
-                    // Récupère le premier item actif pour afficher titre + description
+                    // recup 1er item => affiche titre / description
                     const current = $carousel.find(".owl-item.active .item");
                     mediaTitleCarousel.textContent = current.data("title");
                     mediaDescriptionCarousel.textContent = current.data("description");
                 });
             });
 
-            // Mettre à jour titre + description quand on change de slide
+            // maj titre / description
             $carousel.on("changed.owl.carousel", function (event) {
                 const current = $(event.target).find(".owl-item").eq(event.item.index).find(".item");
                 mediaTitleCarousel.textContent = current.data("title");
                 mediaDescriptionCarousel.textContent = current.data("description");
             });
 
-            // Fermer la visionneuse
             closeBtonCarousel.addEventListener("click", () => {
                 lightboxCarousel.style.display = "none";
                 document.body.classList.remove("no-scroll");
             });
 
-            // Fermer si clic en dehors
             lightboxCarousel.addEventListener("click", (event) => {
                 if (event.target === lightboxCarousel) {
                     lightboxCarousel.style.display = "none";

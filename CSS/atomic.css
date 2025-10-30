@@ -650,17 +650,24 @@ footer {
   font-size: 30px;
 }
 
+/**************************************************************** RESPONSIVE AVANT TABLETTE ****************************************************************/
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+
+  .content-info-footer {
+    width: 100%;
+  }
+
+
+
+}
+
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #2270bd;
-  }
 
   /************ font size tablette ************/
   .font-size {
@@ -814,7 +821,6 @@ footer {
   }
 
   #s
-
   /****************************************** footer tablette ****************************************/
 
   footer {
@@ -849,18 +855,120 @@ footer {
 
 }
 
+/**************************************************************** RESPONSIVE entre TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 601px) and (max-width: 699px) {
+
+  .headerFlex {
+    display: none;
+  }
+
+ /********************************* header back *********************************/
+  .debordement-menu {
+    display: flex;
+    height: 100vh;
+    height: 170px
+  }
+
+  .content-menu {
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: -3px -3px 22px #00000063;
+    text-align: center;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .fixed {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .headerFlex-hamburger {
+    display: flex;
+    margin: 2vh 3vh 2vh 3vh;
+    border-radius: 50px;
+    height: 5.6vh;
+    box-shadow: var(--shadow-negatif);
+  }
+
+  .logo-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 8%;
+  }
+
+  .logo-size-hamburger {
+    width: 9vh;
+    margin-left: 2vh;
+  }
+
+  .home-menu-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 70%;
+  }
+
+  .menu-hamburger {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-hamburger li {
+    display: inline-block;
+    margin: 0 1vh 0 1vh;
+  }
+
+  .menu-hamburger li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--txt-color);
+    cursor: pointer;
+  }
+
+  .menu-hamburger li a:hover {
+    color: var(--accent-color);
+  }
+
+  .bloc-mode-footer {
+    display: flex;
+    width: 10%;
+    justify-content: flex-end;
+    margin-right: 1vh;
+  }
+
+  .color-mode-footer {
+    color: #757986;
+    padding-top: 0.5vh;
+  }
+
+  .menu-color-theme-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-color-theme-footer li {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    width: 4vh;
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
 
 
 
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 
 @media only screen and (min-width: 350px) and (max-width: 600px) {
-
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #bd2277;
-  }
 
   section {
     margin: 0 50px;
@@ -946,8 +1054,8 @@ footer {
   }
 
   #scrollUp {
- display: none;
-}
+    display: none;
+  }
 
   /********************************* header back *********************************/
   .debordement-menu {
@@ -1048,7 +1156,7 @@ footer {
 
   /****************************************** footer ****************************************/
 
-  hr {
+  .line-footer {
     display: none;
   }
 

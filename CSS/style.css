@@ -910,7 +910,7 @@ body.dark-mode .column-print-img {
 
 
 .adobe-font {
-  font-size: 4vh;
+  font-size: 40px;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   background-color: #ffffff;
@@ -1113,6 +1113,76 @@ ul {
   aspect-ratio: 1/1;
   width: 30%;
   margin: 0 auto;
+}
+
+/**************************************************************** RESPONSIVE AVANT TABLETTE ****************************************************************/
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+
+  /******************************************** formation tablette ********************************************/
+
+
+  .titre-size {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .formation-bloc {
+    align-items: flex-start;
+    text-align: center;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .formation-bloc h2 {
+    text-align: center;
+  }
+
+  .formation-bloc i {
+    margin-right: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cdui-bloc {
+    line-height: 2vh;
+  }
+
+  .infograph-bloc {
+    line-height: 2vh;
+  }
+
+  .archi-bloc {
+    line-height: 2vh;
+  }
+
+  /******************************* interets *******************************/
+
+  .content-interet {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .container-image {
+    width: 330px;
+  }
+
+  .content-btn {
+    width: 100%;
+  }
+
+  .listBtn li {
+    height: 50px;
+  }
+
+
+
 }
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
@@ -1386,6 +1456,41 @@ ul {
 
 }
 
+
+
+/**************************************************************** RESPONSIVE APRES TABLETTE ****************************************************************/
+
+
+@media only screen and (min-width: 601px) and (max-width: 995px) {
+
+.formation-bloc {
+    align-items: flex-start;
+    text-align: center;
+    padding: 0;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .cdui-bloc {
+    width: 100%;
+  }
+
+  .infograph-bloc {
+    width: 100%;
+  }
+
+  .archi-bloc {
+    width: 100%;
+  }
+
+  .formation-bloc ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+}
+
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 
 @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -1462,24 +1567,15 @@ ul {
 
   .line-space {
     width: 50%;
-  }
-
-  .container-os {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 30px 0;
+    margin: 20px 0 10px 0;
   }
 
   .content-os {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 50px 10px 50px;
-    border-radius: 30px;
-    background-color: var(--bg-logiciel-color);
+    padding: 0 20px 10px 20px;
+  }
+
+  .bloc-info-os i {
+    font-size: 9px;
   }
 
   .column-web {
@@ -1496,6 +1592,44 @@ ul {
   .content-logiciel {
     width: 100%;
     margin-top: 20px;
+  }
+
+  .content-icon-bloc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .icon-bloc {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .icon-bloc-adobe {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .icon-bloc img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .adobe-font {
+    font-size: 30px;
+  }
+
+  /******************************* logiciel print *******************************/
+
+
+  .icon-bloc span i {
+    font-size: 9px;
+    margin: 0 1px;
   }
 
   /******************************* 3D telephone *******************************/
@@ -1525,8 +1659,8 @@ ul {
   }
 
   .listBtn li {
-  height: 50px;
-}
+    height: 50px;
+  }
 
 
 
