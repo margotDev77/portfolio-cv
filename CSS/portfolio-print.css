@@ -6,7 +6,7 @@ body {
 .headerFlex-horizontal {
     display: flex;
     background-color: var(--bg-color);
-    width: 100%;
+    width: -moz-available;
     /* height: 6vh; */
     border-radius: 0 0 35px 35px;
     align-items: center;
@@ -18,6 +18,7 @@ body {
     opacity: 0;
     animation: apparHeader 0.5s ease-in forwards;
     padding: 5px 0;
+    margin: 0 100px;
     gap: 15px;
 }
 
@@ -302,12 +303,10 @@ body {
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 
-
     .headerFlex-horizontal {
         display: flex;
         background-color: var(--bg-color);
-        margin: 0 100px;
-        width: 100%;
+        width: -moz-available;
         /* height: 6vh; */
         border-radius: 0 0 35px 35px;
         align-items: center;
@@ -319,6 +318,7 @@ body {
         opacity: 0;
         animation: apparHeader 0.5s ease-in forwards;
         padding: 5px 0;
+        margin: 0 100px;
         gap: 12px;
     }
 
@@ -394,7 +394,7 @@ body {
         flex-wrap: nowrap;
         width: 100%;
         height: 80vh;
-        margin-top: 25vh;
+        margin-top: 20vh;
         position: center;
     }
 
@@ -412,6 +412,21 @@ body {
         border-radius: 3vh;
     }
 
+    .content-info-print {
+        display: flex;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        z-index: -1;
+        align-items: center;
+        top: 50%;
+    }
+
+    .lightbox-content {
+        width: 65%;
+    }
+
 }
 
 
@@ -419,9 +434,11 @@ body {
 
 @media only screen and (min-width: 601px) and (max-width: 699px) {
 
-  .headerFlex-horizontal {
-    display: none;
-  }
+    .headerFlex-horizontal {
+        display: none;
+    }
+
+
 }
 
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
@@ -432,66 +449,22 @@ body {
         display: none;
     }
 
-    .button-portfolio-tab-tel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        padding: 1.5vh 1vh 1.5vh 1vh;
-        border-radius: 100%;
-        box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
-        color: var(--txt-color);
-        margin-left: 5vh;
-        margin: 1vh;
-        opacity: 0;
-        animation: apparition 0.3s 0.5s ease-in forwards;
-    }
-
-    @keyframes apparition {
-        100% {
-            opacity: 1;
-            transform: none;
-        }
-    }
-
-    .button-portfolio-tab-tel:hover {
-        box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
-        transition: background-color 0.1s ease;
-        transform: scale(-0.98);
-        color: var(--accent-color);
-    }
-
-
     /***************************************** portfolio print *****************************************/
 
 
     .button-mep {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 1vh 2vh;
-        background-color: #ffffff;
-        color: var(--txt-color);
-        text-decoration: none;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: medium;
-        border-radius: 2vh;
-    }
-
-    .button-mep:hover {
         display: none;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
     }
 
     .content-info-print {
         display: flex;
-        height: 40vh;
+        height: 10vh;
         flex-direction: column;
         justify-content: flex-end;
         position: absolute;
         z-index: -1;
+        align-items: center;
+        top: 65%;
     }
 
 
@@ -501,55 +474,10 @@ body {
         height: 700vh;
     }
 
-    .sticky {
-        position: sticky;
-        top: 0px;
-        max-height: 100vh;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    .dim {
-        display: block;
-        min-width: 100vw;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-    }
-
     .dim-marques-pages {
         display: none;
     }
 
-    .horizontal {
-        display: flex;
-    }
 
-    .br {
-        outline: solid;
-    }
-
-    .gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
-        height: 30vh;
-        margin-top: 25vh;
-        position: center;
-    }
-
-    .image {
-        display: flex;
-        width: calc(100%/2);
-        aspect-ratio: 1/1;
-        position: relative;
-        transition: transform 0.3s ease;
-        justify-content: center;
-    }
-
-
-    .border-radius-img {
-        border-radius: 3vh;
-    }
 
 }

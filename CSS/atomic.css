@@ -631,7 +631,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 40%;
+  width: 100%;
   gap: 7px;
 }
 
@@ -658,6 +658,7 @@ footer {
   .content-info-footer {
     width: 100%;
   }
+
 
 
 
@@ -820,33 +821,7 @@ footer {
     display: none;
   }
 
-  #s
   /****************************************** footer tablette ****************************************/
-
-  footer {
-    display: flex;
-    justify-content: center;
-    margin: 0 100px;
-    padding: 5px;
-    flex-direction: row;
-  }
-
-  .content-info-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 90%;
-    gap: 7px;
-  }
-
-  .content-info-footer i {
-    font-size: 18px;
-  }
-
-  .content-info-footer span {
-    color: var(--accent-color);
-  }
 
   #scrollUp {
     display: none;
@@ -960,6 +935,13 @@ footer {
     align-items: center;
   }
 
+  footer {
+    display: none;
+  }
+
+  .line-footer {
+    display: none;
+  }
 
 }
 
@@ -969,6 +951,10 @@ footer {
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 
 @media only screen and (min-width: 350px) and (max-width: 600px) {
+
+  body {
+    background-color: #c36b9d;
+  }
 
   section {
     margin: 0 50px;

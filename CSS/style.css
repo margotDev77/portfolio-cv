@@ -1093,6 +1093,7 @@ ul {
   width: 80%;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
 }
 
 .blocLangue h2 {
@@ -1181,7 +1182,13 @@ ul {
     height: 50px;
   }
 
+  footer {
+    display: none;
+  }
 
+  .line-footer {
+    display: none;
+  }
 
 }
 
@@ -1487,6 +1494,10 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .boxs {
+    margin: 0;
   }
 
 }

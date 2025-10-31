@@ -25,9 +25,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -44,8 +43,7 @@
 
 </head>
 
-<body
-    onload="afficherDateAccueilNeum(), afficherDateNeum(), afficherDateAccueilDark(), afficherDateDark(), afficherDateAccueil(), afficherDate(),afficherDateAlgo()">
+<body onload="afficherDateAlgo()">
 
     <header class="headerFlex">
         <div class="logo"><a href="index.html">
@@ -107,13 +105,18 @@
 
                 <div class="container-medias image backEnd">
                     <div class="algo-content">
+                        <header>
+                            <button class="head-btn red-color"></button>
+                            <button class="head-btn yellow-color"></button>
+                            <button class="head-btn green-color openAlgo-btn"></button>
+                        </header>
                         <div class="contenair-algo">
-                            <div class="bloc-option">
+                            <div class="bloc-option fontAlgo font-size-algo-home colorAlgo">
                                 <div class="line">
-                                    <p>DÉBUT</p>
+                                    <p>Début</p>
                                 </div>
                                 <div class="line-tab">
-                                    <p>ÇA FONCTIONNE ?</p>
+                                    <p>Ça fonctionne ?</p>
                                 </div>
                                 <div class="line-tab2">
                                     <div class="bloc-point">
@@ -122,9 +125,6 @@
                                         <span class="point">.</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="line-content-button">
-                                <button class="openAlgo-btn colorAlgo"><i class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -276,60 +276,68 @@
 
 
     <div class="screenAlgo-overlay">
-        <div class="screenAlgo-content">
+        <div class="screenAlgo-content fontAlgo font-size-algo colorAlgo">
+            <header class="head-window">
+                <div class="content-btn-window">
+                    <button class="btn-window bg-red-color fillInAlgo"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="btn-window bg-yellow-color"><i class="fa-solid fa-minus"></i></button>
+                    <button class="btn-window bg-green-color"><i
+                            class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+                <div class="content-user">
+                    <p class="txt-clock">\Users\Visitor></p>
+                </div>
+
+            </header>
             <div class="clock-content">
-                <p class="txt-clock fontAlgo fontSize1 colorAlgo">\Users\Visitor> </p>
-                <p class="fontAlgo fontSize1 colorAlgo" id="dateAlgo"></p>
-                <p class="fontAlgo fontSize1 colorAlgo" id="clockAlgo"></p>
+                <p class="txt-clock">Login :</p>
+                <p id="dateAlgo"></p>
+                <p id="clockAlgo"></p>
             </div>
 
             <div class="container-quest" id="questionnaire">
-                <div class="quest-content">
-                    <div class="txt-commence fontAlgo fontSize1 colorAlgo">Début</div>
+                <div class="quest-content-title">
+                    <div class="txt-commence border-term">Début</div>
                 </div>
                 <!-- 1 -->
                 <div class="question indentation" id="questionFonct">
-                    <p class="txt-commence fontAlgo fontSize1 colorAlgo" onclick="handleClick">Ca fonctionne ?</p>
-                    <button class="btn fontAlgo"
-                        onclick="handleResponse('questionFonct', 'questionFonctOui')">Oui</button>
-                    <button class="btn fontAlgo"
-                        onclick="handleResponse('questionFonct', 'questionFonctNon')">Non</button>
+                    <p class="txt-commence" onclick="handleClick">Ca fonctionne ?</p>
+                    <button class="btn" onclick="handleResponse('questionFonct', 'questionFonctOui')">Oui</button>
+                    <button class="btn" onclick="handleResponse('questionFonct', 'questionFonctNon')">Non</button>
                 </div>
 
                 <!-- fonctionne Oui -->
                 <div class="question quest-column hidden" id="questionFonctOui">
                     <div class="indentation">
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">N'y touche surtout pas !</p>
+                            <p class="txt-commence">N'y touche surtout pas !</p>
                         </div>
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                            <p class="txt-commence">Alors pas de problème</p>
                         </div>
                     </div>
-                    <div class="quest-content">
-                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    <div class="quest-content-title">
+                        <div class="txt-commence border-term">Fin</div>
                     </div>
                 </div>
 
                 <!-- fonctionne Non -->
                 <div class="question indentation hidden" id="questionFonctNon">
-                    <p class="txt-commence fontAlgo fontSize1 colorAlgo">Tu y as touché ?</p>
-                    <button class="btn fontAlgo"
-                        onclick="handleResponse('questionFonctNon', 'questionTouchOui')">Oui</button>
-                    <button class="btn fontAlgo"
-                        onclick="handleResponse('questionFonctNon', 'questionTouchNon')">Non</button>
+                    <p class="txt-commence">Tu y as touché ?</p>
+                    <button class="btn" onclick="handleResponse('questionFonctNon', 'questionTouchOui')">Oui</button>
+                    <button class="btn" onclick="handleResponse('questionFonctNon', 'questionTouchNon')">Non</button>
                 </div>
 
                 <!-- touché Oui) -->
                 <div class="question indentation quest-column hidden" id="questionTouchOui">
                     <div class="quest-content">
-                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">Fallait pas ...</p>
+                        <p class="txt-commence">Fallait pas ...</p>
                     </div>
                     <div class="quest-content">
-                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">Quelqu'un est au courant ?</p>
-                        <button class="btn fontAlgo"
+                        <p class="txt-commence">Quelqu'un est au courant ?</p>
+                        <button class="btn"
                             onclick="handleResponse('questionTouchOui', 'questionFauteOui')">Oui</button>
-                        <button class="btn fontAlgo"
+                        <button class="btn"
                             onclick="handleResponse('questionTouchNon', 'questionCourantNon')">Non</button>
                     </div>
                 </div>
@@ -338,37 +346,35 @@
                 <div class="question quest-column hidden" id="questionCourantNon">
                     <div class="indentation">
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Cache le vite !</p>
+                            <p class="txt-commence">Cache le vite !</p>
                         </div>
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                            <p class="txt-commence">Alors pas de problème</p>
                         </div>
                     </div>
-                    <div class="quest-content">
-                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    <div class="quest-content-title">
+                        <div class="txt-commence border-term">Fin</div>
                     </div>
                 </div>
 
                 <!-- touché Non -->
                 <div class="question indentation hidden" id="questionTouchNon">
-                    <p class="txt-commence fontAlgo fontSize1 colorAlgo">C'est de ta faute ?</p>
-                    <button class="btn fontAlgo"
-                        onclick="handleResponse('questionTouchNon', 'questionFauteOui')">Oui</button>
-                    <button class="btn fontAlgo"
-                        onclick="handleResponse('questionTouchNon', 'questionFauteNon')">Non</button>
+                    <p class="txt-commence">C'est de ta faute ?</p>
+                    <button class="btn" onclick="handleResponse('questionTouchNon', 'questionFauteOui')">Oui</button>
+                    <button class="btn" onclick="handleResponse('questionTouchNon', 'questionFauteNon')">Non</button>
                 </div>
 
                 <!-- faute Oui -->
                 <div class="question quest-column hidden" id="questionFauteOui">
                     <div class="indentation">
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">T'es foutu !</p>
+                            <p class="txt-commence">T'es foutu !</p>
                         </div>
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Tu peux accusé quelqu'un d'autre ?</p>
-                            <button class="btn fontAlgo"
+                            <p class="txt-commence">Tu peux accusé quelqu'un d'autre ?</p>
+                            <button class="btn"
                                 onclick="handleResponse('questionFauteOui', 'questionAccuseOui')">Oui</button>
-                            <button class="btn fontAlgo"
+                            <button class="btn"
                                 onclick="handleResponse('questionFauteOui', 'questionAccuseNon')">Non</button>
                         </div>
                     </div>
@@ -377,23 +383,23 @@
                 <!-- accuse Oui -->
                 <div class="question quest-column hidden" id="questionAccuseOui">
                     <div class="quest-content indentation">
-                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                        <p class="txt-commence">Alors pas de problème</p>
                     </div>
-                    <div class="quest-content">
-                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    <div class="quest-content-title">
+                        <div class="txt-commence border-term">Fin</div>
                     </div>
                 </div>
 
                 <!-- accuse Non -->
                 <div class="question quest-column hidden" id="questionAccuseNon">
                     <div class="quest-content indentation">
-                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">T'es foutu !</p>
+                        <p class="txt-commence">T'es foutu !</p>
                     </div>
                     <div class="quest-content-smiley">
-                        <div class="txt-smiley fontAlgo colorAlgo">:(</div>
+                        <div class="txt-smiley">:(</div>
                     </div>
-                    <div class="quest-content">
-                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    <div class="quest-content-title">
+                        <div class="txt-commence border-term">Fin</div>
                     </div>
                 </div>
 
@@ -401,21 +407,20 @@
                 <div class="question quest-column hidden" id="questionFauteNon">
                     <div class="indentation">
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Fais comme si t'avais rien vu</p>
+                            <p class="txt-commence">Fais comme si t'avais rien vu</p>
                         </div>
                         <div class="quest-content">
-                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                            <p class="txt-commence">Alors pas de problème</p>
                         </div>
                     </div>
-                    <div class="quest-content">
-                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    <div class="quest-content-title">
+                        <div class="txt-commence border-term">Fin</div>
                     </div>
                 </div>
             </div>
             <div class="back-btn-content">
-                <button class="button-back fontAlgo colorAlgo" onclick="resetQuestionnaire()"><i
+                <button class="button-back" onclick="resetQuestionnaire()"><i
                         class="fa-solid fa-arrow-rotate-left"></i></button>
-                <button class="button-back fontAlgo colorAlgo fillInAlgo"><i class="fa-solid fa-power-off"></i></button>
             </div>
         </div>
 
@@ -648,34 +653,6 @@
             document.body.classList.remove("no-scroll");
         });
 
-        /**************************** header tel ****************************/
-
-        // function scrollToBottom() {
-        //     window.scrollTo({
-        //         left: 0,
-        //         top: document.body.scrollHeight,
-        //         behavior: 'smooth'
-        //     });
-        // }
-
-        // const bar = document.querySelector('#fixedFooter');
-
-        // let isAtBottom = false;
-        // function setIsAtBottom(flag) {
-        //     isAtBottom = flag;
-        // }
-
-        // const handleScroll = () => {
-        //     window.requestAnimationFrame(() => {
-        //         const windowInnerHeight = window.innerHeight;
-        //         const pageYOffset = window.pageYOffset;
-        //         const documentHeight = document.body.offsetHeight;
-        //         setIsAtBottom((windowInnerHeight + pageYOffset) / documentHeight >= 0.95);
-        //     });
-        // };
-
-        // window.addEventListener('scroll', handleScroll);
-
         /**************************** filtre ****************************/
         var filterBtns = document.querySelectorAll(".filter-btn");
         var images = document.querySelectorAll(".image");
@@ -741,7 +718,7 @@
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
-            const currentTime = `-${hours}:${minutes}`;
+            const currentTime = ` | ${hours}:${minutes}`;
             clockElement.textContent = currentTime;
         }
         setInterval(updateClock, 1000);

@@ -330,29 +330,80 @@ body {
   color: var(--txt-main-color);
 }
 
-
 /***************************************** algo web *****************************************/
+
+.fontAlgo {
+  font-family: "Inconsolata", monospace;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.font-size-algo {
+  font-size: 17px;
+}
+
+.font-size-algo-home {
+  font-size: 17px;
+}
 
 .algo-content {
   display: flex;
   position: relative;
-  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin: 1vh;
+  margin: 10px;
   width: 85%;
   height: 85%;
   background-color: #0f0f0f;
   border-radius: 40px;
-  font-family: "VT323", monospace;
-  font-size: 25px;
   letter-spacing: 2px;
   color: #80ff80cc;
-  text-shadow:
-    0 0 1ex #33ff33,
-    0 0 2px #ffffffcc;
 }
 
+.algo-content header {
+  display: flex;
+  height: 5vh;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.head-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.head-btn:hover {
+  border: 2px solid #dbdbdb;
+}
+
+.btn-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.red-color {
+  background-color: #ec5c65;
+  border: 2px solid #ec5c65;
+}
+
+.yellow-color {
+  background-color: #f2ca44;
+  border: 2px solid #f2ca44;
+}
+
+.green-color {
+  background-color: #65c466;
+  border: 2px solid #65c466;
+}
 
 .contenair-algo {
   display: flex;
@@ -365,6 +416,7 @@ body {
   height: 70%;
   position: absolute;
   flex-direction: column;
+  gap: 10px;
 }
 
 .bloc-point {
@@ -417,14 +469,6 @@ p {
   padding-left: 60px;
 }
 
-.line-content-button {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-right: 25px;
-}
-
 button {
   background: none;
   border: none;
@@ -434,23 +478,7 @@ button {
   color: inherit;
 }
 
-.openAlgo-btn {
-  font-weight: 700;
-  font-size: 22px;
-  color: #80ff80cc;
-  text-shadow:
-    0 0 1ex #33ff33,
-    0 0 2px #ffffffcc;
-  animation: buttonArrow 0.7s ease-in infinite;
-  opacity: 1;
-  transform: translateX(-10px);
-}
-
-@keyframes buttonArrow {
-  100% {
-    transform: translateX(0);
-  }
-}
+/***************************************** algo viz *****************************************/
 
 .screenAlgo-overlay {
   display: none;
@@ -469,11 +497,10 @@ button {
 
 .screenAlgo-content {
   background-color: #0f0f0f;
-  padding: 2vh;
-  width: 60%;
-  height: 60%;
-  max-width: 80%;
-  border-radius: 3vh;
+  padding: 20px;
+  width: 40%;
+  height: 75%;
+  border-radius: 30px;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -489,11 +516,63 @@ button {
   }
 }
 
+.head-window {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.content-btn-window {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 50%;
+}
+
+.btn-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  color: #0f0f0fb4;
+}
+
+.btn-window:hover {
+  border: 2px solid #dbdbdb;
+}
+
+.bg-red-color {
+  font-size: 10px;
+  background-color: #ec5c65;
+  border: 1px solid #ec5c65;
+}
+
+.bg-yellow-color {
+  font-size: 10px;
+  background-color: #f2ca44;
+  border: 1px solid #f2ca44;
+}
+
+.bg-green-color {
+  font-size: 9px;
+  background-color: #65c466;
+  border: 1px solid #65c466;
+}
+
+.content-user {
+  display: flex;
+  width: 70%;
+}
 
 .clock-content {
   display: flex;
   height: 4vh;
-  padding: 0 0 2vh 2vh;
+  padding: 0 0 20px 20px;
   flex-direction: row;
   align-items: center;
 }
@@ -507,19 +586,6 @@ button {
   padding: 5px;
 }
 
-.fontAlgo {
-  font-family: "VT323", monospace;
-  letter-spacing: 1px;
-}
-
-.fontSize1 {
-  font-size: 22px;
-}
-
-.fontSize2 {
-  font-size: 20px;
-}
-
 .colorAlgo {
   color: #80ff80cc;
   text-shadow:
@@ -529,8 +595,15 @@ button {
 
 .button-back {
   cursor: pointer;
-  font-size: 2vh;
-  margin: 2vh;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.quest-content-title {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
 }
 
 .quest-content {
@@ -547,6 +620,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 20px 0 20px 0;
 }
 
 
@@ -562,18 +636,15 @@ button {
 
 .txt-commence {
   padding: 10px;
-  margin: 0 2vh 0 2vh;
-  text-transform: uppercase;
+  margin: 0 20px 0 20px;
   text-align: center;
 }
 
 
 .btn {
   padding: 10px;
-  margin: 0 2vh 0 2vh;
+  margin: 0 20px 0 20px;
   cursor: pointer;
-  font-size: 20px;
-  text-transform: uppercase;
   text-align: center;
   transition: transform 0.3s ease;
   color: #cacacaee;
@@ -596,7 +667,7 @@ button {
 }
 
 .indentation {
-  margin-left: 2vh;
+  margin-left: 20px;
 }
 
 .hidden {
@@ -606,10 +677,10 @@ button {
 
 .container-quest {
   display: flex;
-  height: 80%;
+  height: 75%;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 3vh;
+  margin-left: 30px;
 }
 
 .back-btn-content {
@@ -617,6 +688,14 @@ button {
   justify-content: flex-end;
   align-items: center;
 }
+
+.border-term {
+  border-top: 2px dashed;
+  border-bottom: 2px dashed;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
 
 /***************************************** appli web *****************************************/
 
@@ -641,16 +720,6 @@ button {
   cursor: pointer;
 }
 
-/* .ios-txt {
-  font-family: "Roboto", sans-serif;
-  font-size: 12vh;
-  font-weight: 600;
-  background: linear-gradient(45deg, #22d934 30%, #7bb1dd 50%, #3c93da 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
 .img-back-size {
   width: 50%;
 }
@@ -659,18 +728,47 @@ button {
   margin-left: 1vh;
 }
 
+/**************************************************************** RESPONSIVE ****************************************************************/
+
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+
+  .screenAlgo-content {
+    width: 50%;
+    height: 75%;
+  }
+
+}
+
 /**************************************************************** RESPONSIVE AVANT TABLETTE ****************************************************************/
 
 
-@media only screen and (min-width: 1025px) and (max-width: 1200px){
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
 
-.mediasFlex {
-  justify-content: space-between;
-}
+  .mediasFlex {
+    justify-content: space-between;
+  }
 
-.container-medias {
-  width: calc(90%/2);
-}
+  .container-medias {
+    width: calc(90%/2);
+  }
+
+  /***************************************** algo viz avant tablette *****************************************/
+
+  .screenAlgo-content {
+    padding: 20px;
+    width: 60%;
+    height: 75%;
+    border-radius: 30px;
+  }
+
+  .content-btn-window {
+    width: 40%;
+  }
+
+  .content-user {
+    display: flex;
+    width: 40%;
+  }
 
 }
 
@@ -860,7 +958,7 @@ button {
   #lightboxCarousel .owl-nav {
     position: absolute;
     top: 50%;
-    left:7%;
+    left: 7%;
     width: 85%;
     display: flex;
     justify-content: space-between;
@@ -898,40 +996,182 @@ button {
 
   /***************************************** algo web tablette *****************************************/
 
-  .algo-content {
-    font-size: 18px;
+  .font-size-algo {
+    font-size: 17px;
   }
 
-  .openAlgo-btn {
-    font-size: 18px;
+  .font-size-algo-home {
+    font-size: 15px;
   }
+
+  .head-btn {
+    width: 12px;
+    height: 12px;
+  }
+
+  .contenair-algo {
+    display: flex;
+    width: 100%;
+    height: 80%;
+  }
+
+  .bloc-option {
+    width: 100%;
+  }
+
+  .line {
+    padding-left: 20px;
+  }
+
+  .line-tab {
+    padding-left: 35px;
+  }
+
+  .line-tab2 {
+    padding-left: 50px;
+  }
+
+  /***************************************** algo viz tablette *****************************************/
 
   .screenAlgo-content {
-    background-color: #0f0f0f;
-    padding: 2vh;
-    width: 65%;
-    height: 65%;
-    max-width: 80%;
-    border-radius: 35px;
-    align-items: center;
-    text-align: center;
+    padding: 20px;
+    width: 75%;
+    height: 75%;
+    border-radius: 30px;
+  }
+
+  .btn-window {
+    display: flex;
     justify-content: center;
-    transform: scaleX(0);
-    opacity: 0;
-    animation: apparScreenAlgo 0.3s ease-in forwards;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 5px;
   }
 
-  .fontSize1 {
-    font-size: 18px;
+  .content-user {
+    display: flex;
+    width: 50%;
   }
 
-  .fontSize2 {
-    font-size: 16px;
+  .clock-content {
+    display: flex;
+    height: 4vh;
+    padding: 0 0 20px 20px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .txt-clock {
+    padding: 5px;
+    text-align: center;
+  }
+
+  #dateAlgo {
+    padding: 5px;
+  }
+
+  .colorAlgo {
+    color: #80ff80cc;
+    text-shadow:
+      0 0 1ex #33ff33,
+      0 0 2px #ffffffcc;
   }
 
   .button-back {
+    cursor: pointer;
     font-size: 20px;
     margin: 20px;
+  }
+
+  .quest-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .quest-content-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .quest-column {
+    flex-direction: column;
+  }
+
+  .quest-content-smiley {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+
+
+  .txt-smiley {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    padding: 3px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .txt-commence {
+    padding: 10px;
+    margin: 0 20px 0 20px;
+    text-align: center;
+  }
+
+
+  .btn {
+    padding: 10px;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: #cacacaee;
+    text-shadow:
+      0 0 1ex #cacacaee,
+      0 0 2px #ffffffcc;
+  }
+
+
+  .question {
+    display: flex;
+    text-align: center;
+  }
+
+  .indentation {
+    margin-left: 20px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .container-quest {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 30px;
+  }
+
+  .back-btn-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .border-term {
+    border-top: 2px dashed;
+    border-bottom: 2px dashed;
+    margin-bottom: 10px;
+    width: 70%;
   }
 
   /***************************************** appli web *****************************************/
@@ -942,13 +1182,156 @@ button {
 
 }
 
-/**************************************************************** RESPONSIVE entre TABLETTE ****************************************************************/
+/**************************************************************** RESPONSIVE ****************************************************************/
 
-@media only screen and (min-width: 601px) and (max-width: 699px){
+@media only screen and (min-width: 700px) and (max-width: 760px) {
 
-.container-medias {
-    width: 100%;
+  .btn {
+    margin: 0 7px 0 7px;
+  }
+
 }
+
+/**************************************************************** RESPONSIVE APRES TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 601px) and (max-width: 699px) {
+
+  .container-medias {
+    width: 100%;
+  }
+
+  /***************************************** algo web  apres tablette *****************************************/
+
+  .font-size-algo {
+    font-size: 17px;
+  }
+
+  .font-size-algo-home {
+    font-size: 22px;
+  }
+
+  .algo-content header {
+    height: 7vh;
+    gap: 15px;
+    margin-left: 30px;
+  }
+
+  .head-btn {
+    width: 15px;
+    height: 15px;
+  }
+
+  .content-btn-window {
+    width: 40%;
+  }
+
+  .contenair-algo {
+    display: flex;
+    width: 100%;
+    height: 80%;
+  }
+
+  .line {
+    padding-left: 40px;
+  }
+
+  .line-tab {
+    padding-left: 60px;
+  }
+
+  .line-tab2 {
+    padding-left: 75px;
+  }
+
+  /***************************************** algo viz apres tablette *****************************************/
+
+  .screenAlgo-content {
+    padding: 20px;
+    width: 85%;
+    height: 75%;
+    border-radius: 30px;
+  }
+
+  .btn-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .content-user {
+    display: flex;
+    width: 50%;
+  }
+
+  .button-back {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .quest-content-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .quest-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .txt-smiley {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    padding: 3px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .txt-commence {
+    padding: 10px;
+    margin: 0 20px 0 20px;
+    text-align: center;
+  }
+
+
+  .btn {
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: #cacacaee;
+    text-shadow:
+      0 0 1ex #cacacaee,
+      0 0 2px #ffffffcc;
+  }
+
+  .indentation {
+    margin-left: 10px;
+  }
+
+  .container-quest {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  .border-term {
+    border-top: 2px dashed;
+    border-bottom: 2px dashed;
+    margin-bottom: 10px;
+    width: 70%;
+  }
 
 }
 
@@ -1159,6 +1542,175 @@ button {
   .info-carousel {
     top: 40%;
     left: 30%;
+  }
+
+  /***************************************** algo web telephone *****************************************/
+
+  .font-size-algo {
+    font-size: 15px;
+  }
+
+  .font-size-algo-home {
+    font-size: 16px;
+  }
+
+  .algo-content header {
+    gap: 15px;
+    margin-left: 30px;
+  }
+
+  .head-btn {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contenair-algo {
+    display: flex;
+    width: 100%;
+    height: 80%;
+  }
+
+  .bloc-option {
+    width: 100%;
+  }
+
+  .line {
+    padding-left: 30px;
+  }
+
+  .line-tab {
+    padding-left: 45px;
+  }
+
+  .line-tab2 {
+    padding-left: 60px;
+  }
+
+  /***************************************** algo viz telephone *****************************************/
+
+  .screenAlgo-content {
+    padding: 20px;
+    width: 85%;
+    height: 75%;
+    border-radius: 30px;
+  }
+
+  .btn-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .content-user {
+    display: flex;
+    width: 70%;
+  }
+
+
+  .clock-content {
+    display: flex;
+    height: 4vh;
+    padding: 0 0 10px 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .txt-clock {
+    padding: 5px;
+    text-align: center;
+  }
+
+  #dateAlgo {
+    padding: 5px;
+  }
+
+  .button-back {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  .quest-content-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .quest-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .quest-column {
+    flex-direction: column;
+  }
+
+  .quest-content-smiley {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+
+  .txt-smiley {
+    font-size: 50px;
+  }
+
+  .txt-commence {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: #cacacaee;
+    text-shadow:
+      0 0 1ex #cacacaee,
+      0 0 2px #ffffffcc;
+  }
+
+  .question {
+    display: flex;
+    text-align: center;
+  }
+
+  .indentation {
+    margin-left: 15px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .container-quest {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+
+  .back-btn-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .border-term {
+    border-top: 2px dashed;
+    border-bottom: 2px dashed;
+    width: 70%;
   }
 
 }
