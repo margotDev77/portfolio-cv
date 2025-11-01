@@ -30,6 +30,7 @@
   aspect-ratio: 1/1;
   flex-direction: column;
   position: relative;
+  padding: 20px;
 }
 
 
@@ -49,8 +50,6 @@
 .size-titre {
   display: flex;
   width: 100%;
-
-
 }
 
 .bloc-carousel {
@@ -147,26 +146,11 @@
   transform: rotate(-180deg);
 }
 
-
 .personnages {
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 50px;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  height: 86%;
-  margin-left: 5%;
-}
-
-section h2 {
-  margin: 100px 0 50px 0;
-  font-size: 35px;
 }
 
 .personnages canvas {
@@ -196,6 +180,8 @@ section h2 {
   width: 90%;
   justify-content: space-around;
   font-size: 25px;
+  position: absolute;
+  top: 75%;
 }
 
 
@@ -251,7 +237,7 @@ section h2 {
 
 @media (max-width : 1200px) {
 
-  section {
+  .section {
     width: 100%;
     margin-left: 0;
   }
@@ -261,14 +247,14 @@ section h2 {
   }
 
   .personnage {
-    width: 40%;
+    width: 100%;
   }
 
 }
 
 @media (max-width : 700px) {
 
-  section {
+  .section {
     width: 100%;
   }
 
@@ -309,24 +295,49 @@ section h2 {
   animation: turn-loader 1000ms linear infinite;
 }
 
+/**************************************************************** RESPONSIVE AVANT TABLETTE ****************************************************************/
+
+
+@media only screen and (min-width: 1100px) and (max-width: 1500px) {
+
+  .mediasFlex {
+    justify-content: center;
+  }
+
+  .container-medias-3d {
+    width: calc(90%/2);
+    padding: 10px;
+  }
+
+  .buttons {
+    top: 80%;
+  }
+
+}
+
+/**************************************************************** RESPONSIVE AVANT 2 TABLETTE ****************************************************************/
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1099px) {
+
+  body {
+    background-color: #263704;
+  }
+
+  .container-medias-3d {
+    padding: 0;
+  }
+
+  .content-video {
+    width: 65%;
+    height: 20vh;
+  }
+
+}
+
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-  .main-3d {
-    padding: 0 50px;
-  }
-
-  .Flex3d {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .mediasFlex {
-    flex-direction: column;
-    width: 100%;
-  }
 
   .bloc-medias {
     display: flex;
@@ -336,13 +347,8 @@ section h2 {
   }
 
   .container-medias-3d {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    border-radius: 50px;
-    aspect-ratio: 1/1;
-    flex-direction: column;
+    padding: 5px;
   }
 
   .bloc-gallery {
@@ -383,20 +389,11 @@ section h2 {
   }
 
   .content-info3d {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 20px;
+    top: 20px;
   }
 
   .info-3d {
-    display: flex;
-    justify-content: center;
     font-size: 18px;
-  }
-
-  .size-img-bague {
-    height: 300px;
   }
 
   .content-image {
@@ -405,7 +402,7 @@ section h2 {
 
   .content-video {
     width: 70%;
-    height: 30vh;
+    height: 22vh;
   }
 
   .content-video video {
@@ -431,11 +428,6 @@ section h2 {
     gap: 50px;
   }
 
-  section h2 {
-    margin: 100px 0 50px 0;
-    font-size: 35px;
-  }
-
   #div-canvas-car,
   #div-canvas-ring {
     width: 100%;
@@ -444,15 +436,27 @@ section h2 {
 
   .buttons {
     width: 100%;
-    font-size: 20px;
+    font-size: 17px;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    top: 80%;
+  }
+
+  .buttons button {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: var(--shadow-less-btn);
+    background-color: var(--bg-color);
+    transform: scale(0.98);
   }
 
 
   @media (max-width : 1024px) {
 
-    section {
+    .section {
       width: inherit;
       margin: 0 100px;
     }
@@ -473,6 +477,66 @@ section h2 {
 }
 
 
+/**************************************************************** RESPONSIVE TAB ****************************************************************/
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  body {
+    background-color: aquamarine;
+  }
+
+  .container-medias-3d {
+    width: 100%;
+    padding: 0;
+  }
+
+  .buttons {
+    font-size: 22px;
+    gap: 35px;
+    top: 80%;
+  }
+
+  .buttons button {
+    width: 65px;
+    height: 65px;
+    border-radius: 20px;
+  }
+
+  .content-info3d {
+    top: 40px;
+  }
+
+  .info-3d {
+    font-size: 25px;
+  }
+
+  .content-video {
+    height: 40vh;
+  }
+
+  #div-canvas-car,
+  #div-canvas-ring {
+    height: 400px;
+  }
+
+}
+
+
+/**************************************************************** RESPONSIVE entre TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 601px) and (max-width: 699px) {
+
+  section {
+    margin: 0 50px;
+  }
+
+  .content-video {
+    width: 70%;
+    height: 35vh;
+  }
+
+}
+
+
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 
 @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -484,7 +548,6 @@ section h2 {
   }
 
   .mediasFlex {
-    flex-direction: column;
     width: 100%;
   }
 
@@ -564,12 +627,8 @@ section h2 {
   }
 
   .content-video {
-    width: 70%;
-    height: 30vh;
-  }
-
-  .content-video video {
-    top: -100px;
+    width: 75%;
+    height: 22vh;
   }
 
   .bloc-medias-donjon {
@@ -617,7 +676,7 @@ section h2 {
 
   @media (max-width : 600px) {
 
-    section {
+    .section {
       width: 100%;
     }
 

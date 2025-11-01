@@ -64,7 +64,7 @@ li {
   animation: apparition 0.5s ease-in forwards;
   opacity: 0;
   transform: scaleX(0);
-  gap: 30px;
+  gap: 35px;
 }
 
 @keyframes apparition {
@@ -95,6 +95,97 @@ li {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
+
+/******************************************** evenement ********************************************/
+
+.titre-size-event {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.content-event {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-horizontal {
+  width: 100%;
+}
+
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.timeline-dot-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  top: -7px;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--middle-color);
+  border-radius: 50%;
+}
+
+.timeline-event {
+  position: relative;
+  width: 300px;
+  text-align: center;
+  top: -6px;
+}
+
+.timeline-date {
+  margin-top: 20px;
+  color: var(--txt-color);
+  font-weight: bold;
+}
+
+.timeline-bloc {
+  background: var(--bg-logiciel-color);
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-bloc h3 {
+  margin: 0;
+  color: var(--fd-dark-color);
+}
+
+.timeline-bloc p {
+  color: var(--fd-dark-color);
+}
+
 
 /******************************************** telecharger cv ********************************************/
 
@@ -914,7 +1005,7 @@ body.dark-mode .column-print-img {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   background-color: #ffffff;
-  color: var(--middle-color);
+  color: #565254d5;
 }
 
 
@@ -1194,6 +1285,39 @@ ul {
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  .social-flex {
+    margin-top: 40px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .timeline-event {
+    width: 200px;
+  }
+
+}
+
+@media only screen and (min-width: 731px) and (max-width: 1025px) {
+
+  .social-flex {
+    margin-top: 40px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .timeline-event {
+    width: 220px;
+  }
+
+}
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 
@@ -1230,7 +1354,7 @@ ul {
   }
 
   .social-icons {
-    gap: 20px;
+    gap: 30px;
   }
 
   @keyframes apparition {
@@ -1254,6 +1378,54 @@ ul {
     font-size: 30px;
     background-color: var(--bg-color);
     box-shadow: var(--shadow-less-btn);
+  }
+
+  /******************************************** evenement ********************************************/
+
+  .titre-size-event {
+    justify-content: center;
+  }
+
+  .timeline-horizontal {
+    margin-top: 10px;
+  }
+
+  .timeline-wrapper {
+    justify-content: space-between;
+    max-width: 700px;
+  }
+
+  .timeline-dot-border {
+    width: 25px;
+    height: 25px;
+    top: -6px;
+  }
+
+  .timeline-dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .timeline-event {
+    width: 160px;
+  }
+
+  .timeline-date {
+    margin-top: 0;
+  }
+
+  .timeline-bloc {
+    padding: 7px 12px;
+    border-radius: 12px;
+  }
+
+  .timeline-bloc h3 {
+    margin: 0;
+    color: var(--fd-dark-color);
+  }
+
+  .timeline-bloc p {
+    color: var(--fd-dark-color);
   }
 
   /******************************************** telecharger cv tablette ********************************************/
@@ -1463,14 +1635,30 @@ ul {
 
 }
 
+@media only screen and (min-width: 601px) and (max-width: 730px) {
 
+  /******************************************** evenement ********************************************/
+
+  .timeline-event {
+    width: 100px;
+  }
+
+  .timeline-bloc {
+    padding: 5px 10px;
+  }
+
+  .timeline-bloc p {
+    display: none;
+  }
+
+}
 
 /**************************************************************** RESPONSIVE APRES TABLETTE ****************************************************************/
 
 
 @media only screen and (min-width: 601px) and (max-width: 995px) {
 
-.formation-bloc {
+  .formation-bloc {
     align-items: flex-start;
     text-align: center;
     padding: 0;
@@ -1506,12 +1694,54 @@ ul {
 
 @media only screen and (min-width: 320px) and (max-width: 600px) {
 
+  /******************************************** evenement telephone ********************************************/
 
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #bd2277;
+  .titre-size-event {
+    justify-content: center;
   }
+
+  .timeline-horizontal {
+    margin-top: 10px;
+  }
+
+  .timeline-wrapper {
+    justify-content: space-between;
+    max-width: 700px;
+  }
+
+  .timeline-dot-border {
+    width: 25px;
+    height: 25px;
+    top: -6px;
+  }
+
+  .timeline-dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .timeline-event {
+    width: 170px;
+  }
+
+  .timeline-date {
+    margin-top: 0;
+  }
+
+  .timeline-bloc {
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+
+  .timeline-bloc h3 {
+    margin: 0;
+    color: var(--fd-dark-color);
+  }
+
+  .timeline-bloc p {
+    color: var(--fd-dark-color);
+  }
+
 
   /******************************************** formation telephone ********************************************/
 
