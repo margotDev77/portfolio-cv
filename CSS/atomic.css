@@ -238,7 +238,7 @@ section {
   display: flex;
   background-color: var(--bg-color);
   /* width: 100%; */
-  /* height: 6vh; */
+  height: 6vh;
   border-radius: 0 0 35px 35px;
   align-items: center;
   justify-content: space-between;
@@ -381,14 +381,6 @@ button {
 
 
 /****************************************** title-color ****************************************/
-
-/* .title-color{
-  background: linear-gradient(0deg,#757986 0%, #a3abc3 70%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
 
 .title-color {
   color: var(--middle-color);
@@ -644,6 +636,7 @@ footer {
 
 .content-info-footer span {
   color: var(--accent-color);
+  font-weight: 700;
 }
 
 #scrollUp {
@@ -978,10 +971,6 @@ section {
 /**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
 
 @media only screen and (min-width: 350px) and (max-width: 600px) {
-
-  body {
-    background-color: #c36b9d;
-  }
 
   section {
     margin: 0 50px;
