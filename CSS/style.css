@@ -205,9 +205,9 @@ li {
   margin-top: 14px;
   position: relative;
   z-index: 2;
-  transform: translateY(-30px);
+  transform: translateY(-40px);
   opacity: 0;
-  animation: apparDate 1.6s ease-in forwards;
+  animation: apparDate 0.9s ease-in forwards;
 }
 
 .timeline-bloc h3 {
