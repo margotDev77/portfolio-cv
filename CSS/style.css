@@ -132,6 +132,15 @@ li {
   background: var(--accent-color);
   border-radius: 2px;
   z-index: 1;
+  transform: scaleX(0);
+  animation: apparTimeline 0.7s ease-in forwards;
+}
+
+@keyframes apparTimeline {
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
 .timeline-dot-border {
@@ -146,6 +155,8 @@ li {
   z-index: 2;
   margin: 0 auto;
   top: -7px;
+  transform: scale(0);
+  animation: apparDote 0.9s ease-in forwards;
 }
 
 .timeline-dot {
@@ -153,6 +164,15 @@ li {
   height: 20px;
   background: var(--middle-color);
   border-radius: 50%;
+  transform: scale(0);
+  animation: apparDote 0.9s ease-in forwards;
+}
+
+@keyframes apparDote {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .timeline-event {
@@ -166,6 +186,16 @@ li {
   margin-top: 20px;
   color: var(--txt-color);
   font-weight: bold;
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: apparDate 1.2s ease-in forwards;
+}
+
+@keyframes apparDate {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .timeline-bloc {
@@ -175,6 +205,9 @@ li {
   margin-top: 14px;
   position: relative;
   z-index: 2;
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: apparDate 1.6s ease-in forwards;
 }
 
 .timeline-bloc h3 {
