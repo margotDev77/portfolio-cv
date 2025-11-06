@@ -2,24 +2,24 @@
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
-    
-    if (entry.isIntersecting) {
-    
-    entry.target.classList.add('visible');
-    
-    }
-    
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('visible');
+
+        }
+
     });
-    
-    }, { threshold: 0.5 }); // Se déclenche quand 30% de l'élément est visible
-    
-    // Sélectionne tous les éléments à observer
-    
-    const elements = document.querySelectorAll('.blocApparition');
-    
-    // Applique l'observation sur chaque élément
-    
-    elements.forEach(element => observer.observe(element));  
+
+}, { threshold: 0.5 }); // Se déclenche quand 30% de l'élément est visible
+
+// Sélectionne tous les éléments à observer
+
+const elements = document.querySelectorAll('.blocApparition');
+
+// Applique l'observation sur chaque élément
+
+elements.forEach(element => observer.observe(element));
 
 
 
@@ -140,56 +140,142 @@ tabs.forEach(tab => {
     });
 });
 
-   /**************************** heure ****************************/
+/**************************** heure ****************************/
 
-   function updateClockAccueil() {
-       const clockElement = document.getElementById('clock-screen');
-       const now = new Date();
-       const hours = String(now.getHours()).padStart(2, '0');
-       const minutes = String(now.getMinutes()).padStart(2, '0');
-       const currentTime = `${hours}:${minutes}`;
-       clockElement.textContent = currentTime;
-   }
-   setInterval(updateClock, 1000);
-   updateClockAccueil();
+function updateClockAccueil() {
+    const clockElement = document.getElementById('clock-screen');
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const currentTime = `${hours}:${minutes}`;
+    clockElement.textContent = currentTime;
+}
+setInterval(updateClock, 1000);
+updateClockAccueil();
 
-   function updateClock() {
-       const clockElement = document.getElementById('clock');
-       const now = new Date();
-       const hours = String(now.getHours()).padStart(2, '0');
-       const minutes = String(now.getMinutes()).padStart(2, '0');
-       const currentTime = `${hours}:${minutes}`;
-       clockElement.textContent = currentTime;
-   }
-   setInterval(updateClock, 1000);
-   updateClock();
+function updateClock() {
+    const clockElement = document.getElementById('clock');
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const currentTime = `${hours}:${minutes}`;
+    clockElement.textContent = currentTime;
+}
+setInterval(updateClock, 1000);
+updateClock();
 
 
-   /**************************** date ****************************/
+/**************************** heure app clockworld ****************************/
 
-   function afficherDateAccueil() {
-       const joursSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-       const moisAnnee = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
-       const aujourdHui = new Date();
-       const jourSemaine = joursSemaine[aujourdHui.getDay()];
-       const jour = aujourdHui.getDate();
-       const mois = moisAnnee[aujourdHui.getMonth()];
-       const jourFormate = jour < 10 ? '0' + jour : jour;
-       const dateTexte = `${jourSemaine} ${jourFormate} ${mois}`;
-       document.getElementById("date2").innerText = dateTexte;
-   }
+function updateOtherClocks() {
+    const now = new Date();
 
-   function afficherDate() {
-       const joursSemaine = ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."];
-       const aujourdHui = new Date();
-       const jourSemaine = joursSemaine[aujourdHui.getDay()];
-       const jour = aujourdHui.getDate();
-       const jourFormate = jour < 10 ? '0' + jour : jour;
-       const dateTexte = `${jourSemaine}`;
-       const jourTexte = `${jourFormate}`;
-       document.getElementById("date").innerText = dateTexte;
-       document.getElementById("jour").innerText = jourTexte;
-   }
+    const otherClock = document.getElementById('clock-other');
+    const parisTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+    const parisHours = String(parisTime.getHours()).padStart(2, '0');
+    const parisMinutes = String(parisTime.getMinutes()).padStart(2, '0');
+    otherClock.textContent = `${parisHours}:${parisMinutes}`;
+
+    const minus6Clock = document.getElementById('clock-minus6');
+    const minus6Time = new Date(now.getTime() - 6 * 60 * 60 * 1000);
+    const minus6Hours = String(minus6Time.getHours()).padStart(2, '0');
+    const minus6Minutes = String(minus6Time.getMinutes()).padStart(2, '0');
+    minus6Clock.textContent = ` ${minus6Hours}:${minus6Minutes}`;
+}
+
+setInterval(updateOtherClocks, 1000);
+updateOtherClocks();
+
+/**************************** date ****************************/
+
+function afficherDateAccueil() {
+    const joursSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    const moisAnnee = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+    const aujourdHui = new Date();
+    const jourSemaine = joursSemaine[aujourdHui.getDay()];
+    const jour = aujourdHui.getDate();
+    const mois = moisAnnee[aujourdHui.getMonth()];
+    const jourFormate = jour < 10 ? '0' + jour : jour;
+    const dateTexte = `${jourSemaine} ${jourFormate} ${mois}`;
+    document.getElementById("date2").innerText = dateTexte;
+}
+
+function afficherDate() {
+    const joursSemaine = ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."];
+    const aujourdHui = new Date();
+    const jourSemaine = joursSemaine[aujourdHui.getDay()];
+    const jour = aujourdHui.getDate();
+    const jourFormate = jour < 10 ? '0' + jour : jour;
+    const dateTexte = `${jourSemaine}`;
+    const jourTexte = `${jourFormate}`;
+    document.getElementById("date").innerText = dateTexte;
+    document.getElementById("jour").innerText = jourTexte;
+}
+
+/**************************** chronometre ****************************/
+
+
+let startTime;
+let elapsedTime = 0;
+let intervalId;
+let running = false;
+
+// Fonction pour mettre à jour l'affichage du temps
+function updateChrono() {
+  const now = Date.now();
+  const diff = now - startTime + elapsedTime;
+  const minutes = String(Math.floor(diff / 60000)).padStart(2, '0');
+  const seconds = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+  const milliseconds = String(diff % 100).padStart(2, '0');
+  document.getElementById('chrono').textContent = `${minutes}:${seconds}:${milliseconds}`;
+}
+
+// Fonction utilitaire pour gérer les styles actifs
+function setActiveButton(activeId) {
+  document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+  if (activeId) {
+    document.getElementById(activeId).classList.add('active');
+  }
+}
+
+// Démarrer
+document.getElementById('startBtn').addEventListener('click', () => {
+  if (!running) {
+    startTime = Date.now();
+    intervalId = setInterval(updateChrono, 10);
+    running = true;
+    setActiveButton('startBtn');
+  }
+});
+
+// Pause
+document.getElementById('pauseBtn').addEventListener('click', () => {
+  if (running) {
+    clearInterval(intervalId);
+    elapsedTime += Date.now() - startTime;
+    running = false;
+    setActiveButton('pauseBtn');
+  }
+});
+
+// Reprendre
+document.getElementById('resumeBtn').addEventListener('click', () => {
+  if (!running && elapsedTime > 0) {
+    startTime = Date.now();
+    intervalId = setInterval(updateChrono, 10);
+    running = true;
+    setActiveButton('resumeBtn');
+  }
+});
+
+// Réinitialiser
+document.getElementById('resetBtn').addEventListener('click', () => {
+  clearInterval(intervalId);
+  elapsedTime = 0;
+  running = false;
+  document.getElementById('chrono').textContent = '00:00,00';
+  setActiveButton('resetBtn');
+});
 
 
 

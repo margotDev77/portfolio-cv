@@ -3,6 +3,77 @@
 }
 
 
+:root {
+  /*************** iphone back ************/
+  --back-color: #ebeff3;
+  --border-color: #c3c3c4;
+  --btn-lock: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  --btn-cote: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  --back-logo: linear-gradient(0deg, #c3c3c4, #dfe0df);
+  --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #dfe0df00 100%);
+  --logo-color: #c2bcbc;
+  --color-txt-iphone: #919695;
+  --border-objectif: #919695;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #949495 0%, #dfe0df 20%, #dfe0df 80%, #949495 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #c3c3c40c 25%, #c3c3c414 85%, #dfe0df25 97%, #0000003e 100%);
+  --btn-side: linear-gradient(-45deg, #e7e0e0 5%, #dfe0df 50%, #a0a0a19b 100%);
+  --border-side-btn: #c3c3c4;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-white.png");
+  --btn-home-screen-bg: #ffff;
+  --btn-home-screen: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+  --btn-home-screen-active: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  --txt-color-scroll: #9a9797;
+}
+
+body.theme-rose {
+  /*************** iphone back ************/
+  --back-color: #ebeff3;
+  --border-color: #d6aca8;
+  --btn-lock: linear-gradient(90deg, #5b4746 0%, #d5aca6 7%, #d6aca8 25%, #d5aca6 75%, #9d7d79 90%, #453635 100%);
+  --btn-cote: linear-gradient(0deg, #5b4746 0%, #d5aca6 7%, #d6aca8 25%, #d5aca6 75%, #9d7d79 90%, #453635 100%);
+  --back-logo: linear-gradient(0deg, #cba09c, #dfb5b2);
+  --back-logo-filter: linear-gradient(30deg, #cba09c3d 0%, #d6aca800 100%);
+  --logo-color: #cba09c;
+  --color-txt-iphone: #919695;
+  --border-objectif: #cba09c;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #5b4746 0%, #d6aca8 20%, #d6aca8 80%, #5b4746 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #d5aca61a 3%, #dfb5b200 25%, #dfb5b200 85%, #d6aca825 97%, #0000003e 100%);
+  --btn-side: linear-gradient(-45deg, #e7bebc 5%, #d6aca8 50%, #cba09c9b 100%);
+  --border-side-btn: #cba09c;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-or-rose.png");
+  --btn-home-screen-bg: #fbe0dc;
+  --btn-home-screen: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+  --btn-home-screen-active: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  --txt-color-scroll: #9a9797;
+}
+
+body.theme-sideral {
+  /*************** iphone back ************/
+  --back-color: #0d0d0e;
+  --border-color: #505253;
+  --btn-lock: linear-gradient(90deg, #393939 0%, #626363 7%, #505253 25%, #505253 75%, #626363 90%, #4e4e4e 100%);
+  --btn-cote: linear-gradient(0deg, #393939 0%, #626363 7%, #505253 25%, #505253 75%, #626363 90%, #4e4e4e 100%);
+  --back-logo: linear-gradient(0deg, #16141b, #505253);
+  --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #fbe0dc25 100%);
+  --logo-color: #424145;
+  --color-txt-iphone: #434046;
+  --border-objectif: #424242;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #16141b 0%, #505253 20%, #505253 80%, #16141b 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000070 0%, #7474751a 3%, #5052530c 25%, #62636314 85%, #50525325 97%, #00000052 100%);
+  --btn-side: linear-gradient(-45deg, #686868 5%, #505253 50%, #8080809b 100%);
+  --border-side-btn: #424145;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-sideral.png");
+  --btn-home-screen-bg: #a09fa4;
+  --txt-color-scroll: #dfe1e7;
+}
+
+
 
 
 /************************************************** iphone back *************************************************************/
@@ -12,12 +83,9 @@
   width: 35vh;
   height: 75vh;
   border-radius: 5vh;
-  background-color: #ebeff3;
-  border: 6px solid #c3c3c4;
+  background-color: var(--back-color);
+  border: 6px solid var(--border-color);
 }
-
-
-
 
 .container-btn-back {
   display: flex;
@@ -39,7 +107,8 @@
 .lock-btn-back {
   width: 55px;
   height: 5px;
-  background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-lock);
 }
 
 .lock-btn-back:hover {
@@ -58,14 +127,16 @@
   margin: 1vh 0 1vh 0;
   width: 5px;
   height: 26px;
-  background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-cote);
 }
 
 .sound-btn-back {
   margin: 1vh 0 1vh 0;
   width: 5px;
   height: 26px;
-  background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-cote);
 }
 
 .sound-btn-back:hover {
@@ -87,7 +158,8 @@
   width: 100%;
   height: 45vh;
   justify-content: center;
-  background: linear-gradient(0deg, #c3c3c4, #dfe0df);
+  /* background: linear-gradient(0deg, #c3c3c4, #dfe0df); */
+  background: var(--back-logo);
   align-items: center;
 }
 
@@ -97,12 +169,14 @@
   height: 45vh;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(30deg, #8181813d 0%, #dfe0df00 100%);
+  /* background: linear-gradient(30deg, #8181813d 0%, #dfe0df00 100%); */
+  background: var(--back-logo-filter);
 }
 
 .logo-apple-back {
   font-size: 120px;
-  color: #c2bcbc;
+  /* color: #c2bcbc; */
+  color: var(--logo-color);
 }
 
 .content-objectif {
@@ -142,7 +216,8 @@
   border-radius: 7vh;
   background: radial-gradient(circle, #000000 0%, #0e2d54 20%, #1c1c1c 25%, #181818 35%, #000000 100%);
   margin: 1vh 0 1vh 0;
-  border: 2px solid #919695;
+  /* border: 2px solid #919695; */
+  border: 2px solid var(--border-objectif);
   box-shadow: -3px 1px 2px 2px #1919199f;
 }
 
@@ -153,7 +228,8 @@
   height: 3vh;
   border-radius: 6vh;
   background: radial-gradient(#b39f08, #ccc9c6, #c0bfbe, #c2b4a8);
-  border: 2px solid #919695;
+  /* border: 2px solid #919695; */
+  border: 2px solid var(--border-objectif);
 }
 
 .objectif-flash-filter {
@@ -183,7 +259,8 @@
 }
 
 .txt-iphone {
-  color: #919695;
+  /* color: #919695; */
+  color: var(--color-txt-iphone);
   font-family: "Roboto", sans-serif;
   font-size: 1.6vh;
   font-weight: 400;
@@ -199,7 +276,8 @@
   width: 4vh;
   height: 76vh;
   border-radius: 10px;
-  background: linear-gradient(90deg, #949495 0%, #dfe0df 20%, #dfe0df 80%, #949495 100%);
+  /* background: linear-gradient(90deg, #949495 0%, #dfe0df 20%, #dfe0df 80%, #949495 100%); */
+  background: var(--back-color-side);
 }
 
 .iphone-side-filter {
@@ -207,7 +285,8 @@
   width: 4vh;
   height: 76vh;
   border-radius: 10px;
-  background: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #c3c3c40c 25%, #c3c3c414 85%, #dfe0df25 97%, #0000003e 100%);
+  /* background: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #c3c3c40c 25%, #c3c3c414 85%, #dfe0df25 97%, #0000003e 100%); */
+  background: var(--back-color-side-filter);
 }
 
 
@@ -227,8 +306,8 @@
   top: -4px;
   width: 16px;
   height: 5px;
-  /* border-radius: 3px 3px 0 0; */
-  background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-lock);
 }
 
 
@@ -253,8 +332,12 @@
   width: 26px;
   height: 26px;
   border-radius: 20px;
-  border: 1.5px solid #c3c3c4;
-  background: linear-gradient(-45deg, #e7e0e0 5%, #dfe0df 50%, #a0a0a19b 100%);
+  /* border: 1.5px solid #c3c3c4; */
+  border: 1.5px solid var(--border-side-btn);
+  /* background: linear-gradient(-45deg, #e7e0e0 5%, #dfe0df 50%, #a0a0a19b 100%); */
+  background: var(--btn-side);
+  font-size: 12px;
+  color: var(--border-side-btn);
 }
 
 
@@ -267,13 +350,16 @@
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  color: #c3c3c4;
+  /* color: #c3c3c4; */
+  color: var(--border-side-btn);
   margin: 1vh 0 1vh 0;
   width: 26px;
   height: 26px;
   border-radius: 20px;
-  border: 1.5px solid #c3c3c4;
-  background: linear-gradient(-45deg, #e7e0e0 5%, #dfe0df 50%, #a0a0a19b 100%);
+  /* border: 1.5px solid #c3c3c4; */
+  border: 1.5px solid var(--border-side-btn);
+  /* background: linear-gradient(-45deg, #e7e0e0 5%, #dfe0df 50%, #a0a0a19b 100%); */
+  background: var(--btn-side);
 }
 
 .sound-btn-side:hover {
@@ -293,7 +379,8 @@
   width: 0.8vh;
   height: 8vh;
   border-radius: 1vh;
-  border: 1px solid #c3c3c4;
+  /* border: 1px solid #c3c3c4; */
+  border: 1px solid var(--border-side-btn);
   justify-content: center;
 }
 
@@ -433,7 +520,8 @@ button {
   width: 35vh;
   height: 75vh;
   overflow: hidden;
-  background-image: url("../Medias/APP-Medias/iphone-fd-white.png");
+  /* background-image: url("../Medias/APP-Medias/iphone-fd-white.png"); */
+  background-image: var(--iphone-bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -468,7 +556,8 @@ button {
   height: 75vh;
   border-radius: 5vh;
   border: 3px solid #161616;
-  box-shadow: 0 0 0 3px #c3c3c4;
+  /* box-shadow: 0 0 0 3px #c3c3c4; */
+  box-shadow: 0 0 0 3px var(--border-color);
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
@@ -526,7 +615,8 @@ button {
 .lock-btn-face {
   width: 55px;
   height: 4px;
-  background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-lock);
 }
 
 .lock-btn-face:hover {
@@ -546,15 +636,16 @@ button {
   margin: 1vh 0 1vh 0;
   width: 4px;
   height: 26px;
-  border-radius: 3px 0 0 3px;
-  background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-cote);
 }
 
 .sound-btn-face {
   margin: 1vh 0 1vh 0;
   width: 4px;
   height: 26px;
-  background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-cote);
 }
 
 .sound-btn-face:hover {
@@ -762,9 +853,9 @@ button {
   align-items: flex-end;
 }
 
-.txt-scroll-color {
+/* .txt-scroll-color {
   color: #9a9797;
-}
+} */
 
 .txt-scroll {
   font-family: "Roboto", sans-serif;
@@ -772,6 +863,7 @@ button {
   opacity: 0;
   transform: translateY(20px);
   animation: apparitionTxt 0.5s 0.9s ease-in forwards;
+  color: var(--txt-color-scroll);
 }
 
 @keyframes apparitionTxt {
@@ -793,7 +885,9 @@ button {
   font-size: 2vh;
   color: #565254;
   border-radius: 3vh;
-  box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+  /* box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda; */
+  box-shadow: var(--btn-home-screen);
+  background-color: var(--btn-home-screen-bg);
 }
 
 #toggleButtonFlash.active {
@@ -807,7 +901,10 @@ button {
   font-size: 2vh;
   color: #565254;
   border-radius: 3vh;
-  box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  /* box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15); */
+  box-shadow: var(--btn-home-screen-active);
+  background-color: var(--btn-home-screen-bg);
+
 }
 
 .btn-accueil {
@@ -821,7 +918,9 @@ button {
   font-size: 2vh;
   color: #565254;
   border-radius: 3vh;
-  box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+  /* box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda; */
+  box-shadow: var(--btn-home-screen);
+  background-color: var(--btn-home-screen-bg);
 }
 
 .flashlight-content {
@@ -4443,6 +4542,106 @@ ul {
   left: calc(100% - 25px);
 }
 
+/******************************************* APP clockworld *******************************************/
+
+.border-li-clockworld {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  border-bottom: 1px solid #adadad;
+  border-bottom-width: 1px;
+  border-width: 1px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-clockworld {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-clockworld h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+}
+
+.content-clockworld p {
+  font-size: 13px;
+  color: #adadad;
+  font-weight: 400;
+}
+
+.clock-container h1 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 400;
+  color: #fff;
+
+}
+
+/******************************************* APP timer *******************************************/
+
+.content-timer {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-timer h1 {
+  font-size: 65px;
+  font-weight: 300;
+  color: #adadad;
+}
+
+.content-btn-timer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.btn-timer {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #565254;
+  font-size: 10px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(90, 90, 90, 0.1);
+  background-color: #1e1e1e;
+  color: #adadad;
+}
+
+.btn-timer.active {
+  transform: scale(1.1);
+}
+
+#startBtn.active {
+  color: #43a047;
+}
+
+#pauseBtn.active {
+  color: #fb8c00;
+}
+
+#resumeBtn.active {
+  color: #1e88e5;
+}
+
+#resetBtn.active {
+  color: #e53935;
+}
+
 
 /************************************************** app app store *************************************************************/
 
@@ -4745,6 +4944,16 @@ article {
   aspect-ratio: 1/1;
 }
 
+.icon-foule-contact {
+  background-image: url("../Medias/APP-Medias/icon-foule-contact.png");
+  width: 100%;
+  margin: 7px;
+  border-radius: 12px;
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1/1;
+}
+
 
 /************************************************** iframe app *************************************************************/
 
@@ -4759,4 +4968,173 @@ article {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/************************************************** youtube app *************************************************************/
+
+.content-title-yt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.content-logo-yt {
+  display: flex;
+  width: 40%;
+  gap: 6px;
+}
+
+.content-btn-yt {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  gap: 17px;
+  color: #fff;
+}
+
+.content-logo-yt h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.yt-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 9px;
+  color: #ffffff;
+  background-color: #ff0000;
+}
+
+
+.content-home-yt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 25px 0;
+}
+
+.logo-yt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #ff0000;
+}
+
+.content-line-yt-search {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  gap: 20px;
+}
+
+.back-btn-yt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #4d4d4d;
+}
+
+.search-yt {
+  background-color: #4d4d4d;
+  padding: 10px 55px 10px 15px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+.bloc-yt-info {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #4d4d4d;
+  border-radius: 10px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.bloc-yt-info h2 {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin: 10px 0 10px 0;
+}
+
+.bloc-yt-info p {
+  text-align: center;
+  font-size: 12px;
+  color: #adadad;
+  margin: 5px 0;
+}
+
+.content-bloc-modif {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bloc-modif-param {
+  background-color: #7a7a7a;
+  padding: 10px 55px 10px 15px;
+  font-size: 12px;
+  border-radius: 20px;
+  color: #adadad;
+  margin-top: 10px;
+}
+
+.bloc-line-yt-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7px 25px 30px 25px;
+  border-top: 1px solid #adadad;
+}
+
+.btn-yt {
+  width: calc(100%/6);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  font-size: 22px;
+  aspect-ratio: 1/1;
+}
+
+
+.btn-yt-menu p {
+  font-size: 7px;
+  margin: 5px 0 0 0;
+}
+
+
+/**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+  .flashlight-content {
+    top: -20%;
+  }
+
+
+
+
 }

@@ -74,33 +74,6 @@
   
   /************************************************** iphone face *************************************************************/
   
-
-  
-  .toggleScreen-content-paysage {
-    display: none;
-    width: 75vh;
-    height: 35vh;
-    background: linear-gradient(105deg, #000000, #000000, #343434, #000000, #000000);
-    background-size: 300% 300%;
-    animation: gradientMove 15s ease infinite;
-  }
-  
-  @keyframes gradientMove {
-    0% {
-      background-position: 0% 50%;
-    }
-  
-    50% {
-      background-position: 100% 50%;
-    }
-  
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-
-  
   
   
   .container-info-accueil-screen {
@@ -203,6 +176,7 @@
     width: 40%;
     border-radius: 21vh;
     position: absolute;
+    cursor: grabbing;
   }
   
   .face-cam-paysage {
@@ -223,97 +197,6 @@
     border-radius: 2vh;
     background: radial-gradient(circle, #000000 0%, #0e2d54 20%, #1c1c1c 35%, #181818 50%, #000000 100%);
   }
-  
-  
-  
-  
-  .content-lock {
-    display: flex;
-    width: 35vh;
-    position: absolute;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 4vh;
-    color: #565254;
-  }
-  
-  .content-clock {
-    display: flex;
-    width: 35vh;
-    position: absolute;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 7vh;
-  }
-  
-  .content-date {
-    display: flex;
-    width: 35vh;
-    position: absolute;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 11vh;
-  }
-  
-  .content-light {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    flex-wrap: nowrap;
-    bottom: 3vh;
-  }
-  
-  .content-btn {
-    display: flex;
-    flex-basis: 33%;
-    justify-content: center;
-  }
-  
-  .content-txt {
-    display: flex;
-    flex-basis: 33%;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  
-  .txt-scroll-color {
-    color: #9a9797;
-  }
-  
-  .txt-scroll {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.35vh;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: apparitionTxt 0.5s 0.9s ease-in forwards;
-  }
-  
-  @keyframes apparitionTxt {
-    100% {
-      opacity: 1;
-      transform: none;
-  
-    }
-  }
-  
-
-  
-  .btn-accueil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4vh;
-    height: 4vh;
-    padding: 0.5vh;
-    cursor: pointer;
-    font-size: 2vh;
-    color: #565254;
-    border-radius: 3vh;
-    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
-  }
-
-  
-
   
   /******************************************* blocs *******************************************/
   
@@ -766,6 +649,7 @@
   
   .bloc-info-album p{
   font-size: 6px;
+  color: #adadad;
   }
   
   
