@@ -23,7 +23,7 @@
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-white.png");
   --btn-home-screen-bg: #ffff;
   --btn-home-screen: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
-  --btn-home-screen-active: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  --btn-home-screen-active: inset -2px -2px 7px rgb(196, 206, 218, 1.2), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
   --txt-color-scroll: #9a9797;
 }
 
@@ -46,8 +46,8 @@ body.theme-rose {
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-or-rose.png");
   --btn-home-screen-bg: #fbe0dc;
-  --btn-home-screen: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
-  --btn-home-screen-active: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  --btn-home-screen: 1px 1px 3px 0 #cba09c9b, -4px 0 3px 0 #fbe0dc, -2px -2px 14px 4px #fbe0dc, 3px 3px 15px 0 #5b4746d8;
+  --btn-home-screen-active: inset -3px -3px 9px #d6aca8, inset -3px -3px 13px #fbe0dc, inset 3px 3px 5px #ffffff1a;
   --txt-color-scroll: #9a9797;
 }
 
@@ -70,6 +70,8 @@ body.theme-sideral {
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-sideral.png");
   --btn-home-screen-bg: #a09fa4;
+   --btn-home-screen: 1px 1px 3px 0 #4241459b, -4px 0 3px 0 #a09fa4, -2px -2px 14px 4px #a09fa4, 3px 3px 15px 0 #424145d8;
+  --btn-home-screen-active: inset -3px -3px 9px #686868, inset -3px -3px 13px #a09fa4, inset 3px 3px 5px #ffffff10;
   --txt-color-scroll: #dfe1e7;
 }
 

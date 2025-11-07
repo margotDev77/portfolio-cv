@@ -35,10 +35,8 @@
 <body onload="afficherDateAccueil(), afficherDate()">
 
     <header>
-        <div class="menu-ext">
-            <a href=""><i class="fa-brands fa-apple"></i></a>
-        </div>
         <nav class="menu">
+            <a href="" class="logo-apple-header"><i class="fa-brands fa-apple"></i></a>
             <li><a href="">Store</a></li>
             <li><a href="">Mac</a></li>
             <li><a href="">iPad</a></li>
@@ -50,44 +48,50 @@
             <li><a href="">Entrainement</a></li>
             <li><a href="">Accessories</a></li>
             <li><a href="">Support</a></li>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><i class="fa-solid fa-bag-shopping"></i></li>
         </nav>
-
-        <div class="menu-ext">
-            <div class="menu-color-theme">
-                <button id="theme-toggle"><i id="theme-icon" class="fas fa-sun"></i>
-                </button>
-            </div>
-        </div>
     </header>
 
-    <div class="container-info-page">
-        <div class="content-info-page">
-            <h1 class="font-size-title">Cette page est une simulation et création</h1>
-            <p>toute mes compétences ont été utilisé, illustrator, photoshop, after effects, premiere pro, html, css,
-                javascript ...</p>
-        </div>
+    <div class="content-info-page">
+        <h1 class="font-size-title">Cette page est une simulation et création</h1>
+        <p>toute mes compétences ont été utilisé, illustrator, photoshop, after effects, premiere pro, html, css,
+            javascript ...</p>
     </div>
 
 
 
-    <section style="width: 100vw;">
-        <div class="container-ios-present">
+    <div class="blocFlex-acc bg-accent">
+        <section class="container-ios-present blocApparition">
             <div class="bloc-title-ios">
-                <h1 class="title-ios">Découvrez</h1>
-                <h2>iOS</h2>
+                <span>
+                    <h2 class="title-ios">iOS 20</h2>
+                </span>
+                <h3>Nouveau design</h3>
+                <h3>Nouvelle ère</h3>
             </div>
-            <button class="btn-ios"><a href="#ios-simulation"><img src="Medias/APP-Medias/ios-logo.png">
-                </a></button>
-            <p>Le début d'une nouvelle ère</p>
+        </section>
+    </div>
+
+    <div class="blocFlex">
+        <div class="content-bloc-pt-fort">
+            <div class="bloc-title">
+                <h2>Points forts.</h2>
+            </div>
+
+            <section class="container-pt-fort blocApparition">
+
+            </section>
+
+            <div class="bloc-txt">
+                <p>Le nouveau design en neumorphisme est super intuitif.</p>
+                <p>Il vous offre une expérience plus cohérente et plus fluide.</p>
+            </div>
         </div>
-        </div>
+    </div>
 
-    </section>
-
-
-    <div style="width: 100vw;">
-
-        <section class="container-pub-music blocApparition">
+    <div class="blocFlex">
+        <div class="container-pub-music blocApparition">
             <div class="content-title-pub-music">
                 <h1 class="title">Nouveautés dans Music</h1>
                 <h2 class="inter-title">Comme un petit air de déjàs vu</h2>
@@ -913,9 +917,11 @@
             </div>
 
             <p>essayez-moi</p>
-        </section>
+        </div>
+    </div>
 
 
+    <div class="blocFlex-simul">
         <section class="contenair-bloc-simul blocApparition" id="ios-simulation">
 
             <section class="ip-side">
@@ -1524,7 +1530,8 @@
                                                             <div class="content-info-ajout">
                                                                 <img
                                                                     src="Medias/APP-Medias/pochette-album-daft-punk.jpg">
-                                                                <h3 class="color-title-interm">Random Acess Memorises
+                                                                <h3 class="color-title-interm">Random Acess
+                                                                    Memorises
                                                                 </h3>
                                                                 <p>Daft Punk</p>
                                                             </div>
@@ -1563,7 +1570,8 @@
                                                             <div class="content-info-ajout">
                                                                 <img
                                                                     src="Medias/APP-Medias/pochette-album-pink-floyd.png">
-                                                                <h3 class="color-title-interm">The Dark Side of the Moon
+                                                                <h3 class="color-title-interm">The Dark Side of the
+                                                                    Moon
                                                                 </h3>
                                                                 <p>Pink Floyd</p>
                                                             </div>
@@ -1579,7 +1587,8 @@
                                                             <div class="content-info-ajout">
                                                                 <img
                                                                     src="Medias/APP-Medias/pochette-album-cherry-moon.png">
-                                                                <h3 class="color-title-interm">Classics Collection</h3>
+                                                                <h3 class="color-title-interm">Classics Collection
+                                                                </h3>
                                                                 <p>Cherry Moon Trax</p>
                                                             </div>
                                                             <div class="content-info-ajout">
@@ -1821,7 +1830,8 @@
                                                 <div class="btn-num-none"></div>
                                                 <button class="btn-num color-tel"><i
                                                         class="fa-solid fa-phone"></i></button>
-                                                <div class="btn-num-none"><i class="fa-solid fa-delete-left"></i></div>
+                                                <div class="btn-num-none"><i class="fa-solid fa-delete-left"></i>
+                                                </div>
                                             </div>
 
                                             <div class="content-clavier-back typo-1 color-txt">
@@ -2403,7 +2413,8 @@
                                                                         class="fa-solid fa-chevron-right"></i>
                                                                 </span>
                                                             </div>
-                                                            <p class="color-blue-apple">Super, je suis en vac et toi ?
+                                                            <p class="color-blue-apple">Super, je suis en vac et toi
+                                                                ?
                                                             </p>
                                                         </div>
                                                     </li>
@@ -2445,7 +2456,8 @@
                                                                         class="fa-solid fa-chevron-right"></i>
                                                                 </span>
                                                             </div>
-                                                            <p class="color-blue-apple">Peux-tu récupérer Théo au foot
+                                                            <p class="color-blue-apple">Peux-tu récupérer Théo au
+                                                                foot
                                                             </p>
                                                         </div>
                                                     </li>
@@ -2461,7 +2473,8 @@
                                                                         class="fa-solid fa-chevron-right"></i>
                                                                 </span>
                                                             </div>
-                                                            <p>J'ai déposé votre colis dans votre boîte aux lettres</p>
+                                                            <p>J'ai déposé votre colis dans votre boîte aux lettres
+                                                            </p>
                                                         </div>
                                                     </li>
 
@@ -2643,7 +2656,8 @@
                                             <div class="content-info-profil typo-1 color-primary">
                                                 <img src="Medias/APP-Medias/memoji-profil.png">
                                                 <div class="content-txt-info-profil">
-                                                    <h3 class="font-size-titre color-white">Photo et affiche du contact
+                                                    <h3 class="font-size-titre color-white">Photo et affiche du
+                                                        contact
                                                     </h3>
                                                     <p class="color-title-interm">Contacts uniquement</p>
                                                 </div>
@@ -2727,7 +2741,8 @@
                                                     <span><i class="fa-solid fa-car"></i></span>
                                                     <div class="content-txt-info-plans">
                                                         <h3 class="font-size-titre">Stationnement</h3>
-                                                        <p class="color-txt">à 8,2 km de distance, proche de Rue J...
+                                                        <p class="color-txt">à 8,2 km de distance, proche de Rue
+                                                            J...
                                                         </p>
                                                     </div>
                                                 </div>
@@ -3329,7 +3344,8 @@
 
                                             <div class="bloc-yt-info">
                                                 <h2>Votre historique des vidéos regardées est désactivé</h2>
-                                                <p>Vous pouvez modifier votre paramètre à tout moment pour que nous vous
+                                                <p>Vous pouvez modifier votre paramètre à tout moment pour que nous
+                                                    vous
                                                     proposions les dernières vidéos adaptées à vos goûts. <span
                                                         class="color-blue-apple">En
                                                         savoir plus</span></p>
@@ -3411,7 +3427,8 @@
                                                 <div class="content-btn-top-notif typo-1 color-txt">
                                                     <button><i class="fa-solid fa-plus"></i></button>
                                                     <button class="btn-pwr-back color-white">
-                                                        <div class="btn-pwr"><i class="fa-solid fa-power-off"></i></div>
+                                                        <div class="btn-pwr"><i class="fa-solid fa-power-off"></i>
+                                                        </div>
                                                     </button>
                                                 </div>
                                                 <div class="scroll-container">
@@ -3757,38 +3774,55 @@
 
         </section>
 
-        <div class="controls">
-            <div class="color-name typo-1" id="colorName">Coloris - Argent</div>
-            <div class="themes">
-                <div class="theme-btn" id="argent" data-name="Argent"
-                    style="background: linear-gradient(135deg, #c3c3c4, #dfe0df);"></div>
-                <div class="theme-btn" id="rose" data-name="Or Rose"
-                    style="background: linear-gradient(135deg, #cba09c, #dfb5b2);"></div>
-                <div class="theme-btn" id="sideral" data-name="Gris Sideral"
-                    style="background: linear-gradient(135deg, #505253, #808080);"></div>
+        <section class="contenair-bloc-select-color">
+            <div class="controls">
+                <h1>Change la couleur</h1>
+                <div class="color-name typo-1" id="colorName">Coloris</div>
+                <div class="themes">
+                    <div class="theme-btn" id="argent" data-name="Argent"
+                        style="background: linear-gradient(135deg, #c3c3c4, #e7e0e0);"></div>
+                    <div class="theme-btn" id="rose" data-name="Or Rose"
+                        style="background: linear-gradient(135deg, #cba09c, #fbe0dc);"></div>
+                    <div class="theme-btn" id="sideral" data-name="Gris Sideral"
+                        style="background: linear-gradient(135deg, #505253, #808080);"></div>
+                </div>
             </div>
-        </div>
+        </section>
+    </div>
+
+
+    <div class="blocFlex">
+        <section class="container-dev-pub blocApparition">
+            <div class="btn-ios">
+                <img src="Medias/APP-Medias/ios-logo.png">
+            </div>
+            <h2>Pour les développeurs</h2>
+            <p>En savoir plus sur le développement</p>
+
+        </section>
+
+
 
     </div>
 
 
     <script>
-document.querySelectorAll('.theme-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-        document.body.className = '';
-        document.body.classList.add(`theme-${btn.id}`);
+                document.body.className = '';
+                document.body.classList.add(`theme-${btn.id}`);
 
-        document.getElementById('colorName').textContent = `Coloris - ${btn.dataset.name}`;
-    });
-});
-</script>
+                document.getElementById('colorName').textContent = `Coloris - ${btn.dataset.name}`;
+            });
+        });
+    </script>
 
-<!----------------------------------------- affiche bordure couleur default --------------------------------------->
+    <!----------------------------------------- affiche bordure couleur default --------------------------------------->
 
-<!-- <script>
+    <!-- <script>
 window.addEventListener('DOMContentLoaded', () => {
     const defaultBtn = document.getElementById('argent');
     defaultBtn.classList.add('active');
@@ -3799,7 +3833,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     <script>
-
         /**************************** flashlight ****************************/
 
         const toggleButtonFlash = document.getElementById('toggleButtonFlash');
@@ -3809,41 +3842,6 @@ window.addEventListener('DOMContentLoaded', () => {
             conteneurFlash.classList.toggle('active');
         });
     </script>
-
-    <script>
-        /************************************** dark mode / light mode **************************************/
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleButton = document.getElementById('theme-toggle');
-            const icon = document.getElementById('theme-icon');
-            const body = document.body;
-
-            function updateIcon(isDark) {
-                if (isDark) {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                } else {
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-                }
-            }
-
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                body.classList.add('dark-mode');
-                updateIcon(true);
-            } else {
-                updateIcon(false);
-            }
-
-            toggleButton.addEventListener('click', () => {
-                const isDark = body.classList.toggle('dark-mode');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-                updateIcon(isDark);
-            });
-        });
-    </script>
-
 
 
     <script>
