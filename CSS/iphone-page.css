@@ -134,7 +134,7 @@ a {
   display: flex;
   width: 170px;
   height: 170px;
-  border-radius: 45px;
+  border-radius: 40px;
   justify-content: center;
   align-items: center;
   background-color: #f5f5f7;
@@ -145,6 +145,7 @@ a {
     inset 5px 5px 7px rgba(55, 84, 170, 0),
     inset -5px -5px 10px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 .title-ios {
@@ -181,7 +182,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 100px 0 0 0;
   gap: 100px;
   background-color: var(--bg-accent);
   border-radius: 25px;
@@ -216,6 +217,56 @@ a {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.05vh;
+}
+
+.content-img-ceramic {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-img-ceramic img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -250px;
+}
+
+/*********************************************** parallax puce ***********************************************/
+
+
+.blocFlex-parallax {
+  padding: 0 100px;
+  height: 120vh;
+  position: relative;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.parallax h1 {
+  position: relative;
+  left: 70vw;
+  top: 30vh;
+  margin: 0;
+}
+
+.parallax-1 {
+  background-image: url("../Medias/APP-Medias/puce-apple-cover-2.png");
+  background-position: center;
+}
+
+.parallax-2 {
+  background-image: url("../Medias/APP-Medias/puce-apple-2.png");
+  background-position: center;
+
 }
 
 
@@ -305,6 +356,27 @@ a {
   gap: 10px;
 }
 
+.model-options {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.model-btn {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+
+.model-btn.active {
+  border: 2px solid var(--color-blue-apple);
+}
+
+.theme-btn.inactive {
+  display: none;
+}
+
 .themes {
   display: flex;
   gap: 10px;
@@ -320,7 +392,7 @@ a {
 }
 
 .theme-btn.active {
-  border: 1.5px solid #000;
+  border: 2px solid var(--color-blue-apple);
 }
 
 .color-name {
@@ -329,6 +401,162 @@ a {
   width: 100%;
 }
 
+
+.content-txt-iphone {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 25px;
+  gap: 3px;
+  color: var(--color-txt-iphone);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.storage-options {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.storage-btn {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 6px 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.storage-btn.active {
+  border: 2px solid var(--color-blue-apple);
+}
+
+.storage-display {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.storage-display.change {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.phone-supp.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  display: none;
+}
+
+.engraving-select {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.engravure-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.engraving-btn {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 6px 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.engraving-btn.active {
+  border: 2px solid var(--color-blue-apple);
+}
+
+#engravingInput1,
+#engravingInput2 {
+  width: 90%;
+  padding: 6px 12px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.engraving-display {
+  position: absolute;
+  top: 22%;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-graving-iphone);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1vh;
+  font-weight: 400;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.3s;
+}
+
+.engraving-display div {
+  line-height: 1.2em;
+}
+
+.engraving {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.content-compare {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-compare {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-blue-apple);
+}
+
+.btn-compare:hover {
+  text-decoration: underline solid 1px;
+}
+
+.content-buy {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-savoir {
+  border: 2px solid var(--color-blue-apple);
+  color: #fff;
+  background-color: var(--color-blue-apple);
+  border-radius: 12px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+
+.btn-buy {
+  border: 2px solid var(--color-blue-apple);
+  color: var(--color-blue-apple);
+  border-radius: 12px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+
+.btn-buy:hover {
+  border: 2px solid var(--color-blue-apple);
+  color: #fff;
+  background-color: var(--color-blue-apple);
+}
 
 /*********************************************** dev os ***********************************************/
 

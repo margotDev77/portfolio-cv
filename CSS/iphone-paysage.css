@@ -165,20 +165,6 @@
   
   /*********************************************** iphone accueil ***********************************************/
   
-  
-  
-  .line-back {
-    display: flex;
-    bottom: 0;
-    border: none;
-    height: 4px;
-    background-color: #757986;
-    width: 40%;
-    border-radius: 21vh;
-    position: absolute;
-    cursor: grabbing;
-  }
-  
   .face-cam-paysage {
     display: flex;
     width: 2vh;

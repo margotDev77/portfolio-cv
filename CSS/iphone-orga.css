@@ -2,6 +2,9 @@
   font-family: "Roboto", sans-serif;
 }
 
+.color-acc-screen {
+  color: var(--color-main-acc-screen);
+}
 
 :root {
   /*************** iphone back ************/
@@ -14,6 +17,7 @@
   --logo-color: #c2bcbc;
   --color-txt-iphone: #919695;
   --border-objectif: #919695;
+  --color-graving-iphone: #565254;
   /*************** iphone side ************/
   --back-color-side: linear-gradient(90deg, #949495 0%, #dfe0df 20%, #dfe0df 80%, #949495 100%);
   --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #c3c3c40c 25%, #c3c3c414 85%, #dfe0df25 97%, #0000003e 100%);
@@ -22,46 +26,76 @@
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-white.png");
   --btn-home-screen-bg: #ffff;
-  --btn-home-screen: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
-  --btn-home-screen-active: inset -2px -2px 7px rgb(196, 206, 218, 1.2), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  --btn-home-screen: 1px 1px 3px 0 #c4ceda, 3px 3px 8px 0 #b0c4db;
+  --btn-home-screen-active: inset -2px -2px 7px #c4ceda, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #9a9797;
+  --color-main-acc-screen: #565254;
+}
+
+body.theme-or {
+  /*************** iphone back ************/
+  --back-color: #ebeff3;
+  --border-color: #c3b19a;
+  --btn-lock: linear-gradient(90deg, #5c5349 0%, #eadbc6 7%, #b4a38e 25%, #b4a38e 75%, #c7baa7 90%, #716659 100%);
+  --btn-cote: linear-gradient(0deg, #5c5349 0%, #eadbc6 7%, #b4a38e 25%, #b4a38e 75%, #c7baa7 90%, #716659 100%);
+  --back-logo: linear-gradient(0deg, #b4a38e, #eadbc6);
+  --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #eadbc600 100%);
+  --logo-color: #bdab95;
+  --color-txt-iphone: #919695;
+  --border-objectif: #bdab95;
+  --color-graving-iphone: #565254;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #8d7f6f 0%, #eadbc6 20%, #eadbc6 80%, #8d7f6f 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #b4a38e0c 25%, #b4a38e14 85%, #eadbc625 97%, #0000003e 100%);
+  --btn-side: linear-gradient(-45deg, #eadbc6 5%, #daccb8 50%, #b4a38e9b 100%);
+  --border-side-btn: #b4a38e;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-or.png");
+  --btn-home-screen-bg: #e8dac5;
+  --btn-home-screen: 1px 1px 3px 0 #b4a38e, 3px 3px 8px 0 #9f9484;
+  --btn-home-screen-active: inset -2px -2px 7px #b4a38e, inset 2px 2px 6px #00000016;
+  --txt-color-scroll: #9a9797;
+  --color-main-acc-screen: #565254;
 }
 
 body.theme-rose {
   /*************** iphone back ************/
   --back-color: #ebeff3;
   --border-color: #d6aca8;
-  --btn-lock: linear-gradient(90deg, #5b4746 0%, #d5aca6 7%, #d6aca8 25%, #d5aca6 75%, #9d7d79 90%, #453635 100%);
-  --btn-cote: linear-gradient(0deg, #5b4746 0%, #d5aca6 7%, #d6aca8 25%, #d5aca6 75%, #9d7d79 90%, #453635 100%);
+  --btn-lock: linear-gradient(90deg, #856867 0%, #eec7c1 7%, #d6aca8 25%, #d5aca6 75%, #ad8a85 90%, #7a6564 100%);
+  --btn-cote: linear-gradient(0deg, #79605f 0%, #e4bcb5 7%, #d6aca8 25%, #d5aca6 75%, #9d7d79 90%, #846d6c 100%);
   --back-logo: linear-gradient(0deg, #cba09c, #dfb5b2);
   --back-logo-filter: linear-gradient(30deg, #cba09c3d 0%, #d6aca800 100%);
   --logo-color: #cba09c;
   --color-txt-iphone: #919695;
   --border-objectif: #cba09c;
+  --color-graving-iphone: #565254;
   /*************** iphone side ************/
-  --back-color-side: linear-gradient(90deg, #5b4746 0%, #d6aca8 20%, #d6aca8 80%, #5b4746 100%);
+  --back-color-side: linear-gradient(90deg, #76605f 0%, #d6aca8 20%, #d6aca8 80%, #6d5857 100%);
   --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #d5aca61a 3%, #dfb5b200 25%, #dfb5b200 85%, #d6aca825 97%, #0000003e 100%);
-  --btn-side: linear-gradient(-45deg, #e7bebc 5%, #d6aca8 50%, #cba09c9b 100%);
+  --btn-side: linear-gradient(-45deg, #e7bebc 5%, #e2b7b3 50%, #cba09c9b 100%);
   --border-side-btn: #cba09c;
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-or-rose.png");
   --btn-home-screen-bg: #fbe0dc;
-  --btn-home-screen: 1px 1px 3px 0 #cba09c9b, -4px 0 3px 0 #fbe0dc, -2px -2px 14px 4px #fbe0dc, 3px 3px 15px 0 #5b4746d8;
-  --btn-home-screen-active: inset -3px -3px 9px #d6aca8, inset -3px -3px 13px #fbe0dc, inset 3px 3px 5px #ffffff1a;
+  --btn-home-screen: 1px 1px 3px 0 #cba09c, 3px 3px 8px 0 #9a7d7b;
+  --btn-home-screen-active: inset -2px -2px 7px #cba09c, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #9a9797;
+  --color-main-acc-screen: #636363;
 }
 
 body.theme-sideral {
   /*************** iphone back ************/
   --back-color: #0d0d0e;
   --border-color: #505253;
-  --btn-lock: linear-gradient(90deg, #393939 0%, #626363 7%, #505253 25%, #505253 75%, #626363 90%, #4e4e4e 100%);
-  --btn-cote: linear-gradient(0deg, #393939 0%, #626363 7%, #505253 25%, #505253 75%, #626363 90%, #4e4e4e 100%);
+  --btn-lock: linear-gradient(90deg, #000000 0%, #909595 7%, #56595b 25%, #505253 75%, #838585 90%, #1e1e1e 100%);
+  --btn-cote: linear-gradient(0deg, #000000 0%, #898d8d 7%, #626465 25%, #505253 75%, #797b7b 90%, #272727 100%);
   --back-logo: linear-gradient(0deg, #16141b, #505253);
   --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #fbe0dc25 100%);
   --logo-color: #424145;
   --color-txt-iphone: #434046;
   --border-objectif: #424242;
+  --color-graving-iphone: #1f1f1f;
   /*************** iphone side ************/
   --back-color-side: linear-gradient(90deg, #16141b 0%, #505253 20%, #505253 80%, #16141b 100%);
   --back-color-side-filter: linear-gradient(0deg, #00000070 0%, #7474751a 3%, #5052530c 25%, #62636314 85%, #50525325 97%, #00000052 100%);
@@ -70,11 +104,111 @@ body.theme-sideral {
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-sideral.png");
   --btn-home-screen-bg: #a09fa4;
-   --btn-home-screen: 1px 1px 3px 0 #4241459b, -4px 0 3px 0 #a09fa4, -2px -2px 14px 4px #a09fa4, 3px 3px 15px 0 #424145d8;
-  --btn-home-screen-active: inset -3px -3px 9px #686868, inset -3px -3px 13px #a09fa4, inset 3px 3px 5px #ffffff10;
+  --btn-home-screen: 1px 1px 3px 0 #505253, 3px 3px 8px 0 #706e73;
+  --btn-home-screen-active: inset -2px -2px 7px #505253, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #dfe1e7;
+  --color-main-acc-screen: #f0f0f0;
 }
 
+body.theme-vert {
+  /*************** iphone back ************/
+  --back-color: #ebeff3;
+  --border-color: #acd1be;
+  --btn-lock: linear-gradient(90deg, #000000 0%, #c2e0d0 7%, #acd1be 25%, #acd1be 75%, #bad8c8 90%, #65796f 100%);
+  --btn-cote: linear-gradient(0deg, #000000 0%, #c2e0d0 7%, #acd1be 25%, #acd1be 75%, #bad8c8 90%, #65796f 100%);
+  --back-logo: linear-gradient(0deg, #acd1be, #c2e0d0);
+  --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #c2e0d000 100%);
+  --logo-color: #a2c0b5;
+  --color-txt-iphone: #919695;
+  --border-objectif: #829890;
+  --color-graving-iphone: #565254;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #72867f 0%, #c2e0d0 20%, #c2e0d0 80%, #72867f 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #acd1be1a 3%, #c2e0d00c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
+  --btn-side: linear-gradient(-45deg, #c2e0d0 5%, #acd1be 50%, #c2e0d09b 100%);
+  --border-side-btn: #9abaa9;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-vert.png");
+  --btn-home-screen-bg: #deede5;
+  --btn-home-screen: 1px 1px 3px 0 #acd1be, 3px 3px 8px 0 #8eaa9a;
+  --btn-home-screen-active: inset -2px -2px 7px #b9ccc2, inset 2px 2px 6px #00000016;
+}
+
+body.theme-bleu {
+  /*************** iphone back ************/
+  --back-color: #ebeff3;
+  --border-color: #a4bed7;
+  --btn-lock: linear-gradient(90deg, #000000 0%, #c3ddf3 7%, #98b0c8 25%, #98b0c8 75%, #c3ddf3 90%, #444f59 100%);
+  --btn-cote: linear-gradient(0deg, #000000 0%, #c3ddf3 7%, #98b0c8 25%, #98b0c8 75%, #c3ddf3 90%, #444f59 100%);
+  --back-logo: linear-gradient(0deg, #98b0c8, #c3ddf3);
+  --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #c3ddf300 100%);
+  --logo-color: #9eb0c9;
+  --color-txt-iphone: #919695;
+  --border-objectif: #7793af;
+  --color-graving-iphone: #565254;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #67798b 0%, #c3ddf3 20%, #c3ddf3 80%, #67798b 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #98b0c81a 3%, #c3ddf30c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
+  --btn-side: linear-gradient(-45deg, #c3ddf3 5%, #a4bed7 50%, #c3ddf39b 100%);
+  --border-side-btn: #7a90a5;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-bleu.png");
+  --btn-home-screen-bg: #c2dcf1;
+  --btn-home-screen: 1px 1px 3px 0 #c3ddf3, 3px 3px 8px 0 #8293a2;
+  --btn-home-screen-active: inset -2px -2px 7px #91a6b7, inset 2px 2px 6px #00000016;
+}
+
+body.theme-violet {
+  /*************** iphone back ************/
+  --back-color: #ebeff3;
+  --border-color: #6e588c;
+  --btn-lock: linear-gradient(90deg, #000000 0%, #8c78a5 7%, #655181 25%, #655181 75%, #7c6a8c 90%, #26202a 100%);
+  --btn-cote: linear-gradient(0deg, #000000 0%, #8c78a5 7%, #655181 25%, #655181 75%, #7c6a8c 90%, #26202a 100%);
+  --back-logo: linear-gradient(0deg, #655181, #8c78a5);
+  --back-logo-filter: linear-gradient(30deg, #8181813d 0%, #8c78a500 100%);
+  --logo-color: #705c7c;
+  --color-txt-iphone: #919695;
+  --border-objectif: #6e588c;
+  --color-graving-iphone: #565254;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #3b3242 0%, #8c78a5 20%, #8c78a5 80%, #3b3242 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #6654731a 3%, #7e67880c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
+  --btn-side: linear-gradient(-45deg, #8c78a5 5%, #7b698b 50%, #7e67889b 100%);
+  --border-side-btn: #655181;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-violet.png");
+  --btn-home-screen-bg: #8b78a4;
+   --btn-home-screen: 1px 1px 3px 0 #8c78a5, 3px 3px 8px 0 #493c5c;
+  --btn-home-screen-active: inset -2px -2px 7px #534469, inset 2px 2px 6px #00000016;
+  --txt-color-scroll: #dfe1e7;
+  --color-main-acc-screen: #f0f0f0;
+}
+
+body.theme-noir {
+  /*************** iphone back ************/
+  --back-color: #0d0d0e;
+  --border-color: #343137;
+  --btn-lock: linear-gradient(90deg, #000000 0%, #343137 7%, #16141b 25%, #16141b 75%, #4e4a53 90%, #171717 100%);
+  --btn-cote: linear-gradient(0deg, #000000 0%, #343137 7%, #16141b 25%, #16141b 75%, #4e4a53 90%, #171717 100%);
+  --back-logo: linear-gradient(0deg, #16141b, #343137);
+  --back-logo-filter: linear-gradient(30deg, #16141b3d 0%, #34313700 100%);
+  --logo-color: #16141b;
+  --color-txt-iphone: #434046;
+  --border-objectif: #343137;
+  --color-graving-iphone: #6f6f6f;
+  /*************** iphone side ************/
+  --back-color-side: linear-gradient(90deg, #000000 0%, #343137 20%, #343137 80%, #000000 100%);
+  --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #16141b1a 3%, #3431370c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
+  --btn-side: linear-gradient(-45deg, #343137 5%, #343137 50%, #201e279b 100%);
+  --border-side-btn: #16141b;
+  /*************** iphone face ************/
+  --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-noir.png");
+  --btn-home-screen-bg: #343137;
+  --btn-home-screen: 1px 1px 3px 0 #343137, 3px 3px 8px 0 #000000;
+  --btn-home-screen-active: inset -2px -2px 7px #101010, inset 2px 2px 6px #00000016;
+  --txt-color-scroll: #dfe1e7;
+  --color-main-acc-screen: #f0f0f0;
+}
 
 
 
@@ -220,7 +354,7 @@ body.theme-sideral {
   margin: 1vh 0 1vh 0;
   /* border: 2px solid #919695; */
   border: 2px solid var(--border-objectif);
-  box-shadow: -3px 1px 2px 2px #1919199f;
+  box-shadow: 3px 1px 2px 2px #000000b2;
 }
 
 
@@ -261,13 +395,10 @@ body.theme-sideral {
 }
 
 .txt-iphone {
-  /* color: #919695; */
   color: var(--color-txt-iphone);
   font-family: "Roboto", sans-serif;
-  font-size: 1.6vh;
+  font-size: 15px;
   font-weight: 400;
-  bottom: 1.5vh;
-  position: absolute;
 }
 
 /************************************************** iphone side *************************************************************/
@@ -341,9 +472,6 @@ body.theme-sideral {
   font-size: 12px;
   color: var(--border-side-btn);
 }
-
-
-
 
 .sound-btn-side {
   cursor: pointer;
@@ -705,13 +833,17 @@ button {
   top: 1vh;
 }
 
+.color-info-top {
+  color: #565254;
+}
+
 .container-info-left {
   display: flex;
   flex-basis: 30%;
   justify-content: left;
   align-items: center;
   margin-left: 4vh;
-  color: #565254;
+  /* color: #565254; */
   gap: 10px;
 }
 
@@ -721,7 +853,7 @@ button {
   justify-content: right;
   align-items: center;
   margin-right: 4vh;
-  color: #565254;
+  /* color: #565254; */
   gap: 10px;
 }
 
@@ -793,7 +925,7 @@ button {
 
 #date2 {
   font-family: "Roboto", sans-serif;
-  color: #565254;
+  color: var(--color-main-acc-screen);
   font-size: 2vh;
   margin-top: 1vh;
 }
@@ -803,6 +935,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #565254;
+  color: var(--color-main-acc-screen);
   font-size: 7vh;
 }
 
@@ -813,7 +946,8 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   top: 4vh;
-  color: #565254;
+  /* color: #565254; */
+  color: var(--color-main-acc-screen);
 }
 
 .content-clock {
@@ -861,6 +995,7 @@ button {
 
 .txt-scroll {
   font-family: "Roboto", sans-serif;
+  text-align: center;
   font-size: 1.35vh;
   opacity: 0;
   transform: translateY(20px);
@@ -885,7 +1020,7 @@ button {
   padding: 0.5vh;
   cursor: pointer;
   font-size: 2vh;
-  color: #565254;
+  color: var(--color-main-acc-screen);
   border-radius: 3vh;
   /* box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda; */
   box-shadow: var(--btn-home-screen);
@@ -901,7 +1036,7 @@ button {
   padding: 0.5vh;
   cursor: pointer;
   font-size: 2vh;
-  color: #565254;
+  color: var(--color-main-acc-screen);
   border-radius: 3vh;
   /* box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15); */
   box-shadow: var(--btn-home-screen-active);
@@ -918,7 +1053,7 @@ button {
   padding: 0.5vh;
   cursor: pointer;
   font-size: 2vh;
-  color: #565254;
+  color: var(--color-main-acc-screen);
   border-radius: 3vh;
   /* box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda; */
   box-shadow: var(--btn-home-screen);
@@ -935,7 +1070,6 @@ button {
 }
 
 .conteneur-flash {
-  margin-right: 5vh;
   width: 45vh;
   height: 50vh;
   border-radius: 55vh;
@@ -947,6 +1081,16 @@ button {
   box-shadow: 0 0 30px 20px rgba(155, 155, 155, 0.5);
 }
 
+.line-back-acc {
+  display: flex;
+  bottom: 0;
+  border: none;
+  height: 4px;
+  background-color: var(--color-main-acc-screen);
+  width: 40%;
+  border-radius: 21vh;
+  position: absolute;
+}
 
 /*********************************************** iphone app ***********************************************/
 
