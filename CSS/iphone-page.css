@@ -558,6 +558,29 @@ a {
   background-color: var(--color-blue-apple);
 }
 
+.content-info-exit {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  gap: 10px;
+  color: #adadad;
+}
+
+.line-back-info {
+  display: flex;
+  border: none;
+  height: 4px;
+  background-color: #757986;
+  width: 30%;
+  border-radius: 21vh;
+  margin: 0;
+  font-size: 15px;
+}
+
 /*********************************************** dev os ***********************************************/
 
 .container-dev-pub {

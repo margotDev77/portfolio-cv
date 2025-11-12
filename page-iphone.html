@@ -81,7 +81,7 @@
 
             <section class="container-pt-fort blocApparition">
                 <div class="content-img-ceramic">
-                <img src="Medias/APP-Medias/iphone-ceramic-shield.png" alt="ceramic">
+                    <img src="Medias/APP-Medias/iphone-ceramic-shield.png" alt="ceramic">
                 </div>
 
             </section>
@@ -3586,17 +3586,60 @@
 
                                                                 <div class="content-bloc-line typo-1">
                                                                     <div class="content-sound-notif">
-
+                                                                        <div class="content-progressbar-light-notif">
+                                                                            <i class="fa-solid fa-square-minus"></i>
+                                                                            <div class="progress-container-light">
+                                                                                <div class="progress-bar-light"></div>
+                                                                                <div class="slider-handle"></div>
+                                                                            </div>
+                                                                            <i class="fa-solid fa-square-plus"></i>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
 
 
                                                                 <div class="content-bloc-line typo-1">
                                                                     <div class="content-sound-notif">
-
+                                                                        <div class="content-progressbar-sound-notif">
+                                                                            <i class="fa-solid fa-volume-off"></i>
+                                                                            <div class="progress-container"
+                                                                                id="progress-container">
+                                                                                <div class="progress-barSound"
+                                                                                    id="progress-barSound"></div>
+                                                                                <div class="sliders" id="sliders"></div>
+                                                                            </div>
+                                                                            <i class="fa-solid fa-volume-high"></i>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
 
+                                                                <div class="content-btn-autre">
+
+                                                                    <div class="toggle-btn flash-btn-notif"
+                                                                        id="btnFlashNotif">
+                                                                        <i
+                                                                            class="material-symbols-outlined">flashlight_on</i>
+                                                                    </div>
+
+                                                                    <div class="btn-autre-notif"><i
+                                                                            class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                    </div>
+                                                                    <div class="btn-autre-notif"><i
+                                                                            class="fa-solid fa-qrcode"></i></div>
+
+                                                                    <div class="btn-autre-notif"><i
+                                                                            class="fa-solid fa-ear-listen"></i></div>
+                                                                </div>
+
+                                                                <div class="content-btn-autre2">
+
+                                                                    <div class="btn-autre-notif"><i
+                                                                            class="fa-solid fa-record-vinyl"></i></div>
+                                                                    <div class="btn-autre-notif"><i
+                                                                            class="fa-solid fa-microphone-lines"></i>
+                                                                    </div>
+
+                                                                </div>
                                                             </div>
                                                         </div>
 
@@ -3809,8 +3852,8 @@
                                             </div>
                                             <div class="content-light">
                                                 <div class="content-btn">
-                                                    <div class="toggleButtonFlash"><i class="material-symbols-outlined"
-                                                            id="toggleButtonFlash">
+                                                    <div class="toggle-btn flash-btn-acc"><i
+                                                            class="material-symbols-outlined" id="btnFlashAcc">
                                                             flashlight_on
                                                         </i></div>
                                                 </div>
@@ -3837,6 +3880,12 @@
 
                     </div>
                 </section>
+
+                <div class="content-info-exit">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <i>pour quitter, click / touche : </i>
+                    <hr class="line-back-info" data-id="app-home">
+                </div>
 
             </section>
 
@@ -3913,6 +3962,7 @@
 
                 </div>
             </section>
+
         </div>
 
 
@@ -4084,20 +4134,26 @@
         </script>
 
 
-
-
-
-
         <script>
             /**************************** flashlight ****************************/
-
-            const toggleButtonFlash = document.getElementById('toggleButtonFlash');
+            const btnFlashAcc = document.getElementById('btnFlashAcc');
+            const btnFlashNotif = document.getElementById('btnFlashNotif');
             const conteneurFlash = document.getElementById('conteneurFlash');
-            toggleButtonFlash.addEventListener('click', function () {
-                toggleButtonFlash.classList.toggle('active');
-                conteneurFlash.classList.toggle('active');
-            });
+
+            function toggleFlash() {
+                const isActive = conteneurFlash.classList.toggle('active');
+
+                // Synchronise les deux boutons
+                [btnFlashAcc, btnFlashNotif].forEach(btn => {
+                    btn.classList.toggle('active', isActive);
+                });
+            }
+
+            // Les deux boutons contrôlent le même effet
+            btnFlashAcc.addEventListener('click', toggleFlash);
+            btnFlashNotif.addEventListener('click', toggleFlash);
         </script>
+
 
 
         <script>
@@ -4266,17 +4322,19 @@
         </script>
 
 
+
         <script>
-            const progressBarSound = document.getElementById("progress-barSound");
-            const sliders = document.getElementById("sliders");
-            const progressContainer = document.getElementById("progress-container");
-            const soundLevel = document.getElementById("soundLevel");
+            const progressBars = document.querySelectorAll(".progress-barSound");
+            const sliders = document.querySelectorAll(".sliders");
+            const progressContainers = document.querySelectorAll(".progress-container");
+            const soundLevels = document.querySelectorAll(".soundLevel");
             const floatingElement = document.getElementById("floatingElement");
 
             let isDragging = false;
             let currentVolume = 50;
 
             function showFloatingElement() {
+                if (!floatingElement) return;
                 floatingElement.classList.add('active');
                 setTimeout(() => {
                     floatingElement.classList.remove('active');
@@ -4284,36 +4342,34 @@
             }
 
             function updateVolumeUI(showPopup = true) {
-                let percent = currentVolume + "%";
+                const percent = currentVolume + "%";
 
-                progressBarSound.style.width = percent;
-                sliders.style.left = percent;
-                soundLevel.style.height = percent;
+                progressBars.forEach(bar => bar.style.width = percent);
+                sliders.forEach(slider => slider.style.left = percent);
+                soundLevels.forEach(level => level.style.height = percent);
 
-                if (showPopup) {
-                    showFloatingElement();
-                }
+                if (showPopup) showFloatingElement();
             }
 
             function changeVolume(amount) {
-                currentVolume += amount;
-
-                if (currentVolume < 0) currentVolume = 0;
-                if (currentVolume > 100) currentVolume = 100;
-
+                currentVolume = Math.min(100, Math.max(0, currentVolume + amount));
                 updateVolumeUI();
             }
 
-            progressContainer.addEventListener("click", (e) => {
-                const rect = progressContainer.getBoundingClientRect();
-                let offsetX = e.clientX - rect.left;
-                currentVolume = Math.round((offsetX / rect.width) * 100);
-                updateVolumeUI();
+            progressContainers.forEach(container => {
+                container.addEventListener("click", (e) => {
+                    const rect = container.getBoundingClientRect();
+                    const offsetX = e.clientX - rect.left;
+                    currentVolume = Math.round((offsetX / rect.width) * 100);
+                    updateVolumeUI();
+                });
             });
 
-            sliders.addEventListener("mousedown", () => {
-                isDragging = true;
-                document.addEventListener("mousemove", updateDrag);
+            sliders.forEach(slider => {
+                slider.addEventListener("mousedown", () => {
+                    isDragging = true;
+                    document.addEventListener("mousemove", updateDrag);
+                });
             });
 
             document.addEventListener("mouseup", () => {
@@ -4325,27 +4381,63 @@
 
             function updateDrag(e) {
                 if (!isDragging) return;
-                const rect = progressContainer.getBoundingClientRect();
-                let offsetX = e.clientX - rect.left;
+                const container = progressContainers[0];
+                const rect = container.getBoundingClientRect();
+                const offsetX = e.clientX - rect.left;
                 currentVolume = Math.round((offsetX / rect.width) * 100);
                 currentVolume = Math.max(0, Math.min(currentVolume, 100));
                 updateVolumeUI();
             }
 
-            function updateVolumeUI(showPopup = true) {
-                let percent = currentVolume + "%";
-                progressBarSound.style.width = percent;
-                sliders.style.left = percent;
-                soundLevel.style.height = percent;
-
-                if (showPopup) {
-                    showFloatingElement();
-                }
-            }
-
             updateVolumeUI(false);
-
         </script>
+
+
+        <script>
+            document.querySelectorAll(".slider-block").forEach(block => {
+                const progressContainer = block.querySelector(".progress-container-light");
+                const progressBar = block.querySelector(".progress-bar-light");
+                const handle = block.querySelector(".slider-handle");
+
+                let isDragging = false;
+                let value = 50; // valeur par défaut
+
+                function updateUI() {
+                    progressBar.style.width = value + "%";
+                    handle.style.left = value + "%";
+                }
+
+                function setValueFromEvent(e) {
+                    const rect = progressContainer.getBoundingClientRect();
+                    const offsetX = e.clientX - rect.left;
+                    value = Math.round((offsetX / rect.width) * 100);
+                    value = Math.max(0, Math.min(100, value));
+                    updateUI();
+
+                    // Tu peux stocker la valeur dans un attribut data :
+                    block.dataset.value = value;
+                }
+
+                progressContainerLight.addEventListener("click", e => setValueFromEvent(e));
+
+                handle.addEventListener("mousedown", () => {
+                    isDragging = true;
+                    document.addEventListener("mousemove", setValueFromEvent);
+                });
+
+                document.addEventListener("mouseup", () => {
+                    if (isDragging) {
+                        isDragging = false;
+                        document.removeEventListener("mousemove", setValueFromEvent);
+                    }
+                });
+
+                // Initialisation visuelle
+                updateUI();
+            });
+        </script>
+
+
 
 
 

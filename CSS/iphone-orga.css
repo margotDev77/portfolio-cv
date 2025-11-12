@@ -178,7 +178,7 @@ body.theme-violet {
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-violet.png");
   --btn-home-screen-bg: #8b78a4;
-   --btn-home-screen: 1px 1px 3px 0 #8c78a5, 3px 3px 8px 0 #493c5c;
+  --btn-home-screen: 1px 1px 3px 0 #8c78a5, 3px 3px 8px 0 #493c5c;
   --btn-home-screen-active: inset -2px -2px 7px #534469, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #dfe1e7;
   --color-main-acc-screen: #f0f0f0;
@@ -1011,7 +1011,7 @@ button {
   }
 }
 
-#toggleButtonFlash {
+.toggle-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1019,29 +1019,22 @@ button {
   height: 4vh;
   padding: 0.5vh;
   cursor: pointer;
-  font-size: 2vh;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.flash-btn-acc {
   color: var(--color-main-acc-screen);
-  border-radius: 3vh;
   /* box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda; */
   box-shadow: var(--btn-home-screen);
   background-color: var(--btn-home-screen-bg);
 }
 
-#toggleButtonFlash.active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4vh;
-  height: 4vh;
-  padding: 0.5vh;
-  cursor: pointer;
-  font-size: 2vh;
+.flash-btn-acc.active {
   color: var(--color-main-acc-screen);
-  border-radius: 3vh;
   /* box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15); */
   box-shadow: var(--btn-home-screen-active);
   background-color: var(--btn-home-screen-bg);
-
 }
 
 .btn-accueil {
@@ -4081,11 +4074,53 @@ p {
 
 .line-separ-notif {
   border: none;
-  height: 1px;
+  height: 1.5px;
   background-color: #565254;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
+.content-progressbar-light-notif {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.content-progressbar-light-notif i {
+  color: #f9b705;
+}
+
+.progress-container-light {
+  position: relative;
+  flex-grow: 1;
+  height: 5px;
+  background-color: #adadad;
+  border-radius: 10px;
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.progress-bar-light {
+  height: 100%;
+  width: 22%;
+  background: linear-gradient(0deg, #f9b705, #fb8c00);
+  border-radius: 5px;
+  transition: width 0.1s;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 22%;
+  width: 20px;
+  height: 20px;
+  background-color: #ebecf0;
+  border-radius: 50%;
+  box-shadow: 5px 5px 7px rgba(55, 84, 170, .15), -5px -5px 10px rgba(255, 255, 255, 0.75), inset 0px 0px 4px rgba(255, 255, 255, .2), inset 5px 5px 7px rgba(55, 84, 170, 0), inset -5px -5px 10px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+  cursor: grab;
+  transition: left 0.1s;
+}
 
 .content-sound-notif {
   display: flex;
@@ -4093,7 +4128,7 @@ p {
   flex-direction: row;
   width: 100%;
   border-radius: 20px;
-  padding: 10px;
+  padding: 6px;
   gap: 5px;
   box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
     -5px -5px 10px rgba(255, 255, 255, 0.75),
@@ -4103,6 +4138,62 @@ p {
     0px 0px 4px rgba(255, 255, 255, 0);
   font-size: 13px;
 }
+
+.content-progressbar-sound-notif {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.content-progressbar-sound-notif i {
+  color: #007bb5;
+}
+
+.content-btn-autre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.content-btn-autre2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 45%;
+}
+
+.flash-btn-notif {
+  color: #adadad;
+  background-color: #ebeff3;
+  box-shadow: 5px 5px 7px rgba(55, 84, 170, .15), -5px -5px 10px rgba(255, 255, 255, 0.75), inset 0px 0px 4px rgba(255, 255, 255, .2), inset 5px 5px 7px rgba(55, 84, 170, 0), inset -5px -5px 10px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+}
+
+.flash-btn-notif.active {
+  background: radial-gradient(circle at center, #2196f3 0%, #64b5f6 100%);
+  color: #eaf6ff;
+  box-shadow: 0 0 18px 5px rgba(0, 123, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.btn-autre-notif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4vh;
+  height: 4vh;
+  font-size: 20px;
+  padding: 0.5vh;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #adadad;
+  background-color: #ebeff3;
+  box-shadow: 5px 5px 7px rgba(55, 84, 170, .15), -5px -5px 10px rgba(255, 255, 255, 0.75), inset 0px 0px 4px rgba(255, 255, 255, .2), inset 5px 5px 7px rgba(55, 84, 170, 0), inset -5px -5px 10px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+}
+
 
 
 .bloc-big-notif-battery {
