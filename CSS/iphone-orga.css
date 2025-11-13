@@ -23,6 +23,8 @@
   --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #c3c3c40c 25%, #c3c3c414 85%, #dfe0df25 97%, #0000003e 100%);
   --btn-side: linear-gradient(-45deg, #e7e0e0 5%, #dfe0df 50%, #a0a0a19b 100%);
   --border-side-btn: #c3c3c4;
+  --objectif-side: linear-gradient(0deg, #747474 0%, #919695 20%, #a7abaa 80%, #d2cfcf 100%);
+  --objectif-side-middle: linear-gradient(0deg, #545454 0%, #919695 20%, #a7abaa 80%, #676767 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-white.png");
   --btn-home-screen-bg: #ffff;
@@ -49,6 +51,8 @@ body.theme-or {
   --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #7474751a 3%, #b4a38e0c 25%, #b4a38e14 85%, #eadbc625 97%, #0000003e 100%);
   --btn-side: linear-gradient(-45deg, #eadbc6 5%, #daccb8 50%, #b4a38e9b 100%);
   --border-side-btn: #b4a38e;
+  --objectif-side: linear-gradient(0deg, #5c5349 0%, #8d7f6f 20%, #b0a08e 80%, #eadbc6 100%);
+  --objectif-side-middle: linear-gradient(0deg, #463f37 0%, #8d7f6f 20%, #b0a08e 80%, #676767 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-or.png");
   --btn-home-screen-bg: #e8dac5;
@@ -75,6 +79,8 @@ body.theme-rose {
   --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #d5aca61a 3%, #dfb5b200 25%, #dfb5b200 85%, #d6aca825 97%, #0000003e 100%);
   --btn-side: linear-gradient(-45deg, #e7bebc 5%, #e2b7b3 50%, #cba09c9b 100%);
   --border-side-btn: #cba09c;
+  --objectif-side: linear-gradient(0deg, #856867 0%, #876867 20%, #e2b7b3 80%, #eadbc6 100%);
+  --objectif-side-middle: linear-gradient(0deg, #846867 0%, #7d6563 20%, #e2b7b3 80%, #79605f 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-or-rose.png");
   --btn-home-screen-bg: #fbe0dc;
@@ -101,6 +107,8 @@ body.theme-sideral {
   --back-color-side-filter: linear-gradient(0deg, #00000070 0%, #7474751a 3%, #5052530c 25%, #62636314 85%, #50525325 97%, #00000052 100%);
   --btn-side: linear-gradient(-45deg, #686868 5%, #505253 50%, #8080809b 100%);
   --border-side-btn: #424145;
+  --objectif-side: linear-gradient(0deg, #232323 0%, #424145 20%, #505253 80%, #d2cfcf 100%);
+  --objectif-side-middle: linear-gradient(0deg, #16141b 0%, #424145 20%, #505253 80%, #262626 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-sideral.png");
   --btn-home-screen-bg: #a09fa4;
@@ -127,6 +135,7 @@ body.theme-vert {
   --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #acd1be1a 3%, #c2e0d00c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
   --btn-side: linear-gradient(-45deg, #c2e0d0 5%, #acd1be 50%, #c2e0d09b 100%);
   --border-side-btn: #9abaa9;
+  --objectif-side: linear-gradient(0deg, #4d5855 0%, #9abaa9 20%, #a6c9b7 80%, #aed2bf 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-vert.png");
   --btn-home-screen-bg: #deede5;
@@ -151,6 +160,7 @@ body.theme-bleu {
   --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #98b0c81a 3%, #c3ddf30c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
   --btn-side: linear-gradient(-45deg, #c3ddf3 5%, #a4bed7 50%, #c3ddf39b 100%);
   --border-side-btn: #7a90a5;
+  --objectif-side: linear-gradient(0deg, #3c4650 0%, #7a90a5 20%, #8ea5ba 80%, #98b7d4 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-bleu.png");
   --btn-home-screen-bg: #c2dcf1;
@@ -175,6 +185,7 @@ body.theme-violet {
   --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #6654731a 3%, #7e67880c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
   --btn-side: linear-gradient(-45deg, #8c78a5 5%, #7b698b 50%, #7e67889b 100%);
   --border-side-btn: #655181;
+  --objectif-side: linear-gradient(0deg, #382d47 0%, #655181 20%, #786198 80%, #8a6fb0 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-violet.png");
   --btn-home-screen-bg: #8b78a4;
@@ -201,6 +212,7 @@ body.theme-noir {
   --back-color-side-filter: linear-gradient(0deg, #00000071 0%, #16141b1a 3%, #3431370c 25%, #62636314 85%, #8395a425 97%, #0505053c 100%);
   --btn-side: linear-gradient(-45deg, #343137 5%, #343137 50%, #201e279b 100%);
   --border-side-btn: #16141b;
+  --objectif-side: linear-gradient(0deg, #000000 0%, #16141b 20%, #353438 80%, #494949 100%);
   /*************** iphone face ************/
   --iphone-bg-image: url("../Medias/APP-Medias/iphone-fd-noir.png");
   --btn-home-screen-bg: #343137;
@@ -347,33 +359,83 @@ body.theme-noir {
 
 .objectif-cam {
   display: flex;
-  width: 4vh;
-  height: 4vh;
-  border-radius: 7vh;
-  background: radial-gradient(circle, #000000 0%, #0e2d54 20%, #1c1c1c 25%, #181818 35%, #000000 100%);
+  justify-content: center;
+  align-items: center;
+  width: 4.5vh;
+  height: 4.5vh;
+  border-radius: 50%;
+  background-color: #161616;
   margin: 1vh 0 1vh 0;
-  /* border: 2px solid #919695; */
-  border: 2px solid var(--border-objectif);
-  box-shadow: 3px 1px 2px 2px #000000b2;
+  border: 3px solid var(--border-objectif);
+  box-shadow: 2px 2px 6px #000000b7, inset -2px -2px 6px #111;
+}
+
+.cam-int {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5vh;
+  height: 3.5vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #222 0%, #0a0a0a 100%);
+  box-shadow: inset 1px 1px 2px #000, inset -1px -1px 2px #2c2c2c;
+}
+
+.lentille-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2vh;
+  height: 2.2vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 60%, #202025 0%, #111 80%);
+  box-shadow: inset 0 0 8px #000, 0 0 6px #0c0c0c;
+}
+
+.lentille {
+  width: 1.2vh;
+  height: 1.2vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+      #4a8eff 0%,
+      #1a2a60 25%,
+      #0a0a0a 80%);
+  box-shadow:
+    inset 0 0 2px #000,
+    0 0 4px rgba(50, 150, 255, 0.6),
+    0 0 8px rgba(100, 150, 255, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 
-.objectif-flash {
-  display: flex;
+.flash {
   width: 3vh;
   height: 3vh;
-  border-radius: 6vh;
-  background: radial-gradient(#b39f08, #ccc9c6, #c0bfbe, #c2b4a8);
-  /* border: 2px solid #919695; */
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%,
+      #ffffff 0%,
+      #f3f3f3 20%,
+      #d0d0d0 50%,
+      #a0a0a0 100%);
+  box-shadow:
+    0 0 6px 2px rgba(255, 255, 255, 0.6),
+    inset 0 0 6px rgba(255, 255, 255, 0.9),
+    inset 0 0 2px rgba(0, 0, 0, 0.5);
+  position: relative;
   border: 2px solid var(--border-objectif);
 }
 
-.objectif-flash-filter {
-  display: flex;
-  width: 3vh;
-  height: 3vh;
-  border-radius: 6vh;
-  background: linear-gradient(45deg, #ffffff00 0%, #ababac00 25%, #ececebc6 50%, #c3c3c400 75%, #ffffff00 100%);
+.flash.active {
+  background: radial-gradient(circle at 50% 50%,
+      #ffffff 0%,
+      #ffffe0 25%,
+      #fff176 60%,
+      #f4d03f 100%);
+  box-shadow:
+    0 0 15px 6px rgba(255, 255, 200, 0.6),
+    0 0 40px 15px rgba(255, 255, 120, 0.3);
+  filter: brightness(1.5);
 }
 
 .objectif-black {
@@ -524,6 +586,43 @@ body.theme-noir {
   bottom: 0.5vh;
 }
 
+.content-objectif-side {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -0.6vh;
+  z-index: -2;
+  top: 6px;
+  height: 15vh;
+  padding: 1vh 0;
+}
+
+.objectif-side {
+  display: flex;
+  width: 0.7vh;
+  height: 4.7vh;
+  margin: 1vh 0;
+  background: var(--objectif-side);
+}
+
+.content-objectif-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: -0.6vh;
+  z-index: -1;
+  top: 4.5vh;
+  height: 15vh;
+}
+
+.objectif-side-middle {
+  display: flex;
+  width: 0.7vh;
+  height: 4.7vh;
+  margin: 1vh 0;
+  background: var(--objectif-side-middle);
+}
 
 /********************************* sound effects *****************************/
 
@@ -1069,9 +1168,44 @@ button {
 }
 
 
-.conteneur-flash.active {
+/* .conteneur-flash.active {
   background: radial-gradient(circle, #ffffff, #ffffffe1, #ffffffe1, #ffffff62, #ffffff1e, #bab9b938);
   box-shadow: 0 0 30px 20px rgba(155, 155, 155, 0.5);
+} */
+
+.conteneur-flash.active {
+  opacity: 1;
+  background: radial-gradient(circle at center,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.9) 10%,
+      rgba(255, 255, 255, 0.6) 20%,
+      rgba(255, 255, 255, 0.2) 30%,
+      rgba(0, 0, 0, 0.15) 60%,
+      rgba(0, 0, 0, 0.35) 90%,
+      rgba(0, 0, 0, 0.5) 100%);
+  box-shadow:
+    0 0 80px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 60px 30px rgba(255, 255, 255, 0.5);
+  filter: brightness(1.2);
+  animation: flashlight-fade 2.5s ease-in-out infinite;
+}
+
+@keyframes flashlight-fade {
+
+  0%,
+  100% {
+    filter: brightness(1.2);
+    box-shadow:
+      0 0 80px 40px rgba(0, 0, 0, 0.4),
+      inset 0 0 60px 30px rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    filter: brightness(1.3);
+    box-shadow:
+      0 0 100px 60px rgba(0, 0, 0, 0.5),
+      inset 0 0 80px 40px rgba(255, 255, 255, 0.6);
+  }
 }
 
 .line-back-acc {
@@ -1331,7 +1465,6 @@ button {
 
 .icon-plans {
   width: 100%;
-  margin: 7px;
   border-radius: 12px;
   background-image: url("../Medias/APP-Medias/plans.png");
   background-position: center;
@@ -1341,7 +1474,6 @@ button {
 
 .icon-safari {
   width: 100%;
-  margin: 7px;
   border-radius: 12px;
   background-image: url("../Medias/APP-Medias/safari.png");
   background-position: center;
@@ -1351,7 +1483,6 @@ button {
 
 .icon-google {
   width: 100%;
-  margin: 7px;
   border-radius: 12px;
   background-image: url("../Medias/APP-Medias/google.png");
   background-position: center;
@@ -1389,13 +1520,12 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 1.4vh;
   color: #cf1141;
-  margin: 0.5vh 0 0 0;
 }
 
 #jour {
   font-family: "Roboto", sans-serif;
   color: #565254;
-  font-size: 3vh;
+  font-size: 2.5vh;
   margin: 0;
 }
 
@@ -3016,6 +3146,7 @@ textArea:focus {
   background-color: #8e8d91;
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 
@@ -5174,7 +5305,6 @@ article {
 .icon-fruit-ninja {
   background-image: url("../Medias/APP-Medias/fruit-ninja.png");
   width: 100%;
-  margin: 7px;
   border-radius: 12px;
   background-position: center;
   background-size: contain;
@@ -5184,7 +5314,6 @@ article {
 .icon-foule-contact {
   background-image: url("../Medias/APP-Medias/icon-foule-contact.png");
   width: 100%;
-  margin: 7px;
   border-radius: 12px;
   background-position: center;
   background-size: contain;

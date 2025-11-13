@@ -169,6 +169,22 @@ a {
   font-size: 50px;
 }
 
+.bloc-txt {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  bottom: 120px;
+}
+
+.bloc-txt p {
+  color: var(--txt-attenu-color);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.05vh;
+}
+
 /*********************************************** pub point fort ***********************************************/
 
 .content-bloc-pt-fort {
@@ -181,13 +197,9 @@ a {
 .container-pt-fort {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 100px 0 0 0;
-  gap: 100px;
-  background-color: var(--bg-accent);
-  border-radius: 25px;
   width: 100%;
-  height: 60vh;
 }
 
 .bloc-title {
@@ -203,70 +215,235 @@ a {
   font-size: 50px;
 }
 
-.bloc-txt {
+.owl-carousel .item {
+  height: 70vh;
+  background: var(--bg-accent);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.content-nav-carousel {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 100%;
+  align-items: center;
   height: 20vh;
 }
 
-.bloc-txt p {
-  color: var(--txt-attenu-color);
-  font-size: 22px;
+.item h2 {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  /* color: var(--txt-attenu-color); */
+  font-size: 35px;
   font-weight: 500;
   letter-spacing: 0.05vh;
+  z-index: 100;
+  margin: 0;
 }
 
-.content-img-ceramic {
+.btn-carousel-pub {
   display: flex;
   justify-content: center;
-  width: 60%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+  align-items: center;
+  background: var(--bg-accent);
+  color: var(--txt-attenu-color);
+  font-size: 18px;
+  padding: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.content-img-ceramic img {
-  width: 100%;
+.btn-carousel-pub:hover {
+  background: var(--bg-accent);
+}
+
+.content-img {
+  display: flex;
+  justify-content: center;
+  width: 70%;
   height: auto;
   position: absolute;
-  top: -250px;
+  top: 10%;
+  left: 20%;
+}
+
+
+.content-img img {
+  width: 100%;
+  height: auto;
+}
+
+.content-phone-news {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+}
+
+.phone-news {
+  width: 35vh;
+  height: 75vh;
+  border-radius: 5vh;
+  border: 3px solid #161616;
+  /* box-shadow: 0 0 0 3px #c3c3c4; */
+  box-shadow: 0 0 0 3px var(--border-color);
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../Medias/APP-Medias/iphone-fd-white.png);
+}
+
+.line-back-news {
+  display: flex;
+  bottom: 0;
+  border: none;
+  height: 4px;
+  background-color: #757986;
+  width: 40%;
+  border-radius: 21vh;
+  position: absolute;
+  left: 30%;
+}
+
+
+.owl-dots {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  z-index: 5;
+}
+
+.owl-dot span {
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  display: block;
+  margin: 5px;
+  transition: all 0.3s;
+}
+
+.owl-dot.active span {
+  background: #111;
+  transform: scale(1.2);
+}
+
+.content-notif-news {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 120px;
+  left: 10%;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 #c4ceda, 3px 3px 8px 0 #b0c4db;
+  padding: 6px;
+  animation: pulse 1s 5s ease-in forwards;
+  transform: scale(0);
+}
+
+@keyframes pulse {
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.content-icon-news {
+  display: flex;
+  width: 17%;
+}
+
+.content-icon-news span {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #90cc9a, #dfe0df);
+  position: absolute;
+}
+
+.content-icon-news span i {
+  position: absolute;
+  right: -5px;
+  top: 21px;
+  font-size: 17px;
+  color: #32e350;
+}
+
+.content-mess-news {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  gap: 7px;
+}
+
+.line-notif-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.line-notif-news h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #949495;
+}
+
+.line-notif-news p {
+  margin: 0;
+  font-size: 11px;
+  color: #adadad;
+}
+
+.txt-news {
+  font-size: 13px;
+  color: #949495;
+  text-align: left;
 }
 
 /*********************************************** parallax puce ***********************************************/
 
 
 .blocFlex-parallax {
-  padding: 0 100px;
-  height: 120vh;
+  height: 200vh;
   position: relative;
+  background-color: black;
 }
 
 .parallax {
+  padding: 0 100px;
   height: 100vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .parallax h1 {
-  position: relative;
-  left: 70vw;
-  top: 30vh;
+  position: absolute;
+  left: 70%;
+  transform: translateY(-1000%);
   margin: 0;
+  color: #adadad;
 }
 
 .parallax-1 {
-  background-image: url("../Medias/APP-Medias/puce-apple-cover-2.png");
-  background-position: center;
+  background-image: url("../Medias/APP-Medias/puce-apple-cover.png");
 }
 
 .parallax-2 {
-  background-image: url("../Medias/APP-Medias/puce-apple-2.png");
-  background-position: center;
-
+  background-image: url("../Medias/APP-Medias/puce-apple.png");
 }
 
 
