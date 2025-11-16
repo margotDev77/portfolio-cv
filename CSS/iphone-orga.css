@@ -1914,7 +1914,6 @@ button {
 .content-line-ajout img {
   width: 140px;
   aspect-ratio: 1/1;
-  border-radius: 10px;
 }
 
 /******************************************* APP MUSIC PLAYLIST *******************************************/
@@ -2046,7 +2045,6 @@ button {
 
 .content-line-morceau-title img {
   width: 40px;
-  border-radius: 5px;
   margin: 0 10px 0 5px;
 }
 
