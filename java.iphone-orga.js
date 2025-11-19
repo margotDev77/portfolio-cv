@@ -165,6 +165,33 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
+// function updateAppClock() {
+//     const clockElement = document.getElementById('appclock');
+//     const now = new Date();
+//     const hours = String(now.getHours()).padStart(2, '0');
+//     const minutes = String(now.getMinutes()).padStart(2, '0');
+//     const currentTime = `${hours}:${minutes}`;
+//     clockElement.textContent = currentTime;
+// }
+// setInterval(updateClock, 1000);
+// updateAppClock();
+
+function updateAppClock() {
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+
+    document.getElementById('heures').textContent = hours;
+    document.getElementById('mins').textContent = minutes;
+}
+
+setInterval(updateAppClock, 1000);
+
+// Exécution au chargement
+updateAppClock();
+
+
 /**************************** heure app clockworld ****************************/
 
 function updateOtherClocks() {

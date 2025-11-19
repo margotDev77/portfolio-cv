@@ -221,42 +221,18 @@ a {
 }
 
 .mid-left {
-  left: 32%;
+  left: 31%;
   animation: phoneSecond 0.8s ease-out forwards;
   transform: translateX(60px);
 }
 
 .mid-right {
-  right: 32%;
+  right: 31%;
   animation: phoneSecond 0.8s ease-out forwards;
   transform: translateX(-60px);
 }
 
 @keyframes phoneSecond {
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.content-phone-trois {
-  position: absolute;
-  z-index: 1;
-  top: 12%;
-}
-
-.back-left {
-  left: 23%;
-  animation: phoneTrois 0.8s ease-out forwards;
-  transform: translateX(60px);
-}
-
-.back-right {
-  right: 23%;
-  animation: phoneTrois 0.8s ease-out forwards;
-  transform: translateX(-60px);
-}
-
-@keyframes phoneTrois {
   100% {
     transform: translateX(0);
   }
@@ -813,6 +789,7 @@ a {
 .content-music-news {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 80%;
   border-radius: 18px;
   position: absolute;
@@ -823,7 +800,7 @@ a {
   padding: 6px;
 }
 
-.content-title-music-screen-2{
+.content-title-music-screen-2 {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -831,21 +808,21 @@ a {
   gap: 2px;
 }
 
-.content-title-music-screen-2 h3{
+.content-title-music-screen-2 h3 {
   margin: 0;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
   color: #565254;
 }
 
-.content-title-music-screen-2 p{
+.content-title-music-screen-2 p {
   margin: 0;
-  font-size: 11px;
-   text-align: center;
+  font-size: 9px;
+  text-align: center;
   color: #565254;
 }
 
-.content-timeline-screen-2{
+.content-timeline-screen-2 {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -855,8 +832,8 @@ a {
   margin-top: 5px;
 }
 
-.content-timeline-screen-2 p{
-  font-size: 9px;
+.content-timeline-screen-2 p {
+  font-size: 8px;
   margin: 0;
   color: #565254;
 }
@@ -881,16 +858,16 @@ a {
 
 
 .content-btn-music-screen-2 {
-  margin-top: 5px;
+  margin: 5px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 90%;
   justify-content: space-between;
-  color: #565254 ;
+  color: #565254;
 }
 
-.btn-partage{
+.btn-partage {
   font-size: 12px;
 }
 
@@ -939,7 +916,7 @@ a {
 }
 
 .music-widget-2 {
-  font-size: 10px;
+  font-size: 12px;
   color: #fa273f;
 }
 
@@ -956,7 +933,7 @@ a {
 
 .content-logo-widget-2 {
   display: flex;
-  width: 15%;
+  width: 20%;
 }
 
 .btn-lect-2 {
@@ -999,7 +976,7 @@ a {
   margin: 0;
   color: #565254;
   font-family: "Roboto", sans-serif;
-  font-size: 7px;
+  font-size: 6px;
 }
 
 
@@ -1014,7 +991,7 @@ a {
 .container-appli-2 {
   width: 22vh;
   position: absolute;
-  top: 4.5vh;
+  top: 3vh;
 }
 
 .container-app-2 {
@@ -1079,41 +1056,78 @@ a {
   margin: 0;
   color: #565254;
   font-family: "Roboto", sans-serif;
-  font-size: 7px;
+  font-size: 6px;
 }
 
-.icon-plans-2 {
+.youtube-icon {
+  font-size: 25px;
+  color: #ff0000;
+}
+
+.icon-horloge {
   width: 100%;
   border-radius: 9px;
-  background-image: url("../Medias/APP-Medias/plans.png");
+  background-image: url("../Medias/APP-Medias/horloge.png");
   background-position: center;
   background-size: contain;
   aspect-ratio: 1/1;
 }
 
-.mail-2{
-font-size: 22px;
-color: #adadad;
+.icon-rappel-2 {
+  width: 100%;
+  border-radius: 9px;
+  background-image: url("../Medias/APP-Medias/rappel.png");
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1/1;
+}
+
+.icon-setting {
+  width: 100%;
+  border-radius: 9px;
+  background-image: url("../Medias/APP-Medias/parametre.png");
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1/1;
+}
+
+
+.icon-abonnement {
+  width: 100%;
+  border-radius: 9px;
+  background-image: url("../Medias/APP-Medias/ab.png");
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1/1;
+}
+
+.mail-2 {
+  font-size: 22px;
+  color: #3d90ca;
 }
 
 .appStore-2 {
-font-size: 25px;
-color :#2177e7;
+  font-size: 25px;
+  color: #2177e7;
 }
 
-.music-2{
-font-size: 20px;
-color: #fa273f;
+.music-2 {
+  font-size: 20px;
+  color: #fa273f;
 }
 
-.tv-2{
-color: #000000;
-font-size: 25px;
+.tv-2 {
+  color: #000000;
+  font-size: 25px;
 }
 
 .sante {
   color: #f55265;
   font-size: 22px;
+}
+
+.rappel-2 {
+  color: #adadad;
 }
 
 .objectif-cam-2 {
@@ -1149,7 +1163,7 @@ font-size: 25px;
   position: absolute;
   justify-content: space-evenly;
   align-content: center;
-  margin: 1vh;
+  margin: 0.7vh;
   box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
     -5px -5px 10px rgba(255, 255, 255, 0.75),
     inset 0px 0px 4px rgba(255, 255, 255, .2),
@@ -1159,7 +1173,7 @@ font-size: 25px;
   background-color: #ebecf0;
   border-radius: 1.5vh;
   padding: 0;
-  bottom: 1vh;
+  bottom: 0.5vh;
 }
 
 
@@ -1195,6 +1209,78 @@ font-size: 25px;
   color: #696969;
   font-size: 2vh;
 }
+
+/******************************************* widget meteo *******************************************/
+
+.background-ensoleille-2 {
+  background-image: url("../Medias/APP-Medias/background-ensoleille.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: #565254;
+}
+
+.content-column-2 {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 3px;
+}
+
+.column-ville-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column-ville-2 h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.column-ville-2 p {
+  font-size: 13px;
+}
+
+.content-info-meteo-2 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 10px;
+  position: absolute;
+  bottom: 6px;
+}
+
+.content-info-meteo-2 span i {
+  font-size: 7px;
+}
+
+.content-info-meteo-2 span {
+  display: flex;
+  gap: 5px;
+}
+
+.img-container-2 {
+  position: relative;
+}
+
+.img-container-2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #ebeff3 0%, #ebeff39f 10%, #ffffff00 30%, #ffffff00 50%, #ffffff00 70%, #ebeff39f 90%, #ebeff3 100%);
+  pointer-events: none;
+}
+
 /*********************************************** phone face 3 ***********************************************/
 
 
@@ -1373,14 +1459,15 @@ font-size: 25px;
 
 .item h2 {
   position: absolute;
-  top: 35px;
-  left: 35px;
+  top: 15px;
+  left: 25px;
   /* color: var(--txt-attenu-color); */
-  font-size: 45px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 400;
   letter-spacing: 0.05vh;
   z-index: 100;
   margin: 0;
+  text-align: left;
 }
 
 .btn-carousel-pub {
@@ -1404,11 +1491,10 @@ font-size: 25px;
 .content-img {
   display: flex;
   justify-content: center;
-  width: 50%;
-  height: auto;
+  width: 95%;
   position: absolute;
-  top: 15%;
-  left: 20%;
+  bottom: 0;
+  left: 7%;
 }
 
 
@@ -1440,6 +1526,415 @@ font-size: 25px;
   background: #111;
   transform: scale(1.2);
 }
+
+/****************** abonnements carousel ***********************/
+
+.content-phone-pay {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 22%;
+  right: 7%;
+}
+
+.phone-face-pay {
+  width: 32vh;
+  height: 60vh;
+  border-radius: 4.5vh;
+  border: 4px solid #161616;
+  box-shadow: 0 0 0 4px #c3c3c4;
+  overflow: hidden;
+}
+
+.container-info-accueil-phone-pay {
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  margin: 0 0 2vh 0;
+  position: absolute;
+  top: 1vh;
+  color: #565254;
+}
+
+.container-info-screen-left-pay {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vh;
+  gap: 7px;
+  font-size: 13px;
+}
+
+.container-info-screen-left-pay p {
+  margin: 0;
+}
+
+.container-info-screen-right-pay {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: right;
+  align-items: center;
+  margin-right: 3vh;
+  gap: 7px;
+  font-size: 12px;
+}
+
+.container-info-screen-cam-pay {
+  display: flex;
+  flex-basis: 33%;
+  justify-content: center;
+  align-items: center;
+}
+
+.face-cam-screen-pay {
+  display: flex;
+  width: 2.5vh;
+  height: 1.7vh;
+  background-color: #000000;
+  border-radius: 3vh;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.4vh;
+}
+
+.container-btn-phone-pay {
+  display: flex;
+  position: absolute;
+  width: 32vh;
+  height: 60vh;
+}
+
+.content-btn-lock-phone-pay {
+  display: flex;
+  justify-content: flex-start;
+  top: -10px;
+  right: 52px;
+  position: absolute;
+}
+
+.lock-btn-phone-pay {
+  width: 44px;
+  height: 2.2px;
+  background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+}
+
+.content-btn-phone-pay {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 6vh;
+  left: -10px;
+}
+
+.btn-face-phone-pay {
+  margin: 1vh 0 1vh 0;
+  width: 2.2px;
+  height: 21px;
+  background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+}
+
+.phone-screen-content-pay {
+  display: flex;
+  position: relative;
+  width: 32vh;
+  height: 60vh;
+  justify-content: center;
+  background-color: #ebecf0;
+}
+
+.container-bloc-pay {
+  position: absolute;
+  top: 25px;
+  left: 5.5%;
+  width: 85%;
+}
+
+.container-bloc-pay ul {
+  margin: 0;
+}
+
+.content-nav-pay {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 10px 10px;
+  color: #376eb4;
+  font-size: 18px;
+}
+
+.btn-tri {
+  font-size: 15px;
+}
+
+.content-nav-pay p {
+  color: #adadad;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.content-title-pay {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  color: #adadad;
+}
+
+.content-title-pay h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.content-bloc-pay {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 18px;
+  background-color: #ebecf0;
+  box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0), inset 5px 5px 13px rgba(55, 84, 170, .15), inset -5px -5px 18px rgba(255, 255, 255, 0.75);
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+
+.border-li-pay {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #adadad;
+  border-bottom-width: 1px;
+  padding-inline-start: 1;
+  border-width: 1px;
+  padding: 7px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.border-li-pay-none {
+  display: flex;
+  list-style: none;
+  padding: 7px 7px 0 7px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-pay-logo {
+  display: flex;
+  width: 20%;
+}
+
+.content-pay-logo span {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 6px rgba(55, 84, 170, .15), -4px -4px 9px rgba(255, 255, 255, 0.75), inset 0px 0px 3px rgba(255, 255, 255, .2), inset 4px 4px 6px rgba(55, 84, 170, 0), inset -4px -4px 9px rgba(255, 255, 255, 0), 0px 0px 3px rgba(255, 255, 255, 0);
+  background-color: #ebecf0;
+}
+
+.music-pay {
+  font-size: 16px;
+  color: #fa273f;
+}
+
+.icloud-pay {
+  font-size: 17px;
+  color: #68aff6;
+}
+
+.prime-video {
+  font-size: 22px;
+  color: #2277a5;
+}
+
+.canal-plus {
+  font-size: 32px;
+  font-weight: 800;
+  color: #161616;
+}
+
+.linkedin-pay {
+  font-size: 22px;
+  color: #007bb5;
+}
+
+.content-pay-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 65%;
+}
+
+.content-pay-info h3 {
+  font-size: 13px;
+  margin: 0;
+  color: #565254;
+}
+
+.content-pay-info p {
+  font-size: 12px;
+  margin: 0;
+  color: #adadad;
+}
+
+.content-pay-prix {
+  display: flex;
+  flex-direction: row;
+  width: 15%;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.content-prix-pay-column {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin: 0;
+  color: #adadad;
+}
+
+.content-pay-prix i {
+  font-size: 11px;
+  color: #565254;
+}
+
+
+.content-bloc-renouv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 18px;
+  background-color: #ebecf0;
+  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 0.75);
+  padding: 10px 6px;
+  margin-top: 20px;
+}
+
+.content-bloc-renouv h3 {
+  font-size: 12px;
+  margin: 0 0 0 10px;
+  color: #565254;
+  text-align: start;
+}
+
+.switch-container-fake {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.switch-fake {
+  position: relative;
+  width: 40px;
+  height: 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch-fake::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ebecf0;
+  box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
+    -2px -2px 3px rgba(255, 255, 255, 0.75),
+    inset 0px 0px 4px rgba(255, 255, 255, .2),
+    inset 5px 5px 7px rgba(55, 84, 170, 0),
+    inset -5px -5px 10px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  left: 50%;
+}
+
+.switch-fake.greenOk {
+  background: linear-gradient(0deg, #35c759, #b8e9c4);
+}
+
+/****************** videos carousel ***********************/
+
+.color-title-item {
+  color: #fff;
+}
+
+.content-video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.content-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: #ebecf062;
+  box-shadow: 0px 3px 8px rgba(147, 147, 147, 0.2);
+  backdrop-filter: blur(1px);
+  color: white;
+  border: none;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+/****************** touch ID carousel ***********************/
+
+
+.content-phone-touchID {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  right: 7%;
+}
+
+.phone-face-touchID {
+  width: 32vh;
+  height: 60vh;
+  border-radius: 4.5vh;
+  border: 4px solid #161616;
+  box-shadow: 0 0 0 4px #c3c3c4;
+  background-color: #1a1a1a;
+}
+
+.container-info-accueil-phone-touchID {
+  display: flex;
+  width: 100%;
+  margin: 0 0 2vh 0;
+  position: absolute;
+  top: 1vh;
+  justify-content: center;
+}
+
 
 /*********************************************** parallax puce ***********************************************/
 
@@ -1538,6 +2033,20 @@ font-size: 25px;
   flex-direction: row;
   padding: 0 100px;
   height: 100vh;
+}
+
+.bloc-title-simul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 3%;
+}
+
+.bloc-title-simul h2 {
+  margin: 0;
+  font-size: 35px;
 }
 
 .contenair-bloc-simul {
