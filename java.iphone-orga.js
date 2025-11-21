@@ -249,59 +249,59 @@ let running = false;
 
 // Fonction pour mettre à jour l'affichage du temps
 function updateChrono() {
-  const now = Date.now();
-  const diff = now - startTime + elapsedTime;
-  const minutes = String(Math.floor(diff / 60000)).padStart(2, '0');
-  const seconds = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-  const milliseconds = String(diff % 100).padStart(2, '0');
-  document.getElementById('chrono').textContent = `${minutes}:${seconds}:${milliseconds}`;
+    const now = Date.now();
+    const diff = now - startTime + elapsedTime;
+    const minutes = String(Math.floor(diff / 60000)).padStart(2, '0');
+    const seconds = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+    const milliseconds = String(diff % 100).padStart(2, '0');
+    document.getElementById('chrono').textContent = `${minutes}:${seconds}:${milliseconds}`;
 }
 
 // Fonction utilitaire pour gérer les styles actifs
 function setActiveButton(activeId) {
-  document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
-  if (activeId) {
-    document.getElementById(activeId).classList.add('active');
-  }
+    document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+    if (activeId) {
+        document.getElementById(activeId).classList.add('active');
+    }
 }
 
 // Démarrer
 document.getElementById('startBtn').addEventListener('click', () => {
-  if (!running) {
-    startTime = Date.now();
-    intervalId = setInterval(updateChrono, 10);
-    running = true;
-    setActiveButton('startBtn');
-  }
+    if (!running) {
+        startTime = Date.now();
+        intervalId = setInterval(updateChrono, 10);
+        running = true;
+        setActiveButton('startBtn');
+    }
 });
 
 // Pause
 document.getElementById('pauseBtn').addEventListener('click', () => {
-  if (running) {
-    clearInterval(intervalId);
-    elapsedTime += Date.now() - startTime;
-    running = false;
-    setActiveButton('pauseBtn');
-  }
+    if (running) {
+        clearInterval(intervalId);
+        elapsedTime += Date.now() - startTime;
+        running = false;
+        setActiveButton('pauseBtn');
+    }
 });
 
 // Reprendre
 document.getElementById('resumeBtn').addEventListener('click', () => {
-  if (!running && elapsedTime > 0) {
-    startTime = Date.now();
-    intervalId = setInterval(updateChrono, 10);
-    running = true;
-    setActiveButton('resumeBtn');
-  }
+    if (!running && elapsedTime > 0) {
+        startTime = Date.now();
+        intervalId = setInterval(updateChrono, 10);
+        running = true;
+        setActiveButton('resumeBtn');
+    }
 });
 
 // Réinitialiser
 document.getElementById('resetBtn').addEventListener('click', () => {
-  clearInterval(intervalId);
-  elapsedTime = 0;
-  running = false;
-  document.getElementById('chrono').textContent = '00:00,00';
-  setActiveButton('resetBtn');
+    clearInterval(intervalId);
+    elapsedTime = 0;
+    running = false;
+    document.getElementById('chrono').textContent = '00:00,00';
+    setActiveButton('resetBtn');
 });
 
 
@@ -362,51 +362,137 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**************************** switch btn ****************************/
 
-const switches1 = document.querySelectorAll(".switch");
+function findLabel(switchEl) {
+    if (switchEl.previousElementSibling && switchEl.previousElementSibling.classList && switchEl.previousElementSibling.classList.contains('switch-label')) {
+        return switchEl.previousElementSibling;
+    }
+    const container = switchEl.parentElement;
+    if (container) {
+        const lbl = container.querySelector('.switch-label');
+        if (lbl) return lbl;
+    }
+    return null;
+}
 
-switches1.forEach(switchButton => {
-    switchButton.addEventListener("click", () => {
-        switchButton.classList.toggle("active");
+function setTargetsHidden(targetString, hidden) {
+    if (!targetString) return;
+    targetString.split(',').map(s => s.trim()).filter(Boolean).forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+            el.classList.toggle('hidden', Boolean(hidden));
+        });
+    });
+}
 
-        const label = switchButton.previousElementSibling;
+// --------- switch ----------
+document.querySelectorAll('.switch').forEach(sw => {
+    const label = findLabel(sw);
 
-        const textOn = switchButton.dataset.on;
-        const textOff = switchButton.dataset.off;
+    (function init() {
+        const isOn = sw.classList.contains('active');
+        if (label) label.textContent = isOn ? (sw.dataset.on ?? sw.dataset.on ?? 'Oui') : (sw.dataset.off ?? sw.dataset.off ?? 'Non');
+        setTargetsHidden(sw.dataset.target, !isOn);
+    }());
 
-        if (switchButton.classList.contains("active")) {
-            label.textContent = textOn;
-        } else {
-            label.textContent = textOff;
-        }
+    sw.addEventListener('click', () => {
+        const isOn = sw.classList.toggle('active');
+        if (label) label.textContent = isOn ? (sw.dataset.on ?? sw.dataset.on ?? 'Oui') : (sw.dataset.off ?? sw.dataset.off ?? 'Non');
+        setTargetsHidden(sw.dataset.target, !isOn);
     });
 });
 
 
-const switches2 = document.querySelectorAll(".switch2");
+// --------- switch2 ----------
+document.querySelectorAll('.switch2').forEach(sw => {
+    const label = findLabel(sw);
 
-switches2.forEach(switchButton => {
-    switchButton.addEventListener("click", () => {
-        switchButton.classList.toggle("desactive");
+    (function init() {
+        const isOn = !sw.classList.contains('desactive');
+        if (label) label.textContent = isOn ? (sw.dataset.on ?? sw.dataset.on ?? 'Oui') : (sw.dataset.off ?? sw.dataset.off ?? 'Non');
+        setTargetsHidden(sw.dataset.target, !isOn);
+    }());
 
-        const label = switchButton.previousElementSibling;
+    sw.addEventListener('click', () => {
+        sw.classList.toggle('desactive');
+        const isOn = !sw.classList.contains('desactive');
 
-        const textOns = switchButton.dataset.ons;
-        const textOffs = switchButton.dataset.offs;
-
-        if (switchButton.classList.contains("desactive")) {
-            label.textContent = textOns;
-        } else {
-            label.textContent = textOffs;
-        }
+        if (label) label.textContent = isOn ? (sw.dataset.on ?? sw.dataset.on ?? 'Oui') : (sw.dataset.off ?? sw.dataset.off ?? 'Non');
+        setTargetsHidden(sw.dataset.target, !isOn);
     });
 });
 
+// --- LOGIQUE MODE AVION ---
+const airplaneSwitch = document.querySelector('[data-master="airplane"]');
 
-const switchesDark = document.querySelectorAll(".switchDark");
+function setSwitchState(sw, isOn) {
+    const label = sw.previousElementSibling;
+    const isType1 = sw.classList.contains("switch");
+    const isType2 = sw.classList.contains("switch2");
 
-switchesDark.forEach(switchButton => {
-    switchButton.addEventListener("click", () => {
-        switchButton.classList.toggle("active");
+    if (isType1) {
+        sw.classList.toggle("active", isOn);
+        if (label) label.textContent = isOn ? sw.dataset.on : sw.dataset.off;
+        setTargetsHidden(sw.dataset.target, !isOn);
+    }
+
+    if (isType2) {
+        sw.classList.toggle("desactive", !isOn);
+        if (label) label.textContent = isOn ? sw.dataset.off : sw.dataset.on;
+        setTargetsHidden(sw.dataset.target, !isOn);
+    }
+}
+
+if (airplaneSwitch) {
+    airplaneSwitch.addEventListener("click", () => {
+        const airplaneOn = airplaneSwitch.classList.contains("active");
+
+        document.querySelectorAll('[data-toggle-group="connectivity"]').forEach(sw => {
+            setSwitchState(sw, !airplaneOn);
+        });
+    });
+}
+
+function bindButtonToSwitch(button) {
+    const switchSelector = button.dataset.switch;
+    if (!switchSelector) return;
+
+    const sw = document.querySelector(switchSelector);
+    if (!sw) return;
+
+    button.classList.toggle('active', sw.classList.contains('active') || !sw.classList.contains('desactive'));
+
+    sw.addEventListener('click', () => {
+        const isOn = sw.classList.contains('switch') ? sw.classList.contains('active') : !sw.classList.contains('desactive');
+        button.classList.toggle('active', isOn);
+    });
+
+    button.addEventListener('click', () => {
+        if (sw.classList.contains('switch')) {
+            const newState = !sw.classList.contains('active');
+            setSwitchState(sw, newState);
+            button.classList.toggle('active', newState);
+        }
+        if (sw.classList.contains('switch2')) {
+            const newState = sw.classList.contains('desactive');
+            setSwitchState(sw, newState);
+            button.classList.toggle('active', newState);
+        }
+    });
+}
+
+document.querySelectorAll('[data-switch]').forEach(button => {
+    const switchSelector = button.dataset.switch;
+    if (!switchSelector) return;
+
+    const sw = document.querySelector(switchSelector);
+    if (!sw) return;
+
+    const isOn = sw.classList.contains('switch') ? sw.classList.contains('active') : !sw.classList.contains('desactive');
+    button.classList.toggle('active', isOn);
+
+    button.addEventListener('click', () => {
+        sw.click();
+        const newState = sw.classList.contains('switch') ? sw.classList.contains('active') : !sw.classList.contains('desactive');
+        button.classList.toggle('active', newState);
     });
 });
 

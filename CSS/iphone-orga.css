@@ -32,6 +32,9 @@
   --btn-home-screen-active: inset -2px -2px 7px #c4ceda, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #9a9797;
   --color-main-acc-screen: #565254;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #898e93;
+  --color-minute-theme: #b2b2b3;
 }
 
 body.theme-or {
@@ -60,6 +63,9 @@ body.theme-or {
   --btn-home-screen-active: inset -2px -2px 7px #b4a38e, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #9a9797;
   --color-main-acc-screen: #565254;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #80766b;
+  --color-minute-theme: #b3a28d;
 }
 
 body.theme-rose {
@@ -88,6 +94,9 @@ body.theme-rose {
   --btn-home-screen-active: inset -2px -2px 7px #cba09c, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #9a9797;
   --color-main-acc-screen: #636363;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #947c79;
+  --color-minute-theme: #d4aca5;
 }
 
 body.theme-sideral {
@@ -116,6 +125,9 @@ body.theme-sideral {
   --btn-home-screen-active: inset -2px -2px 7px #505253, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #dfe1e7;
   --color-main-acc-screen: #f0f0f0;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #504f53;
+  --color-minute-theme: #7f7f83;
 }
 
 body.theme-vert {
@@ -141,6 +153,9 @@ body.theme-vert {
   --btn-home-screen-bg: #deede5;
   --btn-home-screen: 1px 1px 3px 0 #acd1be, 3px 3px 8px 0 #8eaa9a;
   --btn-home-screen-active: inset -2px -2px 7px #b9ccc2, inset 2px 2px 6px #00000016;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #7a9288;
+  --color-minute-theme: #abd0bd;
 }
 
 body.theme-bleu {
@@ -166,6 +181,9 @@ body.theme-bleu {
   --btn-home-screen-bg: #c2dcf1;
   --btn-home-screen: 1px 1px 3px 0 #c3ddf3, 3px 3px 8px 0 #8293a2;
   --btn-home-screen-active: inset -2px -2px 7px #91a6b7, inset 2px 2px 6px #00000016;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #6f7f8e;
+  --color-minute-theme: #97b0c7;
 }
 
 body.theme-violet {
@@ -193,6 +211,9 @@ body.theme-violet {
   --btn-home-screen-active: inset -2px -2px 7px #534469, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #dfe1e7;
   --color-main-acc-screen: #f0f0f0;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #4e4262;
+  --color-minute-theme: #716283;
 }
 
 body.theme-noir {
@@ -220,6 +241,9 @@ body.theme-noir {
   --btn-home-screen-active: inset -2px -2px 7px #101010, inset 2px 2px 6px #00000016;
   --txt-color-scroll: #dfe1e7;
   --color-main-acc-screen: #f0f0f0;
+  /*************** heure/min app heure ************/
+  --color-heure-theme: #1c1c22;
+  --color-minute-theme: #434046;
 }
 
 
@@ -418,10 +442,6 @@ body.theme-noir {
       #f3f3f3 20%,
       #d0d0d0 50%,
       #a0a0a0 100%);
-  box-shadow:
-    0 0 6px 2px rgba(255, 255, 255, 0.6),
-    inset 0 0 6px rgba(255, 255, 255, 0.9),
-    inset 0 0 2px rgba(0, 0, 0, 0.5);
   position: relative;
   border: 2px solid var(--border-objectif);
 }
@@ -1363,12 +1383,14 @@ button {
 }
 
 #heures {
-  color: #33ab91;
+  /* color: #33ab91; */
+  color: var(--color-heure-theme);
   transform: scaleY(1.2);
 }
 
 #mins {
-  color: #726a8d;
+  /* color: #726a8d; */
+  color: var(--color-minute-theme);
   transform: scaleY(1.2);
 }
 
@@ -2534,7 +2556,8 @@ button {
 }
 
 .btn-num {
-  width: calc(100%/4.5);
+  width: 65px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2543,7 +2566,7 @@ button {
   color: #adadad;
   font-size: 25px;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 50%;
   box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
     -5px -5px 10px rgba(255, 255, 255, 0.75),
     inset 0px 0px 4px rgba(255, 255, 255, .2),
@@ -2945,91 +2968,6 @@ ul {
 .content-title-viz h4 {
   margin: 0;
 }
-
-/************************************** menu deroulant fichier **********************************/
-
-.menu-button {
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dropdown-menu {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  left: -350px;
-  transition: left 0.3sease-in-out;
-}
-
-.bloc-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-  background: rgba(22, 22, 22, 0.75);
-  backdrop-filter: blur(5px);
-  border-radius: 20px;
-  color: white;
-  padding: 15px;
-}
-
-.content-download {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.content-download img {
-  width: 20%;
-  aspect-ratio: 1/1;
-}
-
-.content-title-download {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.content-title-download p {
-  font-size: 10px;
-  color: #adadad;
-  margin: 2px;
-}
-
-.bloc-menu ul {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-}
-
-.bloc-menu li {
-  display: flex;
-  list-style: none;
-  border-bottom: 1px solid #adadad;
-  padding-inline-start: 1;
-  border-width: 1px;
-  padding: 10px 0;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bloc-menu a {
-  text-decoration: none;
-  font-size: 12px;
-  color: #ebeff3;
-}
-
-.bloc-menu i {
-  font-size: 17px;
-}
-
-.dropdown-menu.active {
-  left: 0;
-}
-
 
 /******************************************* APP METEO *******************************************/
 
@@ -4012,19 +3950,8 @@ p {
   gap: 15px;
 }
 
-.btn-reseau {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(100%/2);
-  box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
-    -5px -5px 10px rgba(255, 255, 255, 0.75),
-    inset 0px 0px 4px rgba(255, 255, 255, .2),
-    inset 5px 5px 7px rgba(55, 84, 170, 0),
-    inset -5px -5px 10px rgba(255, 255, 255, 0),
-    0px 0px 4px rgba(255, 255, 255, 0);
-  border-radius: 50px;
-  aspect-ratio: 1/1;
+.airdrop {
+  font-size: 22px;
 }
 
 .content-btn-reseau {
@@ -4037,19 +3964,84 @@ p {
 
 }
 
+.btn-reseau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100%/2);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
 .btn-reseau-petit {
   display: flex;
   width: 20px;
   height: 20px;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+}
+
+/* desactive */
+.btn-reseau {
+  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reseau-petit {
+  box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0), inset 3px 3px 5px rgba(55, 84, 170, .15), inset -3px -3px 5px rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reseau i {
+  color: #adadad;
+  transition: color 0.3s;
+}
+
+/* active */
+.btn-reseau.active {
   box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
     -5px -5px 10px rgba(255, 255, 255, 0.75),
     inset 0px 0px 4px rgba(255, 255, 255, .2),
     inset 5px 5px 7px rgba(55, 84, 170, 0),
     inset -5px -5px 10px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0);
-  border-radius: 50px;
+}
+
+.btn-reseau-petit.active {
+  box-shadow: 3px 3px 5px rgba(55, 84, 170, .15),
+    -3px -3px 7px rgba(255, 255, 255, 0.75),
+    inset 0px 0px 2px rgba(255, 255, 255, .2),
+    inset 3px 3px 5px rgba(55, 84, 170, 0),
+    inset -3px -3px 5px rgba(255, 255, 255, 0),
+    0px 0px 2px rgba(255, 255, 255, 0);
+}
+
+.btn-reseau.active.btnAirplane i {
+  color: #f0a937;
+}
+
+.btn-reseau.active.btnBlue i {
+  color: #376eb4;
+}
+
+.btn-reseau.active.btnGreen i {
+  color: #35c759;
+}
+
+.btn-reseau-petit i {
+  color: #adadad;
+  transition: color 0.3s;
+}
+
+.btn-reseau-petit.active.btnBlue i {
+  color: #376eb4;
+}
+
+.btn-reseau-petit.active.btnGreen i {
+  color: #35c759;
 }
 
 
@@ -4158,6 +4150,10 @@ p {
 
 .switch.violet.active {
   background: linear-gradient(0deg, #5756ce, #b2b2d9);
+}
+
+.switch.orange.active {
+  background: linear-gradient(0deg, #f0a937, #f5bc7a);
 }
 
 
@@ -4272,9 +4268,18 @@ p {
   color: #35c759;
 }
 
+.color-orange {
+  color: #f0a937;
+}
+
 .color-red {
   color: #fe6064;
 }
+
+.hidden {
+  display: none;
+}
+
 
 .line-separ-notif {
   border: none;
@@ -4377,10 +4382,12 @@ p {
 }
 
 .flash-btn-notif.active {
-  background: radial-gradient(circle at center, #2196f3 0%, #64b5f6 100%);
-  color: #eaf6ff;
-  box-shadow: 0 0 18px 5px rgba(0, 123, 255, 0.4);
-  transform: scale(1.05);
+  /* background: radial-gradient(circle at center, #2196f3 0%, #64b5f6 100%); */
+  color: #376eb4;
+  /* box-shadow: 0 0 18px 5px rgba(0, 123, 255, 0.4); */
+  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 0.75);
+
+  transform: scale(0.97);
 }
 
 .btn-autre-notif {
@@ -4568,18 +4575,20 @@ p {
 
 .cpt-btn {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 37px;
+  height: 37px;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   box-shadow: 3px 3px 5px rgba(55, 84, 170, .20), -3px -3px 5px rgba(255, 255, 255, 0.25), 0px 0px 4px rgba(255, 255, 255, .20);
   background-color: #cbd1d7;
-  border-radius: 50px;
+  border-radius: 50%;
+  background-image: url("../Medias/APP-Medias/memoji-profil.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .zone-msg-plans {
-  width: 100%;
+  width: 85%;
 }
 
 .search-bloc-plans {
@@ -5210,16 +5219,6 @@ ul {
   border-radius: 30px;
 }
 
-
-article {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  flex-direction: row;
-  /* padding: 10px 0; */
-}
-
 .hidden {
   display: none;
 }
@@ -5266,7 +5265,7 @@ article {
   margin: 0 auto;
 }
 
-.scrollable-content {
+.scrollable-content-store {
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -5274,6 +5273,15 @@ article {
 
 .scrollable-content::-webkit-scrollbar {
   display: none;
+}
+
+.scrollable-content-store article {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 7px 0;
 }
 
 /************************************************** groupe app *************************************************************/
@@ -5426,10 +5434,12 @@ article {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #fd6f6f;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(140, 140, 140, 0.1);
+  background-color: #1e1e1e;
   background-image: url("../Medias/APP-Medias/memoji-profil.png");
   background-size: cover;
   background-position: center;
+  padding: 5px;
 }
 
 .content-info-pages h2 {
@@ -5665,11 +5675,11 @@ article {
   background-image: url("../Medias/APP-Medias/creafi3d-logo-simple.png");
 }
 
-.bg-3d {
-  background-image: url("../Medias/APP-Medias/ethan-neja.jpg");
+.bg-meme-dev {
+  background-image: url("../Medias/APP-Medias/dev-profil.png");
 }
 
-.bg-dev{
+.bg-dev {
   background-image: url("../Medias/APP-Medias/bitcoin.jpg");
 }
 
@@ -5752,10 +5762,9 @@ article {
 }
 
 .content-info-post-fb-left span {
-  width: 27px;
-  height: 27px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background-color: #007bb5;
   background-position: center;
   background-size: cover;
 }
@@ -5818,23 +5827,80 @@ article {
   gap: 17px;
 }
 
-.content-like-post-fb span{
+.content-like-post-fb span {
   display: flex;
   flex-direction: row;
   gap: 6px;
 }
 
-.content-like-post-fb span p{
+.content-like-post-fb span p {
   margin: 0;
   font-size: 14px;
 }
 
-.container-commentaire-fb{
+.container-commentaire-fb {
   display: flex;
   flex-direction: column;
+  padding: 5px 15px;
+}
+
+.content-commentaire-fb {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.content-commentaire-fb span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../Medias/APP-Medias/ethan-neja.jpg");
+}
+
+.content-info-profil-commentaire {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.content-info-profil-commentaire h2 {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
 }
 
 
+.content-info-profil-commentaire p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.container-like-commentaire-fb {
+  display: flex;
+  flex-direction: row;
+  padding: 6px 15px 10px 35px;
+  justify-content: space-between;
+  align-items: center;
+  color: #adadad;
+}
+
+.container-like-commentaire-fb p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.container-like-commentaire-fb span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
 
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/

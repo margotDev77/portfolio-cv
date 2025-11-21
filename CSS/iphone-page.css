@@ -1935,6 +1935,49 @@ a {
   justify-content: center;
 }
 
+.content-touch-id{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  padding: 0 15%;
+}
+
+.container-img-touch-id{
+display: flex;
+width: 25%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.container-img-touch-id img{
+width: 8vh !important;
+height: auto;
+}
+
+.container-img-touch-id h3{
+margin: 0;
+font-size: 20px;
+font-weight: 500;
+color: #adadad;
+}
+
+.container-txt-et{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 15%;
+}
+
+.container-txt-et h3{
+margin: 0;
+font-size: 35px;
+font-weight: 500;
+}
+
 
 /*********************************************** parallax puce ***********************************************/
 
@@ -2279,7 +2322,7 @@ a {
 .content-info-exit {
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 40%;
   align-items: center;
   position: absolute;
   bottom: 20px;

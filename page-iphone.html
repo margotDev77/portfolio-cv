@@ -631,7 +631,24 @@
                     </div>
 
                     <div class="item">
-                        <h2>Nouvel </h2>
+                        <h2>Plus te sécurité avec</h2>
+
+                        <div class="content-touch-id">
+                            <div class="container-img-touch-id">
+                                <img src="Medias/APP-Medias/face-id.png" alt="">
+                                <h3>Face ID</h3>
+                            </div>
+
+                            <div class="container-txt-et">
+                                <h3>+</h3>
+                            </div>
+
+                            <div class="container-img-touch-id">
+                                <img src="Medias/APP-Medias/touch.png" alt="">
+                                <h3>Touch ID</h3>
+                            </div>
+
+                        </div>
 
                         <div class="content-phone-touchID">
 
@@ -1683,13 +1700,15 @@
                                 <div class="container-info-accueil-app">
                                     <div class="container-info-left color-info-top">
                                         <div class="clock" id="clock"></div>
-                                        <div><i class="location fa-solid fa-location-arrow"></i></div>
+                                        <div class="location"><i class="fa-solid fa-location-arrow"></i></div>
                                     </div>
                                     <div class="container-info-cam">
                                     </div>
                                     <div class="container-info-right color-info-top">
-                                        <div><i class="reseau fa-solid fa-signal"></i></div>
-                                        <div><i class="wifi fa-solid fa-wifi"></i></div>
+                                        <div class="airplane"><i class="fa-solid fa-plane"></i></div>
+                                        <div class="reseau"><i class="fa-solid fa-signal"></i></div>
+                                        <div class="wifi"><i class="fa-solid fa-wifi"></i></div>
+                                        <div class="bluetooth"><i class="fa-brands fa-bluetooth"></i></div>
                                         <div><i class="battery fa-solid fa-battery-three-quarters"></i></div>
                                     </div>
                                 </div>
@@ -2478,8 +2497,10 @@
                                                 <button class="btn-num font-size-1"><i
                                                         class="fa-solid fa-hashtag"></i></button>
                                                 <div class="btn-num-none"></div>
+
                                                 <button class="btn-num color-tel"><i
                                                         class="fa-solid fa-phone"></i></button>
+
                                                 <div class="btn-num-none"><i class="fa-solid fa-delete-left"></i>
                                                 </div>
                                             </div>
@@ -2491,11 +2512,12 @@
                                                 <button class="btn-clavier-back"><i class="fa-solid fa-clock"></i>
                                                     <p>Récents</p>
                                                 </button>
-                                                <button class="btn-clavier-back"><i class="fa-solid fa-circle-user"></i>
+                                                <button class="btn-clavier-back" data-id="app-contact"><i
+                                                        class="fa-solid fa-circle-user"></i>
                                                     <p>Contacts</p>
                                                 </button>
                                                 <button class="btn-clavier color-blue-apple"><i
-                                                        class="fa-solid fa-ellipsis-vertical"></i>
+                                                        class="fa-solid fa-braille"></i>
                                                     <p>Clavier</p>
                                                 </button>
                                                 <button class="btn-clavier-back"><i class="fa-solid fa-voicemail"></i>
@@ -2674,38 +2696,10 @@
                                                     </div>
                                                 </div>
 
-                                                <div id="dropdown-menu" class="dropdown-menu typo-1">
-                                                    <nav class="bloc-menu">
-                                                        <div class="content-download">
-                                                            <img src="Medias/APP-Medias/CV_download.png">
-                                                            <div class="content-title-download">
-                                                                <a href="" download="">CV_Margot</a>
-                                                                <p>pdf . 314 ko</p>
-                                                            </div>
-                                                            <button><a href="" download=""><i
-                                                                        class="fa-solid fa-arrow-up-from-bracket"></i></a></button>
-                                                        </div>
-                                                        <ul>
-                                                            <li><a href="#">Enregistrer dans Photos</a><i
-                                                                    class="fa-solid fa-file-arrow-down"></i></li>
-                                                            <li><a href="#">Exporter</a><i
-                                                                    class="fa-solid fa-file-arrow-up"></i></li>
-                                                            <li><a href="#">Imprimer</a><i
-                                                                    class="fa-solid fa-print"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-
-
                                                 <div class="lightbox-content">
                                                     <img class="lightbox-img" id="lightbox-img" src="" alt="">
                                                     <p class="image-info" id="image-info"></p>
                                                 </div>
-
-
-
-
 
                                                 <div class="content-clavier-back color-blue-apple">
                                                     <i class="fa-solid fa-arrow-up-from-bracket"></i>
@@ -2932,9 +2926,9 @@
                                                 </div>
 
                                                 <div class="content-story-fb">
-                                                    <span class="bg-3d"></span>
-                                                    <img src="Medias/APP-Medias/3D-print.jpg" alt="">
-                                                    <h2>Ethan</h2>
+                                                    <span class="bg-meme-dev"></span>
+                                                    <img src="Medias/APP-Medias/meme-dev-gpt.JPG" alt="">
+                                                    <h2>Memes Dev</h2>
                                                 </div>
 
                                                 <div class="content-story-fb-end">
@@ -2948,7 +2942,7 @@
                                             <div class="container-post-fb">
                                                 <div class="content-info-post-fb">
                                                     <div class="content-info-post-fb-left">
-                                                        <span></span>
+                                                        <span class="bg-meme-dev"></span>
                                                         <div class="content-info-post-fb-title color-accent-clear">
                                                             <h2>Memes Dev</h2>
                                                             <p>18 min</p>
@@ -2970,15 +2964,29 @@
                                                 </div>
 
                                                 <div class="content-like-post-fb">
-                                                    <span><i class="fa-solid fa-thumbs-up"></i> <p>22</p></span>
-                                                    <span><i class="fa-solid fa-comment"></i><p>47</p></span>
+                                                    <span><i class="fa-solid fa-thumbs-up"></i>
+                                                        <p>22</p>
+                                                    </span>
+                                                    <span><i class="fa-solid fa-comment"></i>
+                                                        <p>47</p>
+                                                    </span>
                                                     <i class="fa-solid fa-share"></i>
                                                 </div>
 
                                                 <div class="container-commentaire-fb">
-                                                    <div class="content-commentaire-fb">
+                                                    <div class="content-commentaire-fb color-accent-clear">
                                                         <span></span>
-
+                                                        <div class="content-info-profil-commentaire">
+                                                            <h2>Ethan Neja</h2>
+                                                            <p>Oui easy, 31 en base 8 = 25 en base 10</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="container-like-commentaire-fb">
+                                                        <p>Répondre</p>
+                                                        <span>
+                                                            <i class="fa-solid fa-thumbs-up color-accent-clear"></i>
+                                                            <i class="fa-regular fa-thumbs-down"></i>
+                                                        </span>
                                                     </div>
 
                                                 </div>
@@ -3002,9 +3010,6 @@
 
 
                                 </div>
-
-
-
 
                                 <!------------------------------------------------------------------------- APP SAFARI ------------------------------------------------------------------------->
 
@@ -3179,7 +3184,8 @@
 
                                                     <div class="content-bloc-photos">
                                                         <div class="content-bloc-img">
-                                                            <img src="Medias/APP-Medias/camera-bg.jpg" alt="">
+                                                            <img src="Medias/APP-Medias/carrosserie-face_light.webp"
+                                                                alt="">
                                                         </div>
 
                                                         <div class="content-bloc-img">
@@ -3231,7 +3237,7 @@
                                                     <div class="content-bloc-photos">
                                                         <div class="content-bloc-img-2">
                                                             <img src="Medias/APP-Medias/meme-dev-gpt.JPG" alt="">
-                                                            <h3>Facebook</h3>
+                                                            <h3>Fakebook</h3>
                                                         </div>
 
                                                         <div class="content-bloc-img-2">
@@ -3633,7 +3639,7 @@
                                                             <i class="fa-solid fa-microphone"></i>
                                                         </div>
                                                     </div>
-                                                    <div class="cpt-btn"><i class="fa-solid fa-m"></i></div>
+                                                    <div class="cpt-btn"></div>
                                                 </div>
                                             </div>
 
@@ -3985,7 +3991,7 @@
 
 
                                             <div class="contentFixed product">
-                                                <div class="scrollable-content typo-1">
+                                                <div class="scrollable-content-store typo-1">
                                                     <article data-categories="logic">
                                                         <div class="bloc-game-titre"><img
                                                                 src="Medias/APP-Medias/angry-birds.jpeg">
@@ -4268,26 +4274,26 @@
                                                             <div class="content-bloc-line typo-1">
                                                                 <div class="bloc-big-notif gap-bloc-notif">
                                                                     <div class="line-bloc-notif">
-                                                                        <button class="btn-reseau color-txt"><i
+                                                                        <button class="btn-reseau btnAirplane" data-switch="#switch-airplane"><i
                                                                                 class="fa-solid fa-plane"></i></button>
-                                                                        <button class="btn-reseau color-blue-apple"><i
-                                                                                class="fa-solid fa-plane"></i></button>
+                                                                        <button class="btn-reseau btnBlue" data-switch="#switch-airdrop"><i
+                                                                                class="fa-solid fa-spinner airdrop"></i></button>
                                                                     </div>
                                                                     <div class="line-bloc-notif">
-                                                                        <button class="btn-reseau color-blue-apple"><i
+                                                                        <button class="btn-reseau btnBlue" data-switch="#switch-wifi"><i
                                                                                 class="fa-solid fa-wifi"></i></button>
                                                                         <div class="content-btn-reseau">
                                                                             <button
-                                                                                class="btn-reseau-petit color-tel"><i
+                                                                                class="btn-reseau-petit btnGreen" data-switch="#switch-reseau"><i
                                                                                     class="fa-solid fa-signal"></i></button>
                                                                             <button
-                                                                                class="btn-reseau-petit color-txt"><i
+                                                                                class="btn-reseau-petit btnBlue" data-switch="#switch-bluetooth"><i
                                                                                     class="fa-brands fa-bluetooth-b"></i></button>
                                                                             <button
-                                                                                class="btn-reseau-petit color-txt"><i
+                                                                                class="btn-reseau-petit btnGreen" data-switch="#switch-partageconnect"><i
                                                                                     class="fa-solid fa-link"></i></button>
                                                                             <button
-                                                                                class="btn-reseau-petit color-txt"><i
+                                                                                class="btn-reseau-petit btnGreen" data-switch="#switch-vpn"><i
                                                                                     class="fa-solid fa-globe"></i></button>
                                                                         </div>
                                                                     </div>
@@ -4348,6 +4354,7 @@
 
                                                                 <div class="bloc-moyen-notif-none">
                                                                 </div>
+
                                                             </div>
 
                                                             <hr class="line-separ-notif">
@@ -4419,10 +4426,10 @@
                                                                     <p>Mode avion</p>
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Non</span>
-                                                                        <div class="switch green" data-on="Oui"
-                                                                            data-off="Non">
+                                                                        <div class="switch orange" data-on="Oui"
+                                                                            data-off="Non" data-target=".airplane" data-master="airplane" id="switch-airplane">
                                                                             <i
-                                                                                class="icon color-green fa-solid fa-plane"></i>
+                                                                                class="icon color-orange fa-solid fa-plane"></i>
                                                                         </div>
 
                                                                     </div>
@@ -4433,7 +4440,7 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Non</span>
                                                                         <div class="switch green" data-on="Oui"
-                                                                            data-off="Non">
+                                                                            data-off="Non" data-toggle-group="connectivity" id="switch-partageconnect">
                                                                             <i
                                                                                 class="icon color-green fa-solid fa-link"></i>
                                                                         </div>
@@ -4446,8 +4453,8 @@
                                                                     <p>Wifi</p>
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Oui</span>
-                                                                        <div class="switch2 blueOk" data-ons="Non"
-                                                                            data-offs="Oui">
+                                                                        <div class="switch2 blueOk" data-on="Oui"
+                                                                            data-off="Non" data-target=".wifi" data-toggle-group="connectivity" id="switch-wifi">
                                                                             <i
                                                                                 class="icon2 color-blue fa-solid fa-wifi"></i>
                                                                         </div>
@@ -4459,9 +4466,10 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Contact
                                                                             uniquement</span>
-                                                                        <div class="switch2 blueOk" data-ons="Non"
-                                                                            data-offs="Contact uniquement">
-                                                                            <i class="icon2 color-blue fas fa-bell"></i>
+                                                                        <div class="switch2 blueOk" data-on="Contact uniquement"
+                                                                            data-off="Non" data-toggle-group="connectivity" id="switch-airdrop">
+                                                                            <i
+                                                                                class="icon2 color-blue fa-solid fa-spinner"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -4472,8 +4480,8 @@
                                                                     <p>Données celulaires</p>
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Oui</span>
-                                                                        <div class="switch2 greenOk" data-ons="Non"
-                                                                            data-offs="Oui">
+                                                                        <div class="switch2 greenOk" data-on="Oui"
+                                                                            data-off="Non" data-target=".reseau" data-toggle-group="connectivity" id="switch-reseau">
                                                                             <i
                                                                                 class="icon2 color-green fa-solid fa-signal"></i>
                                                                         </div>
@@ -4483,11 +4491,11 @@
                                                                 <div class="bloc-moyen-notif color-txt">
                                                                     <p>Bluetooth</p>
                                                                     <div class="switch-container">
-                                                                        <span class="switch-label">Oui</span>
-                                                                        <div class="switch2 blueOk" data-ons="Non"
-                                                                            data-offs="Oui">
+                                                                        <span class="switch-label">Non</span>
+                                                                        <div class="switch blue" data-on="Oui"
+                                                                            data-off="Non" data-target=".bluetooth" data-toggle-group="connectivity" id="switch-bluetooth">
                                                                             <i
-                                                                                class="icon2 color-blue fa-brands fa-bluetooth"></i>
+                                                                                class="icon color-blue fa-brands fa-bluetooth"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -4499,14 +4507,22 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Non</span>
                                                                         <div class="switch green" data-on="Oui"
-                                                                            data-off="Non">
+                                                                            data-off="Non" id="switch-vpn">
                                                                             <i
                                                                                 class="icon color-green fa-solid fa-globe"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="bloc-moyen-notif-none">
+                                                                <div class="bloc-moyen-notif color-txt">
+                                                                    <p>Localisation</p>
+                                                                    <div class="switch-container">
+                                                                        <span class="switch-label">Oui</span>
+                                                                        <div class="switch2 greenOk" data-on="Oui"
+                                                                            data-off="Non" data-target=".location" data-toggle-group="connectivity">
+                                                                            <i class="icon2 color-green fa-solid fa-location-arrow"></i>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
 
@@ -4598,8 +4614,8 @@
                                         <div class="container-info-cam">
                                         </div>
                                         <div class="container-info-right color-acc-screen">
-                                            <div><i class="fa-solid fa-signal"></i></div>
-                                            <div><i class="fa-solid fa-wifi"></i></div>
+                                            <div class="reseau"><i class="fa-solid fa-signal"></i></div>
+                                            <div class="wifi"><i class="fa-solid fa-wifi"></i></div>
                                             <div><i class="fa-solid fa-battery-three-quarters"></i></div>
                                         </div>
                                     </div>
@@ -4647,7 +4663,7 @@
 
             <div class="content-info-exit">
                 <i class="fa-solid fa-circle-info"></i>
-                <i>pour quitter, click / touche : </i>
+                <i>pour quitter l'application, click / touche : </i>
                 <hr class="line-back-info" data-id="app-home">
             </div>
 
@@ -4740,7 +4756,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
 
     <script>
         const videoBlocks = document.querySelectorAll('.content-video');
