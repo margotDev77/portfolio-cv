@@ -1656,7 +1656,7 @@
                 </div>
             </section>
 
-            <section class="ip-face">
+            <section class="ip-face boxs apparent anim-phone-paysage-portrait" data-content="bloc-face">
                 <div class="iphone-face">
                     <div class="flashlight-content">
                         <div id="conteneurFlash" class="conteneur-flash"></div>
@@ -1836,8 +1836,8 @@
                                                         target="_blank" rel="noopener noreferrer"><i
                                                             class="social-icon-app size-app icon-noir fab fa-github"></i></a>
                                                 </button>
-                                                <button class="app-icon" data-id="app-14"><i
-                                                        class="social-icon-app size-app-2 app-3d fa-brands fa-unity"></i>
+                                                <button class="app-icon" data-id="app-creafi3d">
+                                                    <div class="icon-creafi3d"></div>
                                                 </button>
                                                 <button class="app-icon" data-id="app-fichier"><i
                                                         class="social-icon-app size-app-2 fichier fa-solid fa-folder-closed"></i>
@@ -1846,7 +1846,7 @@
                                             <div class="container-app-txt typo-1">
                                                 <a class="app-txt">LinkedIn</a>
                                                 <a class="app-txt">Github</a>
-                                                <a class="app-txt">3D</a>
+                                                <a class="app-txt">Creafi3D</a>
                                                 <a class="app-txt">Fichiers</a>
                                             </div>
 
@@ -1884,7 +1884,7 @@
                                             <button class="app-icon-contact" data-id="app-contact"><i
                                                     class="fa-regular fa-address-book social-icon-app contact"></i>
                                             </button>
-                                            <button class="app-icon-contact" data-id="app-message"><i
+                                            <button class="app-icon-contact" data-id="app-messagesms"><i
                                                     class="fa-solid fa-comment social-icon-app tel"></i>
                                             </button>
                                             <button class="app-icon-contact" data-id="app-facetime"><i
@@ -3013,7 +3013,6 @@
 
                                 <!------------------------------------------------------------------------- APP SAFARI ------------------------------------------------------------------------->
 
-
                                 <div class="box hide color-fd-app-variante anim-app-open" data-content="app-safari">
                                     <div class="screen-content-app">
                                         <div class="container-info-accueil">
@@ -3290,7 +3289,7 @@
 
 
                                 <!------------------------------------------------------------------------- APP MESSAGE ------------------------------------------------------------------------->
-                                <div class="box hide color-fd-app-variante anim-app-open" data-content="app-message">
+                                <div class="box hide color-fd-app-variante anim-app-back" data-content="app-message">
                                     <div class="screen-content-app">
                                         <div class="container-info-accueil">
                                         </div>
@@ -3414,7 +3413,7 @@
 
                                 <!------------------------------------------------------------------------- APP MESSAGE SMS ------------------------------------------------------------------------->
 
-                                <div class="box hide color-fd-app-variante anim-app-back" data-content="app-messagesms">
+                                <div class="box hide color-fd-app-variante anim-app-open" data-content="app-messagesms">
                                     <div class="screen-content-app">
                                         <div class="container-info-accueil-app-back">
                                             <div class="content-contact-info">
@@ -3463,8 +3462,9 @@
                                                 <div class="zone-msg">
                                                     <textarea class="textArea-mess typo-1" data-id="txtarea-2"
                                                         placeholder="iMessage">
-                                            </textarea>
+                                                    </textarea>
                                                 </div>
+                                                <i class="add-btn fa-solid fa-circle-arrow-up color-blue-apple"></i>
                                             </div>
 
                                             <div class="content-rac-clavier typo-1">
@@ -4202,15 +4202,72 @@
                                 </div>
 
 
-                                <!------------------------------------------------------------------------- APP IFRAME ------------------------------------------------------------------------->
+                                <!------------------------------------------------------------------------- APP 3D ------------------------------------------------------------------------->
 
-                                <div class="box hide color-fd-app-gene anim-app-open" data-content="app-14">
+                                <div class="box hide color-fd-app-variante anim-app-open" data-content="app-creafi3d">
                                     <div class="screen-content-app">
                                         <div class="container-info-accueil-app">
                                         </div>
 
-                                        <div class="web-container">
-                                            <iframe src="https://" class="web-frame"></iframe>
+                                        <div class="container-main">
+                                            <div class="content-title-3d typo-1">
+                                                <i class="fa-solid fa-angle-left"></i>
+                                                <h2 class="color-clear">Creafi3D</h2>
+                                                <div class="content-afficher-arrow">
+                                                    <span class="icon-profil"><img
+                                                            src="Medias/APP-Medias/creafi3d-transparent.png"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="contentFixed-3d content-3d">
+                                                <div class="scrollable-content-3d typo-1">
+                                                    <article>
+                                                        <div class="content-info-3d">
+                                                            <h3>Carfi3D - model 1</h3>
+                                                            <p>Voiture RC imprimer en 3D</p>
+                                                        </div>
+                                                        <div class="bloc-img-3d">
+                                                            <img src="Medias/APP-Medias/carrosserie-face_light.webp">
+                                                        </div>
+                                                    </article>
+
+                                                    <hr class="line-separ-3d">
+
+                                                    <article>
+                                                        <div class="bloc-img-3d">
+                                                            <img src="Medias/APP-Medias/carrosserie-profil_light.webp">
+                                                        </div>
+                                                    </article>
+
+                                                    <hr class="line-separ-3d">
+
+                                                    <article>
+                                                        <div class="bloc-img-3d">
+                                                            <img src="Medias/APP-Medias/carrosserie-AR.webp">
+                                                        </div>
+                                                    </article>
+
+                                                    <hr class="line-separ-3d">
+
+                                                    <article>
+                                                        <div class="bloc-img-3d">
+                                                            <img src="Medias/APP-Medias/carrosserie-AR_light.webp">
+                                                        </div>
+                                                    </article>
+
+                                                    <hr class="line-separ-3d">
+
+                                                    <article>
+                                                        <div class="bloc-img-3d">
+                                                            <img src="Medias/APP-Medias/electronique.webp">
+                                                        </div>
+                                                    </article>
+
+                                                </div>
+                                            </div>
+
+
+
                                         </div>
 
 
@@ -4221,7 +4278,6 @@
 
                                 <!------------------------------------------------------------------------- POPUP GAMES ------------------------------------------------------------------------->
 
-
                                 <div class="container-grp-app typo-1">
                                     <h3 class="color-accent">Games</h3>
 
@@ -4231,7 +4287,7 @@
                                             <button class="app-icon">
                                                 <div class="icon-fruit-ninja"></div>
                                             </button>
-                                            <button class="app-icon">
+                                            <button class="app-icon" data-id="bloc-paysage">
                                                 <div class="icon-foule-contact"></div>
                                             </button>
                                             <button class="app-icon-none">
@@ -4243,10 +4299,8 @@
                                             <a class="app-txt">Foule Contact</a>
                                             <a class="app-txt"></a>
                                         </div>
-
-
-
                                     </div>
+
                                 </div>
 
                                 <!------------------------------------------------------------------------- NOTIF ------------------------------------------------------------------------->
@@ -4274,26 +4328,29 @@
                                                             <div class="content-bloc-line typo-1">
                                                                 <div class="bloc-big-notif gap-bloc-notif">
                                                                     <div class="line-bloc-notif">
-                                                                        <button class="btn-reseau btnAirplane" data-switch="#switch-airplane"><i
+                                                                        <button class="btn-reseau btnAirplane"
+                                                                            data-switch="#switch-airplane"><i
                                                                                 class="fa-solid fa-plane"></i></button>
-                                                                        <button class="btn-reseau btnBlue" data-switch="#switch-airdrop"><i
+                                                                        <button class="btn-reseau btnBlue"
+                                                                            data-switch="#switch-airdrop"><i
                                                                                 class="fa-solid fa-spinner airdrop"></i></button>
                                                                     </div>
                                                                     <div class="line-bloc-notif">
-                                                                        <button class="btn-reseau btnBlue" data-switch="#switch-wifi"><i
+                                                                        <button class="btn-reseau btnBlue"
+                                                                            data-switch="#switch-wifi"><i
                                                                                 class="fa-solid fa-wifi"></i></button>
                                                                         <div class="content-btn-reseau">
-                                                                            <button
-                                                                                class="btn-reseau-petit btnGreen" data-switch="#switch-reseau"><i
+                                                                            <button class="btn-reseau-petit btnGreen"
+                                                                                data-switch="#switch-reseau"><i
                                                                                     class="fa-solid fa-signal"></i></button>
-                                                                            <button
-                                                                                class="btn-reseau-petit btnBlue" data-switch="#switch-bluetooth"><i
+                                                                            <button class="btn-reseau-petit btnBlue"
+                                                                                data-switch="#switch-bluetooth"><i
                                                                                     class="fa-brands fa-bluetooth-b"></i></button>
-                                                                            <button
-                                                                                class="btn-reseau-petit btnGreen" data-switch="#switch-partageconnect"><i
+                                                                            <button class="btn-reseau-petit btnGreen"
+                                                                                data-switch="#switch-partageconnect"><i
                                                                                     class="fa-solid fa-link"></i></button>
-                                                                            <button
-                                                                                class="btn-reseau-petit btnGreen" data-switch="#switch-vpn"><i
+                                                                            <button class="btn-reseau-petit btnGreen"
+                                                                                data-switch="#switch-vpn"><i
                                                                                     class="fa-solid fa-globe"></i></button>
                                                                         </div>
                                                                     </div>
@@ -4427,7 +4484,8 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Non</span>
                                                                         <div class="switch orange" data-on="Oui"
-                                                                            data-off="Non" data-target=".airplane" data-master="airplane" id="switch-airplane">
+                                                                            data-off="Non" data-target=".airplane"
+                                                                            data-master="airplane" id="switch-airplane">
                                                                             <i
                                                                                 class="icon color-orange fa-solid fa-plane"></i>
                                                                         </div>
@@ -4440,7 +4498,9 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Non</span>
                                                                         <div class="switch green" data-on="Oui"
-                                                                            data-off="Non" data-toggle-group="connectivity" id="switch-partageconnect">
+                                                                            data-off="Non"
+                                                                            data-toggle-group="connectivity"
+                                                                            id="switch-partageconnect">
                                                                             <i
                                                                                 class="icon color-green fa-solid fa-link"></i>
                                                                         </div>
@@ -4454,7 +4514,9 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Oui</span>
                                                                         <div class="switch2 blueOk" data-on="Oui"
-                                                                            data-off="Non" data-target=".wifi" data-toggle-group="connectivity" id="switch-wifi">
+                                                                            data-off="Non" data-target=".wifi"
+                                                                            data-toggle-group="connectivity"
+                                                                            id="switch-wifi">
                                                                             <i
                                                                                 class="icon2 color-blue fa-solid fa-wifi"></i>
                                                                         </div>
@@ -4466,8 +4528,10 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Contact
                                                                             uniquement</span>
-                                                                        <div class="switch2 blueOk" data-on="Contact uniquement"
-                                                                            data-off="Non" data-toggle-group="connectivity" id="switch-airdrop">
+                                                                        <div class="switch2 blueOk"
+                                                                            data-on="Contact uniquement" data-off="Non"
+                                                                            data-toggle-group="connectivity"
+                                                                            id="switch-airdrop">
                                                                             <i
                                                                                 class="icon2 color-blue fa-solid fa-spinner"></i>
                                                                         </div>
@@ -4481,7 +4545,9 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Oui</span>
                                                                         <div class="switch2 greenOk" data-on="Oui"
-                                                                            data-off="Non" data-target=".reseau" data-toggle-group="connectivity" id="switch-reseau">
+                                                                            data-off="Non" data-target=".reseau"
+                                                                            data-toggle-group="connectivity"
+                                                                            id="switch-reseau">
                                                                             <i
                                                                                 class="icon2 color-green fa-solid fa-signal"></i>
                                                                         </div>
@@ -4493,7 +4559,9 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Non</span>
                                                                         <div class="switch blue" data-on="Oui"
-                                                                            data-off="Non" data-target=".bluetooth" data-toggle-group="connectivity" id="switch-bluetooth">
+                                                                            data-off="Non" data-target=".bluetooth"
+                                                                            data-toggle-group="connectivity"
+                                                                            id="switch-bluetooth">
                                                                             <i
                                                                                 class="icon color-blue fa-brands fa-bluetooth"></i>
                                                                         </div>
@@ -4519,8 +4587,10 @@
                                                                     <div class="switch-container">
                                                                         <span class="switch-label">Oui</span>
                                                                         <div class="switch2 greenOk" data-on="Oui"
-                                                                            data-off="Non" data-target=".location" data-toggle-group="connectivity">
-                                                                            <i class="icon2 color-green fa-solid fa-location-arrow"></i>
+                                                                            data-off="Non" data-target=".location"
+                                                                            data-toggle-group="connectivity">
+                                                                            <i
+                                                                                class="icon2 color-green fa-solid fa-location-arrow"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -4661,6 +4731,39 @@
                 </div>
             </section>
 
+            <section class="ip-paysage boxs hidden anim-phone-portrait-paysage " data-content="bloc-paysage">
+                <div class="iphone-app-paysage color-fd-video">
+                    <div class="container-info-fix-paysage">
+                        <div class="container-info-cam-fix-paysage">
+                            <div class="face-cam-paysage">
+                                <div class="objectif-paysage"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="screen-content-app-paysage">
+                        <div class="container-main-paysage">
+                            <video id="videoGame" src="Medias/portfolio/anim-intro-jeu.mp4" autoplay></video>
+
+                            <div class="end-screen hidden" id="endScreen">
+                                <p>Erreur de connexion</p>
+                                <div class="content-line-video-game">
+                                    <button class="btnVideoGame" id="restartBtn"><i
+                                            class="fa-solid fa-arrow-rotate-left"></i></button>
+                                    <button class="btnVideoGame" data-id="bloc-face"><i
+                                            class="fa-solid fa-right-from-bracket"></i></button>
+                                </div>
+                            </div>
+
+                            <hr class="line-back-paysage" data-id="bloc-face">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
             <div class="content-info-exit">
                 <i class="fa-solid fa-circle-info"></i>
                 <i>pour quitter l'application, click / touche : </i>
@@ -4756,6 +4859,35 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+    <script>
+        'use strict';
+        const slidebar = document.querySelectorAll("[data-id^='bloc-']");
+        const containerBoxs = document.querySelectorAll("[data-content^='bloc-']");
+        let currentIndex = 0;
+
+        slidebar.forEach(function (tab, index) {
+            tab.addEventListener('click', function () {
+                slidebar[currentIndex].classList.remove('active');
+                tab.classList.add('active');
+                currentIndex = index;
+
+                const id = tab.getAttribute('data-id');
+
+                containerBoxs.forEach(function (boxs) {
+                    boxs.classList.add('hidden');
+                    if (boxs.getAttribute('data-content') === id) {
+                        boxs.classList.remove('hidden');
+                        boxs.classList.add('apparent');
+                    }
+                });
+            });
+        });
+    </script>
+
+
 
     <script>
         const videoBlocks = document.querySelectorAll('.content-video');

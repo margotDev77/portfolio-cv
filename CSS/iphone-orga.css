@@ -1550,6 +1550,15 @@ button {
   aspect-ratio: 1/1;
 }
 
+.icon-creafi3d {
+  width: 100%;
+  border-radius: 12px;
+  background-image: url("../Medias/APP-Medias/creafi3d-transparent.png");
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1/1;
+}
+
 .app-icon-contact {
   display: flex;
   justify-content: center;
@@ -5408,20 +5417,126 @@ ul {
 }
 
 
-/************************************************** iframe app *************************************************************/
+/************************************************** 3D app *************************************************************/
 
-.web-container {
-  width: 35vh;
-  height: 100vh;
+.content-title-3d {
+  display: flex;
+  padding: 0 25px 0 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-title-3d h2 {
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.content-afficher-arrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon-profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width: 35px;
+  aspect-ratio: 1/1;
+  border-radius: 35px;
+  box-shadow: 3px 3px 5px rgba(55, 84, 170, .20), -3px -3px 5px rgba(255, 255, 255, 0.25), 0px 0px 4px rgba(255, 255, 255, .20);
+  background-color: #cbd1d7;
+}
+
+.icon-profil img {
+  width: 27px;
+}
+
+
+.contentFixed-3d {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.content-3d {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 63vh;
+  padding: 10px 0;
+}
+
+.scrollable-content-3d {
+  height: 100%;
+  overflow-y: auto;
+  /* padding-right: 5px; */
+}
+
+.scrollable-content-3d::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollable-content-3d::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.scrollable-content-3d::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.scrollable-content-3d article {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloc-img-3d {
+  width: 100%;
+  aspect-ratio: 1/1;
   overflow: hidden;
   position: relative;
 }
 
-.web-frame {
+.bloc-img-3d img {
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover;
 }
+
+.content-info-3d {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 6px;
+  row-gap: 6px;
+}
+
+.content-info-3d h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #565254;
+}
+
+.content-info-3d p {
+  font-size: 14px;
+  color: #757986;
+}
+
+.line-separ-3d {
+  border: none;
+  height: 2px;
+  background-color: #757986;
+  width: 100%;
+  border-radius: 21vh;
+  margin: 25px 0;
+}
+
 
 /************************************************** appareil photo app *************************************************************/
 
@@ -5900,6 +6015,144 @@ ul {
   flex-direction: row;
   align-items: center;
   gap: 15px;
+}
+
+/************************************************** foule contact app *************************************************************/
+
+.color-fd-video{
+  background-color: #000;
+}
+
+.ip-paysage {
+  display: flex;
+  position: absolute;
+  z-index: 200;
+}
+
+.iphone-app-paysage {
+  width: 75vh;
+  height: 35vh;
+  border-radius: 5vh;
+  border: 3px solid #161616;
+  box-shadow: 0 0 0 3px #c3c3c4;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-content-app-paysage {
+  display: flex;
+  position: relative;
+  width: 75vh;
+  height: 35vh;
+  justify-content: center;
+}
+
+.line-back-paysage {
+  display: flex;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  height: 4px;
+  background-color: #adadad;
+  width: 40%;
+  border-radius: 21vh;
+  position: absolute;
+}
+
+.container-main-paysage {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 75vh;
+  height: 35vh;
+}
+
+.container-main-paysage video{
+width: auto;
+height: 100%;
+}
+
+.end-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2vh;
+  gap: 2vh;
+}
+
+.content-line-video-game{
+  display: flex;
+  width: 25%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnVideoGame {
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* .boxs {
+  animation: movingRotate 1s ease;
+  -webkit-animation: movingRotate 1s ease; 
+} */
+
+.apparent {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.anim-phone-portrait-paysage {
+  animation: movingRotate 0.1s ease;
+  -webkit-animation: movingRotate 0.1s ease;
+}
+
+@keyframes movingRotate {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(90deg);
+    -webkit-transform: scale(1);
+  }
+}
+
+
+.anim-phone-paysage-portrait {
+  animation: movingRotate2 0.1s ease;
+  -webkit-animation: movingRotate2 0.1s ease;
+}
+
+@keyframes movingRotate2 {
+  0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(45deg) scale(0.95);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 

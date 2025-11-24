@@ -247,7 +247,6 @@ let elapsedTime = 0;
 let intervalId;
 let running = false;
 
-// Fonction pour mettre à jour l'affichage du temps
 function updateChrono() {
     const now = Date.now();
     const diff = now - startTime + elapsedTime;
@@ -257,7 +256,6 @@ function updateChrono() {
     document.getElementById('chrono').textContent = `${minutes}:${seconds}:${milliseconds}`;
 }
 
-// Fonction utilitaire pour gérer les styles actifs
 function setActiveButton(activeId) {
     document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
     if (activeId) {
@@ -265,7 +263,6 @@ function setActiveButton(activeId) {
     }
 }
 
-// Démarrer
 document.getElementById('startBtn').addEventListener('click', () => {
     if (!running) {
         startTime = Date.now();
@@ -275,7 +272,6 @@ document.getElementById('startBtn').addEventListener('click', () => {
     }
 });
 
-// Pause
 document.getElementById('pauseBtn').addEventListener('click', () => {
     if (running) {
         clearInterval(intervalId);
@@ -285,7 +281,6 @@ document.getElementById('pauseBtn').addEventListener('click', () => {
     }
 });
 
-// Reprendre
 document.getElementById('resumeBtn').addEventListener('click', () => {
     if (!running && elapsedTime > 0) {
         startTime = Date.now();
@@ -295,7 +290,6 @@ document.getElementById('resumeBtn').addEventListener('click', () => {
     }
 });
 
-// Réinitialiser
 document.getElementById('resetBtn').addEventListener('click', () => {
     clearInterval(intervalId);
     elapsedTime = 0;
@@ -505,6 +499,42 @@ switchesDarkOk.forEach(switchButton => {
 
     });
 });
+
+/************************************************************************** MESSAGE VIDEO GAME **************************************************************************/
+
+const video = document.getElementById("videoGame");
+const endScreen = document.getElementById("endScreen");
+const restartBtn = document.getElementById("restartBtn");
+const openBtn = document.querySelector(".open-video");
+
+video.addEventListener("ended", () => {
+    endScreen.classList.remove("hidden");
+});
+
+restartBtn.addEventListener("click", () => {
+    endScreen.classList.add("hidden");
+    video.currentTime = 0;
+    video.play();
+});
+
+const closeBtn = document.querySelector(".line-back-paysage");
+
+closeBtn.addEventListener("click", () => {
+    video.pause();
+    video.currentTime = 0;         
+    videoBloc.classList.add("hidden");
+});
+
+
+openBtn.addEventListener("click", () => {
+    videoBloc.classList.remove("hidden");
+    endScreen.classList.add("hidden");
+    
+    video.currentTime = 0;
+    video.play();
+});
+
+
 
 /************************************************************************** FICHIER PAGE **************************************************************************/
 
