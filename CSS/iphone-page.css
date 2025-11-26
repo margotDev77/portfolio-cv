@@ -22,18 +22,47 @@
   height: 100vh;
 }
 
+.animBloc {
+  opacity: 0;
+   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
 .blocApparition {
   transform: translateX(20);
   transform: scale(0.95);
-  opacity: 0;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .blocApparition.visible {
   opacity: 1;
   transform: scale(1);
   transform: translateX(1);
+}
+
+.bas-haut {
+  transform: translateY(130px);
+}
+
+.bas-haut.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.haut-bas {
+  transform: translateY(-130px) !important;
+}
+
+.haut-bas.visible {
+  opacity: 1;
+  transform: translateY(0) !important;
+}
+
+.left-right {
+  transform: translateX(90px);
+}
+
+.left-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 :root {
@@ -1085,7 +1114,7 @@ a {
 .icon-setting {
   width: 100%;
   border-radius: 9px;
-  background-image: url("../Medias/APP-Medias/parametre.png");
+  background-image: url("../Medias/APP-Medias/reglage.png");
   background-position: center;
   background-size: contain;
   aspect-ratio: 1/1;
@@ -1935,7 +1964,7 @@ a {
   justify-content: center;
 }
 
-.content-touch-id{
+.content-touch-id {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -1944,38 +1973,38 @@ a {
   padding: 0 15%;
 }
 
-.container-img-touch-id{
-display: flex;
-width: 25%;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
+.container-img-touch-id {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.container-img-touch-id img{
-width: 8vh !important;
-height: auto;
+.container-img-touch-id img {
+  width: 8vh !important;
+  height: auto;
 }
 
-.container-img-touch-id h3{
-margin: 0;
-font-size: 20px;
-font-weight: 500;
-color: #adadad;
+.container-img-touch-id h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #adadad;
 }
 
-.container-txt-et{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 15%;
+.container-txt-et {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
 }
 
-.container-txt-et h3{
-margin: 0;
-font-size: 35px;
-font-weight: 500;
+.container-txt-et h3 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 500;
 }
 
 
@@ -2081,15 +2110,22 @@ font-weight: 500;
 .bloc-title-simul {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
   width: 100%;
   position: absolute;
   top: 3%;
+  gap: 15px;
 }
 
 .bloc-title-simul h2 {
   margin: 0;
   font-size: 35px;
+}
+
+.bloc-title-simul p {
+  margin: 0;
+  font-size: 20px;
+  color: var(--txt-attenu-color);
 }
 
 .contenair-bloc-simul {

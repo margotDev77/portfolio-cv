@@ -18,7 +18,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +71,7 @@
 
 
     <div class="blocFlex-acc bg-accent">
-        <section class="container-ios-present blocApparition">
+        <section class="container-ios-present animBloc" data-anim="blocApparition">
             <div class="content-title-ios">
                 <span>
                     <h2 class="title-ios">iOS 20</h2>
@@ -439,7 +443,7 @@
                 <h2>Nouveautés.</h2>
             </div>
 
-            <section class="container-pt-fort blocApparition">
+            <section class="container-pt-fort animBloc" data-anim="blocApparition">
                 <div class="owl-carousel owl-theme" id="my-carousel">
 
                     <div class="item">
@@ -719,7 +723,7 @@
     </div>
 
     <div class="blocFlex">
-        <div class="container-pub-music blocApparition">
+        <div class="container-pub-music animBloc" data-anim="blocApparition">
             <div class="content-title-pub-music">
                 <h1 class="title">Nouveautés dans Music</h1>
                 <h2 class="inter-title">Comme un petit air de déjàs vu</h2>
@@ -1550,18 +1554,19 @@
 
 
     <div class="blocFlex-simul" id="ios-simulation">
-        <section class="contenair-bloc-simul blocApparition">
+        <section class="contenair-bloc-simul animBloc" data-anim="blocApparition">
             <div class="bloc-title-simul">
                 <h2>Test moi</h2>
+                <p>joue avec l'interface</p>
             </div>
 
-            <section class="ip-side">
+            <section class="ip-side animBloc" data-anim="bas-haut" data-delay="0.4s">
                 <div class="iphone-side">
                     <div class="iphone-side-filter">
                         <div class="container-tel-side">
                             <div class="btn-lock-side" onclick="toggleScreen()"></div>
                             <div class="content-btn-sound-side">
-                                <div class="vibr-btn-side">
+                                <div class="vibr-btn-side" data-switch="#switch-sonnerie">
                                     <i class="fa-solid fa-bell"></i>
                                 </div>
                                 <div class="sound-btn-side" onclick="showFloatingElement(),changeVolume(-10)"
@@ -1588,7 +1593,7 @@
                 </div>
             </section>
 
-            <section class="ip-back">
+            <section class="ip-back animBloc" data-anim="left-right" data-delay="0.4s">
                 <div class="iphone-back">
                     <div class="back-content">
                         <div class="content-objectif">
@@ -1646,7 +1651,7 @@
                             <div class="lock-btn-back" onclick="toggleScreen()"></div>
                         </div>
                         <div class="content-btn-sound-back">
-                            <div class="vibr-btn-back"></div>
+                            <div class="sound-btn-back" data-switch="#switch-sonnerie"></div>
                             <div class="sound-btn-back" onclick="showFloatingElement(),changeVolume(10)" data-id="1">
                             </div>
                             <div class="sound-btn-back" onclick="showFloatingElement(),changeVolume(-10)" data-id="1">
@@ -1656,8 +1661,9 @@
                 </div>
             </section>
 
-            <section class="ip-face boxs apparent anim-phone-paysage-portrait" data-content="bloc-face">
-                <div class="iphone-face">
+            <section class="ip-face boxs apparent animBloc" data-content="bloc-face" data-anim="haut-bas"
+                data-delay="0.4s">
+                <div class="iphone-face anim-phone-paysage-portrait">
                     <div class="flashlight-content">
                         <div id="conteneurFlash" class="conteneur-flash"></div>
                     </div>
@@ -1686,7 +1692,7 @@
                             <div class="lock-btn-face" onclick="toggleScreen()"></div>
                         </div>
                         <div class="content-btn-sound-face">
-                            <div class="vibr-btn-face"></div>
+                            <div class="sound-btn-face" data-switch="#switch-sonnerie"></div>
                             <div class="sound-btn-face" onclick="changeVolume(10)"></div>
                             <div class="sound-btn-face" onclick="changeVolume(-10)"></div>
                         </div>
@@ -1701,6 +1707,8 @@
                                     <div class="container-info-left color-info-top">
                                         <div class="clock" id="clock"></div>
                                         <div class="location"><i class="fa-solid fa-location-arrow"></i></div>
+                                        <div class="sonnerie"><i class="fa-solid fa-bell-slash"></i></div>
+
                                     </div>
                                     <div class="container-info-cam">
                                     </div>
@@ -1790,43 +1798,21 @@
                                                     <div class="icon-safari"></div>
                                                 </button>
 
-                                                <button class="app-icon">
-                                                    <div class="photo-objectif">
-                                                        <div class="photo-lentille-content">
-                                                            <div class="photo-lentille"></div>
-                                                        </div>
-                                                    </div>
+                                                <button class="app-icon" data-id="app-reglage">
+                                                    <div class="icon-reglage"></div>
                                                 </button>
                                             </div>
                                             <div class="container-app-txt typo-1">
                                                 <a class="app-txt">Météo</a>
                                                 <a class="app-txt">Plans</a>
                                                 <a class="app-txt">Safari</a>
-                                                <a class="app-txt">App Photo</a>
+                                                <a class="app-txt">Réglages</a>
                                             </div>
 
                                             <div class="container-app">
                                                 <button class="app-icon" data-id="app-fakebook"><i
                                                         class="social-icon-app size-app-2 facebook fa-brands fa-facebook-f"></i>
                                                 </button>
-                                                <button class="app-icon"><i
-                                                        class="social-icon-app size-app icon-noir fa-brands fa-instagram"></i>
-                                                </button>
-                                                <button class="app-icon"><i
-                                                        class="social-icon-app size-app-2 fab fa-x-twitter"></i>
-                                                </button>
-                                                <button class="app-icon" data-id="app-photos">
-                                                    <div class="icon-photos"></div>
-                                                </button>
-                                            </div>
-                                            <div class="container-app-txt typo-1">
-                                                <a class="app-txt">Fakebook</a>
-                                                <a class="app-txt">Instagram</a>
-                                                <a class="app-txt">X</a>
-                                                <a class="app-txt">Photos</a>
-                                            </div>
-
-                                            <div class="container-app">
                                                 <button class="app-icon"><a
                                                         href="https://www.linkedin.com/in/margot-m-432123298/"
                                                         target="_blank" rel="noopener noreferrer"><i
@@ -1836,27 +1822,47 @@
                                                         target="_blank" rel="noopener noreferrer"><i
                                                             class="social-icon-app size-app icon-noir fab fa-github"></i></a>
                                                 </button>
+
                                                 <button class="app-icon" data-id="app-creafi3d">
                                                     <div class="icon-creafi3d"></div>
                                                 </button>
-                                                <button class="app-icon" data-id="app-fichier"><i
-                                                        class="social-icon-app size-app-2 fichier fa-solid fa-folder-closed"></i>
-                                                </button>
                                             </div>
                                             <div class="container-app-txt typo-1">
+                                                <a class="app-txt">Fakebook</a>
                                                 <a class="app-txt">LinkedIn</a>
                                                 <a class="app-txt">Github</a>
                                                 <a class="app-txt">Creafi3D</a>
+                                            </div>
+
+                                            <div class="container-app">
+                                                <button class="app-icon" data-id="app-fichier"><i
+                                                        class="social-icon-app size-app-2 fichier fa-solid fa-folder-closed"></i>
+                                                </button>
+                                                <button class="app-icon">
+                                                    <div class="photo-objectif">
+                                                        <div class="photo-lentille-content">
+                                                            <div class="photo-lentille"></div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <button class="app-icon" data-id="app-photos">
+                                                    <div class="icon-photos"></div>
+                                                </button>
+                                                <button class="app-icon" data-id="app-appstore"><i
+                                                        class="social-icon-app size-app app-store fa-brands fa-app-store"></i>
+                                                </button>
+                                            </div>
+                                            <div class="container-app-txt typo-1">
                                                 <a class="app-txt">Fichiers</a>
+                                                <a class="app-txt">App Photo</a>
+                                                <a class="app-txt">Photos</a>
+                                                <a class="app-txt">App Store</a>
                                             </div>
 
 
                                             <div class="container-app">
                                                 <button class="app-icon" data-id="app-music"><i
                                                         class="social-icon-app music fa-solid fa-music"></i>
-                                                </button>
-                                                <button class="app-icon" data-id="app-appstore"><i
-                                                        class="social-icon-app size-app app-store fa-brands fa-app-store"></i>
                                                 </button>
 
                                                 <button class="app-icon-grp openGrpApp">
@@ -1867,11 +1873,12 @@
                                                 </button>
 
                                                 <div class="app-icon-none"></div>
+                                                <div class="app-icon-none"></div>
                                             </div>
                                             <div class="container-app-txt typo-1">
                                                 <a class="app-txt">Music</a>
-                                                <a class="app-txt">App Store</a>
                                                 <a class="app-txt">Games</a>
+                                                <a class="app-txt"></a>
                                                 <a class="app-txt"></a>
                                             </div>
 
@@ -1894,6 +1901,145 @@
                                         <hr class="line-back">
                                     </div>
                                 </div>
+
+
+                                <!------------------------------------------------------------------------- APP REGLAGES ------------------------------------------------------------------------->
+
+
+                                <div class="box hide color-fd-app-gene anim-app-open" data-content="app-reglage">
+                                    <div class="screen-content-app">
+                                        <div class="container-info-accueil">
+                                        </div>
+
+                                        <div class="container-main">
+                                            <div class="content-title-app typo-1 color-accent">
+                                                <h2>Réglages</h2>
+                                            </div>
+
+                                            <div class="content-setting">
+                                                <div class="bloc-line-setting">
+                                                    <div class="content-profil-setting">
+                                                        <div class="content-left-profil">
+                                                            <span></span>
+                                                            <div class="content-left-txt">
+                                                                <h2 class="color-accent">Margot MICHEL</h2>
+                                                                <p>Compte, Cloud+ et autres</p>
+                                                            </div>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right color-txt"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-setting">
+                                                <div class="bloc-line-setting">
+                                                    <ul class="list-setting typo-1 color-txt">
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-plane orange-color"></i></span>
+                                                                <p>Mode Avion</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-wifi blue-color-reseau"></i></span>
+                                                                <p>Wifi</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-brands fa-bluetooth-b blue-color-reseau"></i></span>
+                                                                <p>Bluetooth</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-tower-broadcast green-color-reseau"></i></span>
+                                                                <p>Données cellulaires</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-link green-color-reseau"></i></span>
+                                                                <p>Partage de connexion</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-globe green-color-reseau"></i></span>
+                                                                <p>VPN</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-battery-full color-batterie"></i></span>
+                                                                <p>Batterie</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-setting">
+                                                <div class="bloc-line-setting">
+                                                    <ul class="list-setting typo-1 color-txt">
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i class="fa-solid fa-gear"></i></span>
+                                                                <p>Général</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i
+                                                                        class="fa-solid fa-universal-access color-blue"></i></span>
+                                                                <p>Accessibilité</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i class="fa-solid fa-camera"></i></span>
+                                                                <p>Appareil photo</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="content-left-setting">
+                                                                <span><i class="fa-solid fa-toggle-on"></i></span>
+                                                                <p>Centre de contrôle</p>
+                                                            </div>
+                                                            <i class="fa-solid fa-chevron-right"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <hr class="line-back" data-id="app-home">
+                                    </div>
+                                </div>
+
 
                                 <!------------------------------------------------------------------------- APP MUSIC LECTURE ------------------------------------------------------------------------->
 
@@ -3597,36 +3743,27 @@
 
                                 <div class="box hide color-fd-app-variante anim-app-open" data-content="app-plan">
                                     <div class="screen-content-app">
-                                        <div class="container-info-accueil-app-back">
-                                            <div class="content-contact-info color-blue-apple typo-1">
-
-                                            </div>
-                                        </div>
-
                                         <div class="container-main-plans">
-                                            <div class="line-block-plans">
-                                                <div class="bloc-map">
-                                                    <i class="color-blue fa-solid fa-map"></i>
-                                                    <hr class="line-bloc-map">
-                                                    <i class="color-blue fa-solid fa-location-arrow"></i>
-                                                </div>
+                                            <div class="bloc-map">
+                                                <i class="color-blue fa-solid fa-map"></i>
+                                                <hr class="line-bloc-map">
+                                                <i class="color-blue fa-solid fa-location-arrow"></i>
                                             </div>
 
-                                            <div class="content-block-plans">
-                                                <div class="bloc-map-back">
-                                                    <i class="color-white fa-solid fa-binoculars"></i>
-                                                </div>
-
-                                                <div class="bloc-map-back typo-1 color-accent">
-                                                    <span><i class="color-white fa-solid fa-cloud"></i>
-                                                        <p>6°</p>
-                                                    </span>
-                                                    <span>
-                                                        <p class="air-plans-size">Air</p><i
-                                                            class="color-green dot-plans fa-solid fa-circle"></i>
-                                                    </span>
-                                                </div>
+                                            <div class="bloc-map-back-loupe">
+                                                <i class="color-white fa-solid fa-binoculars"></i>
                                             </div>
+
+                                            <div class="bloc-map-back-temp typo-1 color-accent">
+                                                <span><i class="color-white fa-solid fa-cloud"></i>
+                                                    <p>6°</p>
+                                                </span>
+                                                <span>
+                                                    <p class="air-plans-size">Air</p><i
+                                                        class="color-green dot-plans fa-solid fa-circle"></i>
+                                                </span>
+                                            </div>
+
                                         </div>
                                         <div class="content-plans-back">
                                             <div class="content-line-back-plans">
@@ -3686,10 +3823,12 @@
 
                                             </div>
 
-
+                                            <div class="content-line-btn-rotate">
+                                                <button class="btn-rotate-plan" data-id="bloc-paysagePlan">mode
+                                                    paysage</button>
+                                            </div>
 
                                         </div>
-
 
                                         <hr class="line-back" data-id="app-home">
                                     </div>
@@ -3826,14 +3965,16 @@
                                                         class="fa-solid fa-globe"></i>
                                                     <p>Horloges</p>
                                                 </button>
-                                                <button class="btn-clock color-clock"><i class="fa-solid fa-bell"></i>
+                                                <button class="btn-clock color-clock"><i
+                                                        class="fa-solid fa-alarm-clock"></i>
                                                     <p>Alarmes</p>
                                                 </button>
                                                 <button data-id="app-timer" class="btn-clock-back"><i
                                                         class="fa-solid fa-stopwatch"></i>
                                                     <p>Chronomètre</p>
                                                 </button>
-                                                <button class="btn-clock-back"><i class="fa-regular fa-clock"></i>
+                                                <button class="btn-clock-back" data-id="app-minuteur"><i
+                                                        class="fa-regular fa-clock"></i>
                                                     <p>Minuteurs</p>
                                                 </button>
                                             </div>
@@ -3890,14 +4031,15 @@
                                                     <p>Horloges</p>
                                                 </button>
                                                 <button data-id="app-horloge" class="btn-clock-back"><i
-                                                        class="fa-solid fa-bell"></i>
+                                                        class="fa-solid fa-alarm-clock"></i>
                                                     <p>Alarmes</p>
                                                 </button>
                                                 <button data-id="app-timer" class="btn-clock-back"><i
                                                         class="fa-solid fa-stopwatch"></i>
                                                     <p>Chronomètre</p>
                                                 </button>
-                                                <button class="btn-clock-back"><i class="fa-regular fa-clock"></i>
+                                                <button class="btn-clock-back" data-id="app-minuteur"><i
+                                                        class="fa-regular fa-clock"></i>
                                                     <p>Minuteurs</p>
                                                 </button>
                                             </div>
@@ -3939,14 +4081,15 @@
                                                     <p>Horloges</p>
                                                 </button>
                                                 <button data-id="app-horloge" class="btn-clock-back"><i
-                                                        class="fa-solid fa-bell"></i>
+                                                        class="fa-solid fa-alarm-clock"></i>
                                                     <p>Alarmes</p>
                                                 </button>
                                                 <button class="btn-clock color-clock"><i
                                                         class="fa-solid fa-stopwatch"></i>
                                                     <p>Chronomètre</p>
                                                 </button>
-                                                <button class="btn-clock-back"><i class="fa-regular fa-clock"></i>
+                                                <button class="btn-clock-back" data-id="app-minuteur"><i
+                                                        class="fa-regular fa-clock"></i>
                                                     <p>Minuteurs</p>
                                                 </button>
                                             </div>
@@ -3956,6 +4099,86 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!------------------------------------------------------------------------- APP minuteur ------------------------------------------------------------------------->
+
+                                <div class="box hide color-fd-app-dark anim-app-open" data-content="app-minuteur">
+                                    <div class="screen-content-app">
+                                        <div class="container-info-accueil-app">
+                                        </div>
+
+                                        <div class="container-main">
+
+                                            <div class="content-minuteur">
+                                                <div id="timerDisplay" class="timer-display">00:00:00</div>
+
+                                                <div class="picker-zone">
+                                                    <div class="rotary-picker" data-type="hours"></div>
+                                                    <div class="rotary-picker" data-type="minutes"></div>
+                                                    <div class="rotary-picker" data-type="seconds"></div>
+                                                </div>
+
+                                                <div class="timer-buttons">
+                                                    <button class="btn-min demarer-color"
+                                                        id="startPauseBtn">Démarrer</button>
+                                                    <button class="btn-min" id="stopBtn">Annuler</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-desc-minuteur">
+                                                <div class="bloc-desc-minuteur">
+                                                    <div class="content-line-desc">
+                                                        <h2>Description</h2>
+                                                        <p class="color-accent">Minuteur</p>
+                                                    </div>
+                                                    <hr class="line-separ-desc">
+                                                    <div class="content-line-desc">
+                                                        <h2>Sonnerie</h2> <span class="color-accent">
+                                                            <p>Radar</p><i class="fa-solid fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-recent-minuteur">
+                                                <h2 class="color-accent-clear">Récents</h2>
+                                                <div class="content-bloc-recent">
+                                                    <h1 class="color-accent">45:00</h1>
+                                                    <button class="btn-start demarer-color"><i
+                                                            class="fa-solid fa-play"></i></button>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="content-btn-back">
+
+                                            <div class="bloc-line-clavier-back typo-1 color-txt">
+                                                <button data-id="app-clockworld" class="btn-clock-back"><i
+                                                        class="fa-solid fa-globe"></i>
+                                                    <p>Horloges</p>
+                                                </button>
+                                                <button data-id="app-horloge" class="btn-clock-back"><i
+                                                        class="fa-solid fa-alarm-clock"></i>
+                                                    <p>Alarmes</p>
+                                                </button>
+                                                <button class="btn-clock-back"><i class="fa-solid fa-stopwatch"
+                                                        data-id="app-timer"></i>
+                                                    <p>Chronomètre</p>
+                                                </button>
+                                                <button class="btn-clock color-clock"><i
+                                                        class="fa-regular fa-clock"></i>
+                                                    <p>Minuteurs</p>
+                                                </button>
+                                            </div>
+                                            <div class="content-line-back">
+                                                <hr class="line-back-clavier" data-id="app-home">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
 
 
                                 <!------------------------------------------------------------------------- APP APP STORE ------------------------------------------------------------------------->
@@ -4409,7 +4632,17 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="bloc-moyen-notif-none">
+                                                                <div class="bloc-moyen-notif color-txt">
+                                                                    <p>Sonnerie</p>
+                                                                    <div class="switch-container">
+                                                                        <div class="switch2 redOk2"
+                                                                            data-target=".sonnerie"
+                                                                            id="switch-sonnerie">
+                                                                            <i
+                                                                                class="icon2 color-red2 fa-solid fa-bell"></i>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </div>
 
                                                             </div>
@@ -4595,9 +4828,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-
-
                                                         </div>
                                                     </div>
 
@@ -4680,6 +4910,7 @@
                                     <div class="container-info-accueil-screen">
                                         <div class="container-info-left color-acc-screen">
                                             <div class="operateur">Orange F</div>
+                                            <div class="sonnerie"><i class="fa-solid fa-bell-slash"></i></div>
                                         </div>
                                         <div class="container-info-cam">
                                         </div>
@@ -4731,21 +4962,30 @@
                 </div>
             </section>
 
-            <section class="ip-paysage boxs hidden anim-phone-portrait-paysage " data-content="bloc-paysage">
-                <div class="iphone-app-paysage color-fd-video">
-                    <div class="container-info-fix-paysage">
-                        <div class="container-info-cam-fix-paysage">
-                            <div class="face-cam-paysage">
-                                <div class="objectif-paysage"></div>
+            <section class="ip-paysage-face boxs hidden anim-phone-portrait-paysage" data-content="bloc-paysage">
+                <div class="iphone-paysage-face anim-phone-paysage-portrait">
+                    <div class="container-info-paysage-face">
+                        <div class="container-info-cam-paysage-face">
+                            <div class="face-cam-paysage-face">
+                                <div class="objectif-paysage-face"></div>
                             </div>
                         </div>
-
-
                     </div>
 
-                    <div class="screen-content-app-paysage">
-                        <div class="container-main-paysage">
-                            <video id="videoGame" src="Medias/portfolio/anim-intro-jeu.mp4" autoplay></video>
+                    <div class="container-btn-paysage-face">
+                        <div class="content-btn-lock-paysage-face">
+                            <div class="lock-btn-paysage-face" onclick="toggleScreen()"></div>
+                        </div>
+                        <div class="content-btn-sound-paysage-face">
+                            <div class="sound-btn-paysage-face" data-switch="#switch-sonnerie"></div>
+                            <div class="sound-btn-paysage-face" onclick="changeVolume(10)"></div>
+                            <div class="sound-btn-paysage-face" onclick="changeVolume(-10)"></div>
+                        </div>
+                    </div>
+
+                    <div class="screen-content-paysage-face color-fd-video">
+                        <div class="container-main-video">
+                            <video src="Medias/portfolio/anim-intro-jeu.mp4" autoplay></video>
 
                             <div class="end-screen hidden" id="endScreen">
                                 <p>Erreur de connexion</p>
@@ -4756,9 +4996,123 @@
                                             class="fa-solid fa-right-from-bracket"></i></button>
                                 </div>
                             </div>
-
-                            <hr class="line-back-paysage" data-id="bloc-face">
                         </div>
+
+                        <hr class="line-back-paysage-face" data-id="bloc-face">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="ip-paysage-face boxs hidden anim-phone-portrait-paysage" data-content="bloc-paysagePlan">
+                <div class="iphone-paysage-face color-fd-video">
+                     <div class="container-info-paysage-face">
+                        <div class="container-info-cam-paysage-face">
+                            <div class="face-cam-paysage-face">
+                                <div class="objectif-paysage-face"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-btn-paysage-face">
+                        <div class="content-btn-lock-paysage-face">
+                            <div class="lock-btn-paysage-face" onclick="toggleScreen()"></div>
+                        </div>
+                        <div class="content-btn-sound-paysage-face">
+                            <div class="sound-btn-paysage-face" data-switch="#switch-sonnerie"></div>
+                            <div class="sound-btn-paysage-face" onclick="changeVolume(10)"></div>
+                            <div class="sound-btn-paysage-face" onclick="changeVolume(-10)"></div>
+                        </div>
+                    </div>
+
+                    <div class="screen-content-paysage-face">
+                        <div class="container-main-plans-paysage">
+                            <div class="bloc-map-paysage">
+                                <i class="color-blue fa-solid fa-map"></i>
+                                <hr class="line-bloc-map">
+                                <i class="color-blue fa-solid fa-location-arrow"></i>
+                            </div>
+
+                            <div class="bloc-map-back-loupe-paysage">
+                                <i class="color-white fa-solid fa-binoculars"></i>
+                            </div>
+
+                            <div class="bloc-map-back-temp-paysage typo-1 color-accent">
+                                <span><i class="color-white fa-solid fa-cloud"></i>
+                                    <p>6°</p>
+                                </span>
+                                <span>
+                                    <p class="air-plans-size">Air</p><i
+                                        class="color-green dot-plans fa-solid fa-circle"></i>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="content-plans-back-paysage">
+                            <div class="content-line-back-plans-paysage">
+                                <div class="content-zone-msg-plans-paysage">
+                                    <div class="zone-msg-plans-paysage">
+                                        <div class="search-bloc-plans-paysage typo-1 color-clear">
+                                            <div class="bloc-recherche-plans-paysage">
+                                                <p>Rechercher dans Plans</p>
+                                            </div>
+                                            <i class="fa-solid fa-microphone"></i>
+                                        </div>
+                                    </div>
+                                    <div class="cpt-btn-paysage"></div>
+                                </div>
+                            </div>
+
+
+                            <div class="content-line-back-plans-paysage typo-1">
+                                <h3>Suggestions</h3>
+                                <div class="content-info-plans-paysage">
+                                    <span><i class="fa-solid fa-car"></i></span>
+                                    <div class="content-txt-info-plans-paysage">
+                                        <h3 class="font-size-titre">Stationnement</h3>
+                                        <p class="color-txt">à 8,2 km de distance, proche de Rue
+                                            J...
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="content-line-back-plans-paysage typo-1">
+                                <h3>Bibliothèque</h3>
+                                <div class="content-info-plans-paysage">
+
+                                    <div class="content-column-btn-plans-paysage">
+                                        <button class="btn-plans-paysage"><i
+                                                class="color-plans fa-solid fa-house-chimney-window"></i></button>
+                                        <h4>Domicile</h4>
+                                        <p class="color-accent">Proche</p>
+                                    </div>
+
+                                    <div class="content-column-btn-plans-paysage">
+                                        <button class="btn-plans-paysage"><i
+                                                class="color-plans fa-solid fa-briefcase"></i></button>
+                                        <h4>Bureau</h4>
+                                        <p class="color-plans">2 h 23 min</p>
+                                    </div>
+
+                                    <div class="content-column-btn-plans-paysage">
+                                        <button class="btn-plans-paysage"><i
+                                                class="color-accent fa-solid fa-plus"></i></button>
+                                        <h4>Ajouter</h4>
+                                        <p class="color-txt">.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content-line-btn-rotate-paysage">
+                                <button class="btn-rotate-plan" data-id="bloc-face">mode portrait</button>
+                            </div>
+                        </div>
+
+                        <hr class="line-back-paysage-face" data-id="bloc-face">
                     </div>
                 </div>
 
@@ -4847,7 +5201,7 @@
 
 
     <div class="blocFlex">
-        <section class="container-dev-pub blocApparition">
+        <section class="container-dev-pub animBloc" data-anim="blocApparition">
             <div class="btn-ios">
                 <img src="Medias/APP-Medias/ios-logo.png">
             </div>

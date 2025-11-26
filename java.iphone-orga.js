@@ -1,26 +1,30 @@
 
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('visible');
+//         }
+//     });
+// }, { threshold: 0.5 }); // declenche 30% element visible
+// const elements = document.querySelectorAll('.blocApparition');
+// elements.forEach(element => observer.observe(element));
+
+
 const observer = new IntersectionObserver(entries => {
-
     entries.forEach(entry => {
-
         if (entry.isIntersecting) {
-
+            const delay = entry.target.dataset.delay || '0s';
+            entry.target.style.transitionDelay = delay;
             entry.target.classList.add('visible');
-
         }
-
     });
+}, { threshold: 0.3 });
 
-}, { threshold: 0.5 }); // Se déclenche quand 30% de l'élément est visible
-
-// Sélectionne tous les éléments à observer
-
-const elements = document.querySelectorAll('.blocApparition');
-
-// Applique l'observation sur chaque élément
-
-elements.forEach(element => observer.observe(element));
-
+document.querySelectorAll('.animBloc').forEach(el => {
+    const anim = el.dataset.anim;
+    if (anim) el.classList.add(anim);
+    observer.observe(el);
+});
 
 
 /************************************************************************** Drag screen accueil **************************************************************************/
@@ -298,6 +302,132 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     setActiveButton('resetBtn');
 });
 
+/**************************** minuteur ****************************/
+
+
+let totalSeconds = 0;
+let interval = null;
+let run = false;
+
+const startPauseBtn = document.getElementById("startPauseBtn");
+const stopBtn = document.getElementById("stopBtn");
+const timerDisplay = document.getElementById("timerDisplay");
+
+// ----------- ROTARY PICKER SETUP -----------
+
+const pickers = document.querySelectorAll(".rotary-picker");
+
+pickers.forEach(picker => {
+    const type = picker.dataset.type;
+
+    for (let i = 0; i < 60; i++) {
+        const div = document.createElement("div");
+        div.textContent = i.toString().padStart(2, "0");
+        picker.appendChild(div);
+    }
+
+    updatePickerSelection(picker);
+
+    picker.addEventListener("scroll", () => {
+        clearTimeout(picker._scrollTimeout);
+
+        picker._scrollTimeout = setTimeout(() => {
+            snapPicker(picker);
+        }, 80);
+    });
+});
+
+function snapPicker(picker) {
+    let index = Math.round(picker.scrollTop / 50);
+    index = Math.max(0, Math.min(59, index));
+
+    picker.scrollTo({
+        top: index * 50,
+        behavior: "smooth"
+    });
+
+    updatePickerSelection(picker);
+    updateTimerFromPickers();
+}
+
+function updatePickerSelection(picker) {
+    const index = Math.round(picker.scrollTop / 50);
+    const items = picker.querySelectorAll("div");
+
+    items.forEach(el => el.classList.remove("selected"));
+    if (items[index]) items[index].classList.add("selected");
+}
+
+function getPickerValue(type) {
+    const picker = document.querySelector(`.rotary-picker[data-type="${type}"]`);
+    const index = Math.round(picker.scrollTop / 50);
+    return index;
+}
+
+function updateTimerFromPickers() {
+    const h = getPickerValue("hours");
+    const m = getPickerValue("minutes");
+    const s = getPickerValue("seconds");
+
+    totalSeconds = h * 3600 + m * 60 + s;
+
+    timerDisplay.textContent =
+        `${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+}
+
+
+startPauseBtn.addEventListener("click", () => {
+    if (!run) {
+        if (totalSeconds <= 0) updateTimerFromPickers();
+        startTimer();
+    } else {
+        pauseTimer();
+    }
+});
+
+stopBtn.addEventListener("click", stopTimer);
+
+function startTimer() {
+    if (totalSeconds <= 0) return;
+
+    run = true;
+    startPauseBtn.textContent = "Pause";
+
+    interval = setInterval(() => {
+        totalSeconds--;
+
+        updateDisplay();
+
+        if (totalSeconds <= 0) {
+            stopTimer();
+        }
+    }, 1000);
+}
+
+function pauseTimer() {
+    run = false;
+    startPauseBtn.textContent = "Reprendre";
+    clearInterval(interval);
+}
+
+function stopTimer() {
+    run = false;
+    clearInterval(interval);
+    totalSeconds = 0;
+    timerDisplay.textContent = "00:00:00";
+    startPauseBtn.textContent = "Démarrer";
+}
+
+function updateDisplay() {
+    const h = Math.floor(totalSeconds / 3600);
+    const m = Math.floor((totalSeconds % 3600) / 60);
+    const s = totalSeconds % 60;
+
+    timerDisplay.textContent =
+        `${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+}
+
+
 
 
 /************************************************************************** CONTROL PAGE **************************************************************************/
@@ -491,14 +621,62 @@ document.querySelectorAll('[data-switch]').forEach(button => {
 });
 
 
-const switchesDarkOk = document.querySelectorAll(".switchDarkOk");
 
-switchesDarkOk.forEach(switchButton => {
-    switchButton.addEventListener("click", () => {
-        switchButton.classList.toggle("desactive");
+document.querySelectorAll('.switchDark').forEach(sw => {
+    sw.addEventListener('click', () => {
+        sw.classList.toggle('active');
 
+        const li = sw.closest('.border-li-alarm');
+
+        const h2 = li.querySelector('h2');
+
+        if (sw.classList.contains('active')) {
+            h2.classList.add('alarm-on');
+        } else {
+            h2.classList.remove('alarm-on');
+        }
     });
 });
+
+const switchesDarkOk = document.querySelectorAll(".switchDarkOk");
+
+switchesDarkOk.forEach(sw => {
+
+    applyInitialColor(sw);
+
+    sw.addEventListener("click", () => {
+        sw.classList.toggle("desactive");
+        updateH2Color(sw);
+    });
+});
+
+function applyInitialColor(sw) {
+    const li = sw.closest(".border-li-alarm");
+    const h2 = li.querySelector("h2");
+
+    const isOn = !sw.classList.contains("desactive");
+
+    if (isOn) {
+        h2.classList.add("alarm-ok-on");
+    } else {
+        h2.classList.remove("alarm-ok-on");
+    }
+}
+
+function updateH2Color(sw) {
+    const li = sw.closest(".border-li-alarm");
+    const h2 = li.querySelector("h2");
+
+    const isOn = !sw.classList.contains("desactive");
+
+    if (isOn) {
+        h2.classList.add("alarm-ok-on");
+    } else {
+        h2.classList.remove("alarm-ok-on");
+    }
+}
+
+
 
 /************************************************************************** MESSAGE VIDEO GAME **************************************************************************/
 
@@ -521,7 +699,7 @@ const closeBtn = document.querySelector(".line-back-paysage");
 
 closeBtn.addEventListener("click", () => {
     video.pause();
-    video.currentTime = 0;         
+    video.currentTime = 0;
     videoBloc.classList.add("hidden");
 });
 
@@ -529,7 +707,7 @@ closeBtn.addEventListener("click", () => {
 openBtn.addEventListener("click", () => {
     videoBloc.classList.remove("hidden");
     endScreen.classList.add("hidden");
-    
+
     video.currentTime = 0;
     video.play();
 });

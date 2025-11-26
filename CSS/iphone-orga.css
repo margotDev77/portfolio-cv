@@ -291,17 +291,11 @@ body.theme-noir {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 9vh;
+  top: 10vh;
   left: 35.5vh;
 }
 
-.vibr-btn-back {
-  margin: 1vh 0 1vh 0;
-  width: 3px;
-  height: 26px;
-  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
-  background: var(--btn-cote);
-}
+
 
 .sound-btn-back {
   margin: 1vh 0 1vh 0;
@@ -553,6 +547,10 @@ body.theme-noir {
   background: var(--btn-side);
   font-size: 12px;
   color: var(--border-side-btn);
+}
+
+.vibr-btn-side:hover {
+  transform: scale(0.96);
 }
 
 .sound-btn-side {
@@ -881,14 +879,6 @@ button {
   left: -9px;
 }
 
-.vibr-btn-face {
-  margin: 1vh 0 1vh 0;
-  width: 3px;
-  height: 26px;
-  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
-  background: var(--btn-cote);
-}
-
 .sound-btn-face {
   margin: 1vh 0 1vh 0;
   width: 3px;
@@ -1003,12 +993,12 @@ button {
 }
 
 .location {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .clock {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .reseau {
@@ -1022,11 +1012,15 @@ button {
 }
 
 .battery {
-  font-size: 19px;
+  font-size: 14px;
 }
 
 .operateur {
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+
+.sonnerie {
   font-size: 14px;
 }
 
@@ -1532,6 +1526,15 @@ button {
   aspect-ratio: 1/1;
 }
 
+.icon-reglage {
+  width: 100%;
+  border-radius: 12px;
+  background-image: url("../Medias/APP-Medias/reglage.png");
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1/1;
+}
+
 .icon-google {
   width: 100%;
   border-radius: 12px;
@@ -1600,8 +1603,6 @@ button {
 
 .calculette {
   color: #1c1c1c;
-  background-color: #b4b4b2;
-  border-radius: 1vh;
 }
 
 .fa-lightbulb {
@@ -1675,8 +1676,6 @@ button {
   background-color: #161616;
   border: 3px solid #919695;
 }
-
-
 
 .photo-lentille-content {
   display: flex;
@@ -4239,6 +4238,10 @@ p {
   background: linear-gradient(0deg, #5756ce, #b2b2d9);
 }
 
+.switch2.redOk2 {
+  background: linear-gradient(0deg, #fe6064, red);
+}
+
 
 .switch2.greenOk.desactive {
   background: #adadad;
@@ -4249,6 +4252,10 @@ p {
 }
 
 .switch2.redOk.desactive {
+  background: #adadad;
+}
+
+.switch2.redOk2.desactive {
   background: #adadad;
 }
 
@@ -4283,6 +4290,10 @@ p {
 
 .color-red {
   color: #fe6064;
+}
+
+.color-red2 {
+  color: red;
 }
 
 .hidden {
@@ -4488,10 +4499,9 @@ p {
 .container-main-plans {
   width: 35vh;
   position: absolute;
-  top: 4.5vh;
-  height: 37vh;
+  height: 100%;
   background-image: url("../Medias/APP-Medias/plans-map.jpg");
-  background-position: bottom;
+  /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -4510,12 +4520,15 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 15px 0;
   background: rgba(136, 135, 135, 0.41);
   box-shadow: 0px 3px 8px rgba(65, 65, 65, 0.225);
   backdrop-filter: blur(15px);
-  border-radius: 6px;
+  border-radius: 15px;
   font-size: 12px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
 
 .line-bloc-map {
@@ -4525,14 +4538,13 @@ p {
   width: 100%;
 }
 
-
 .content-block-plans {
   display: flex;
   justify-content: space-between;
   padding: 165px 10px 10px 10px;
 }
 
-.bloc-map-back {
+.bloc-map-back-temp {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4543,10 +4555,29 @@ p {
   backdrop-filter: blur(15px);
   border-radius: 6px;
   font-size: 13px;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+
+.bloc-map-back-loupe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background: rgba(135, 135, 135, 0.41);
+  box-shadow: 0px 3px 8px rgba(65, 65, 65, 0.225);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  font-size: 13px;
+  position: absolute;
+  right: 5%;
+  top: 40%;
 }
 
 
-.bloc-map-back span {
+.bloc-map-back-temp span {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -4570,7 +4601,7 @@ p {
   position: absolute;
   border-radius: 20px 20px 0 0;
   bottom: 0;
-  width: 100%;
+  width: 93%;
   padding-bottom: 20px;
 }
 
@@ -4639,10 +4670,10 @@ p {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 15px;
   box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0), inset 3px 3px 2px rgba(39, 39, 39, .15), inset -2px -2px 7px rgba(255, 255, 255, 0.35);
-  column-gap: 20px;
+  column-gap: 15px;
 }
 
 .content-info-plans span {
@@ -4681,16 +4712,295 @@ p {
 
 .btn-plans {
   display: flex;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 3px 3px 5px rgba(55, 84, 170, .20), -3px -3px 5px rgba(255, 255, 255, 0.25), 0px 0px 4px rgba(255, 255, 255, .20);
   background-color: #cbd1d7;
-  border-radius: 30px;
-  font-size: 22px;
+  border-radius: 50%;
+  font-size: 20px;
 }
+
+.content-line-btn-rotate {
+  display: flex;
+  width: 95%;
+  justify-content: flex-end;
+  padding: 5px 0;
+}
+
+.btn-rotate-plan {
+  display: flex;
+  font-size: 11px;
+  background-color: #007bb5;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+/********************** APP PLANS PAYSAGE **********************/
+
+.color-plans {
+  color: #376eb4;
+}
+
+.container-main-plans-paysage {
+  width: 100%;
+  position: absolute;
+  height: 35vh;
+  background-image: url("../Medias/APP-Medias/plans-map.jpg");
+  /* background-position: bottom; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.line-block-plans-paysage {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px 10px;
+}
+
+
+.bloc-map-paysage {
+  display: flex;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0;
+  background: rgba(136, 135, 135, 0.41);
+  box-shadow: 0px 3px 8px rgba(65, 65, 65, 0.225);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  font-size: 12px;
+  position: absolute;
+  top: 8%;
+  right: 2%;
+}
+
+.line-bloc-map-paysage {
+  border: none;
+  height: 1.5px;
+  background-color: #ebeff3;
+  width: 100%;
+}
+
+.content-block-plans-paysage {
+  display: flex;
+  justify-content: space-between;
+  padding: 165px 10px 10px 10px;
+}
+
+.bloc-map-back-temp-paysage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px 7px;
+  background: rgba(135, 135, 135, 0.41);
+  box-shadow: 0px 3px 8px rgba(65, 65, 65, 0.225);
+  backdrop-filter: blur(15px);
+  border-radius: 6px;
+  font-size: 13px;
+  position: absolute;
+  left: 47%;
+  top: 5%;
+}
+
+.bloc-map-back-loupe-paysage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background: rgba(135, 135, 135, 0.41);
+  box-shadow: 0px 3px 8px rgba(65, 65, 65, 0.225);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  font-size: 13px;
+  position: absolute;
+  right: 2%;
+  top: 85%;
+}
+
+
+.bloc-map-back-temp-paysage span {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.dot-plans {
+  font-size: 6px;
+}
+
+.air-plans-size {
+  font-size: 10px;
+}
+
+
+.content-plans-back-paysage {
+  display: flex;
+  flex-direction: column;
+  background-color: #cbd1d7;
+  box-shadow: 0px 0px 10px rgba(79, 79, 79, 0.60), 0px 0px 7px rgba(27, 27, 27, 0.30);
+  position: absolute;
+  border-radius: 25px 25px 0 0;
+  top: 0;
+  left: 5%;
+  width: 40%;
+  padding-bottom: 20px;
+  margin: 2% 0 0 0;
+}
+
+.content-zone-msg-plans-paysage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.cpt-btn-paysage {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px rgba(55, 84, 170, .20), -3px -3px 5px rgba(255, 255, 255, 0.25), 0px 0px 4px rgba(255, 255, 255, .20);
+  background-color: #cbd1d7;
+  border-radius: 50%;
+  background-image: url("../Medias/APP-Medias/memoji-profil.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.zone-msg-plans-paysage {
+  width: 85%;
+}
+
+.search-bloc-plans-paysage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 15px;
+  height: 25px;
+  background-color: #cbd1d7;
+  box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0),
+    inset 3px 3px 2px rgba(39, 39, 39, .15),
+    inset -2px -2px 7px rgba(255, 255, 255, 0.35);
+}
+
+
+.bloc-recherche-plans-paysage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.bloc-recherche-plans-paysage p {
+  font-size: 14px;
+}
+
+.content-line-back-plans-paysage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 7px 4px;
+  padding: 0 7px 0 7px;
+  color: #ffffff;
+}
+
+.content-line-back-plans-paysage h3 {
+  margin: 0 0 7px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content-info-plans-paysage {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0), inset 3px 3px 2px rgba(39, 39, 39, .15), inset -2px -2px 7px rgba(255, 255, 255, 0.35);
+  column-gap: 10px;
+}
+
+.content-info-plans-paysage span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #376eb4;
+  font-size: 16px;
+}
+
+.content-txt-info-plans-paysage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content-txt-info-plans-paysage h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.content-txt-info-plans-paysage p {
+  font-size: 11px;
+  margin: 0;
+}
+
+.content-column-btn-plans-paysage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.content-column-btn-plans-paysage h4 {
+  margin: 5px;
+  font-size: 10px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+.content-column-btn-plans-paysage p {
+  margin: 0;
+  font-size: 8px;
+}
+
+.btn-plans-paysage {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  box-shadow: 3px 3px 5px rgba(55, 84, 170, .20), -3px -3px 5px rgba(255, 255, 255, 0.25), 0px 0px 4px rgba(255, 255, 255, .20);
+  background-color: #cbd1d7;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.content-line-btn-rotate-paysage {
+  display: flex;
+  width: 95%;
+  justify-content: flex-start;
+  padding: 5px 0 5px 15px;
+}
+
+
 
 
 /******************************************* APP FACETIME *******************************************/
@@ -4912,8 +5222,22 @@ ul {
 
 .border-li-alarm h2 {
   font-size: 35px;
+  font-weight: 400;
   margin: 0;
-  color: #ebeff3;
+  color: #adadad;
+}
+
+.switchDark {
+  position: relative;
+  width: 50px;
+  height: 18px;
+  border-radius: 25px;
+  background: #adadad;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .switchDarkOk {
@@ -4928,6 +5252,20 @@ ul {
   justify-content: center;
 }
 
+
+.switchDark::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  background: #1e1e1e;
+  border-radius: 50%;
+  transition: left 0.3s;
+  box-shadow:
+    3px 3px 6px rgba(0, 0, 0, 0.5),
+    -3px -3px 6px rgba(145, 145, 145, 0.1);
+}
 
 .switchDarkOk::before {
   content: "";
@@ -4959,47 +5297,30 @@ ul {
   right: calc(100% - 25px);
 }
 
-
-
-.switchDark {
-  position: relative;
-  width: 50px;
-  height: 18px;
-  border-radius: 25px;
-  background-color: #adadad;
-  cursor: pointer;
-  transition: background 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.switchDark::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  box-shadow:
-    3px 3px 6px rgba(0, 0, 0, 0.5),
-    -3px -3px 6px rgba(145, 145, 145, 0.1);
-  background-color: #1e1e1e;
-  border-radius: 50%;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  transition: left 0.3s, background 0.3s;
-}
-
 .switchDark.alarm.active {
   background: linear-gradient(0deg, #ff9f0a, #fac16d);
 }
 
-
-
 .switchDark.active::before {
   left: calc(100% - 25px);
 }
+
+.switchDark.active {
+  background: linear-gradient(0deg, #ff9f0a, #fac16d);
+}
+
+.alarm-on {
+  color: #fff !important;
+}
+
+.alarm-ok-on {
+  color: #fff !important;
+}
+
+.border-li-alarm h2 {
+  transition: color 0.3s ease;
+}
+
 
 /******************************************* APP clockworld *******************************************/
 
@@ -5103,6 +5424,178 @@ ul {
 
 #resetBtn.active {
   color: #e53935;
+}
+
+/******************************************* APP minuteur *******************************************/
+.content-minuteur {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.timer-display {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+  color: #adadad;
+}
+
+.timer-buttons {
+  display: flex;
+  width: 85%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+
+}
+
+
+.btn-min {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #565254;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(90, 90, 90, 0.1);
+  background-color: #1e1e1e;
+  font-size: 12px;
+  color: #adadad;
+}
+
+.demarer-color {
+  color: #43a047;
+}
+
+/* ----- ROTARY PICKER ----- */
+
+.picker-zone {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rotary-picker {
+  width: 70px;
+  height: 150px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  box-shadow:
+    inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 6px rgba(140, 140, 140, 0.1);
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  text-align: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.rotary-picker::-webkit-scrollbar {
+  display: none;
+}
+
+.rotary-picker div {
+  height: 50px;
+  /* IMPORTANT */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  scroll-snap-align: center;
+  opacity: 0.3;
+  transition: opacity 0.15s;
+  color: #adadad;
+}
+
+.rotary-picker .selected {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.content-desc-minuteur {
+  display: flex;
+  padding: 15px;
+}
+
+.bloc-desc-minuteur {
+  display: flex;
+  width: 100%;
+  box-shadow:
+    inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 6px rgba(140, 140, 140, 0.1);
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.line-separ-desc {
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: #adadad;
+}
+
+.content-line-desc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-line-desc h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: #adadad;
+}
+
+.content-line-desc p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.content-line-desc span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+}
+
+.content-recent-minuteur {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.content-recent-minuteur h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+.content-bloc-recent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #adadad;
+  border-bottom: 1px solid #adadad;
+  padding: 10px 0;
+}
+
+.content-bloc-recent h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 400;
 }
 
 
@@ -6019,27 +6512,108 @@ ul {
 
 /************************************************** foule contact app *************************************************************/
 
-.color-fd-video{
-  background-color: #000;
-}
 
-.ip-paysage {
-  display: flex;
-  position: absolute;
-  z-index: 200;
-}
 
-.iphone-app-paysage {
+.ip-paysage-face {
+    position: absolute;
+    z-index: 300;
+  }
+
+  .iphone-paysage-face {
   width: 75vh;
   height: 35vh;
   border-radius: 5vh;
   border: 3px solid #161616;
-  box-shadow: 0 0 0 3px #c3c3c4;
-  position: relative;
+  /* box-shadow: 0 0 0 3px #c3c3c4; */
+  box-shadow: 0 0 0 3px var(--border-color);
   overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.screen-content-app-paysage {
+.container-info-paysage-face {
+  display: flex;
+  height: 35vh;
+  margin: 0 2vh 0 1vh;
+  z-index: 10;
+  position: absolute;
+}
+
+.container-info-cam-paysage-face{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.face-cam-paysage-face {
+  display: flex;
+  width: 2vh;
+  height: 3vh;
+  background-color: #000000;
+  border-radius: 3vh;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.5vh;
+}
+
+
+.objectif-paysage-face {
+  width: 1.2vh;
+  height: 1.2vh;
+  border-radius: 2vh;
+  background: radial-gradient(circle, #000000 0%, #0e2d54 20%, #1c1c1c 35%, #181818 50%, #000000 100%);
+}
+
+.container-btn-paysage-face {
+  display: flex;
+  position: absolute;
+  width: 75vh;
+  height: 35vh;
+}
+
+.content-btn-lock-paysage-face {
+  display: flex;
+  justify-content: flex-start;
+  top: 70px;
+  left: -9px;
+  position: absolute;
+}
+
+.lock-btn-paysage-face {
+  width: 3px;
+  height: 55px;
+  /* background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-cote);
+}
+
+.lock-btn-paysage-face:hover {
+  transform: translateX(1.1px);
+}
+
+.content-btn-sound-paysage-face {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  bottom: -9px;
+  left: 10vh;
+}
+
+.sound-btn-paysage-face {
+  margin:0 1vh 0 1vh;
+  width: 26px;
+  height: 3px;
+  /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
+  background: var(--btn-lock);
+}
+
+.sound-btn-paysage-face:hover {
+  transform: translateY(-1.1px);
+}
+
+.screen-content-paysage-face {
   display: flex;
   position: relative;
   width: 75vh;
@@ -6047,20 +6621,24 @@ ul {
   justify-content: center;
 }
 
-.line-back-paysage {
+.line-back-paysage-face {
   display: flex;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   border: none;
   height: 4px;
-  background-color: #adadad;
+  background-color: #757986;
   width: 40%;
   border-radius: 21vh;
   position: absolute;
 }
 
-.container-main-paysage {
+/***********************************************  app video foule contact ***********************************************/
+
+  .color-fd-video {
+  background-color: #000;
+}
+
+.container-main-video {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -6068,9 +6646,9 @@ ul {
   height: 35vh;
 }
 
-.container-main-paysage video{
-width: auto;
-height: 100%;
+.container-main-video video {
+  width: auto;
+  height: 100%;
 }
 
 .end-screen {
@@ -6089,7 +6667,7 @@ height: 100%;
   gap: 2vh;
 }
 
-.content-line-video-game{
+.content-line-video-game {
   display: flex;
   width: 25%;
   flex-direction: row;
@@ -6117,8 +6695,8 @@ height: 100%;
 }
 
 .anim-phone-portrait-paysage {
-  animation: movingRotate 0.1s ease;
-  -webkit-animation: movingRotate 0.1s ease;
+  animation: movingRotate 0.2s ease;
+  -webkit-animation: movingRotate 0.2s ease;
 }
 
 @keyframes movingRotate {
@@ -6139,20 +6717,169 @@ height: 100%;
 
 
 .anim-phone-paysage-portrait {
-  animation: movingRotate2 0.1s ease;
-  -webkit-animation: movingRotate2 0.1s ease;
+  animation: movingRotate2 0.2s ease;
+  -webkit-animation: movingRotate2 0.2s ease;
 }
 
 @keyframes movingRotate2 {
   0% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(45deg) scale(0.95);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container-info-fix-paysage-rotate {
+  display: flex;
+  margin: 0 2vh 0 1vh;
+  z-index: 10;
+  position: absolute;
+  flex-direction: column;
+  height: 35vh;
+  left: 0;
+}
+
+/************************************************** reglage app *************************************************************/
+
+.content-setting {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 25px 15px;
+}
+
+.content-profil-setting {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-left-profil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-left-profil span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-image: url("../Medias/APP-Medias/memoji-profil.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.content-left-txt {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-left-txt h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content-left-txt p {
+  margin: 0;
+  font-size: 10px;
+  color: #adadad;
+}
+
+.content-left-setting {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-left-setting span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: #ebecf0;
+  box-shadow: 3px 3px 5px rgba(55, 84, 170, .15), -3px -3px 7px rgba(255, 255, 255, 0.75), inset 0px 0px 2px rgba(255, 255, 255, .2), inset 3px 3px 5px rgba(55, 84, 170, 0), inset -3px -3px 5px rgba(255, 255, 255, 0), 0px 0px 2px rgba(255, 255, 255, 0);
+  font-size: 13px;
+}
+
+.orange-color {
+  color: #f0a937;
+}
+
+.blue-color-reseau {
+  color: #376eb4;
+}
+
+.green-color-reseau {
+  color: #35c759;
+}
+
+.color-blue {
+  color: #2177e7;
+}
+
+.color-batterie {
+  color: #43a047;
+}
+
+.bloc-line-setting {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 0 15px;
+  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 0.75);
+}
+
+.list-setting li:first-child {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #adadad;
+  border-bottom-width: 1px;
+  padding-inline-start: 1;
+  border-width: 1px;
+  padding: 0 0 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-setting li {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #adadad;
+  border-bottom-width: 1px;
+  padding-inline-start: 1;
+  border-width: 1px;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-setting li:last-child {
+  display: flex;
+  list-style: none;
+  border-bottom: none;
+  padding: 10px 0 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-setting p {
+  font-size: 13px;
+  margin: 0;
 }
 
 
