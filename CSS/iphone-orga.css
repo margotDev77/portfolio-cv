@@ -295,8 +295,6 @@ body.theme-noir {
   left: 35.5vh;
 }
 
-
-
 .sound-btn-back {
   margin: 1vh 0 1vh 0;
   width: 3px;
@@ -383,7 +381,7 @@ body.theme-noir {
   height: 4.5vh;
   border-radius: 50%;
   background-color: #161616;
-  margin: 1vh 0 1vh 0;
+  margin: 0.5vh 0 0.5vh 0;
   border: 3px solid var(--border-objectif);
   box-shadow: 2px 2px 6px #000000b7, inset -2px -2px 6px #111;
 }
@@ -437,7 +435,7 @@ body.theme-noir {
       #d0d0d0 50%,
       #a0a0a0 100%);
   position: relative;
-  border: 2px solid var(--border-objectif);
+  /* border: 2px solid var(--border-objectif); */
 }
 
 .flash.active {
@@ -6515,11 +6513,11 @@ ul {
 
 
 .ip-paysage-face {
-    position: absolute;
-    z-index: 300;
-  }
+  position: absolute;
+  z-index: 300;
+}
 
-  .iphone-paysage-face {
+.iphone-paysage-face {
   width: 75vh;
   height: 35vh;
   border-radius: 5vh;
@@ -6540,7 +6538,7 @@ ul {
   position: absolute;
 }
 
-.container-info-cam-paysage-face{
+.container-info-cam-paysage-face {
   display: flex;
   height: 100%;
   justify-content: center;
@@ -6602,7 +6600,7 @@ ul {
 }
 
 .sound-btn-paysage-face {
-  margin:0 1vh 0 1vh;
+  margin: 0 1vh 0 1vh;
   width: 26px;
   height: 3px;
   /* background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%); */
@@ -6634,7 +6632,7 @@ ul {
 
 /***********************************************  app video foule contact ***********************************************/
 
-  .color-fd-video {
+.color-fd-video {
   background-color: #000;
 }
 

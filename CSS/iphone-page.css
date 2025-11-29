@@ -24,7 +24,7 @@
 
 .animBloc {
   opacity: 0;
-   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .blocApparition {
@@ -2420,6 +2420,695 @@ a {
   width: 15vh
 }
 
+
+/*********************************************** support ***********************************************/
+
+
+.container-support {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 25px;
+  gap: 70px;
+  padding: 70px 0;
+}
+
+.content-line-support-appareil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.content-line-support-appareil span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.content-line-support-appareil span i {
+  font-size: 35px;
+}
+
+.content-line-support-appareil span p:hover {
+  text-decoration: underline solid 1px;
+  cursor: pointer;
+}
+
+.content-line-support {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.content-line-support span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100%/4);
+  background-color: #f5f5f7;
+  box-shadow: 5px 5px 7px rgba(55, 84, 170, .15), -5px -5px 10px rgba(255, 255, 255, 0.75), inset 0px 0px 4px rgba(255, 255, 255, .2), inset 5px 5px 7px rgba(55, 84, 170, 0), inset -5px -5px 10px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  padding: 35px 0;
+  gap: 20px;
+  transform: scale(0.97);
+  transition: 300ms ease;
+}
+
+.content-line-support span:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.content-line-support span i {
+  font-size: 35px;
+}
+
+.content-line-support span p {
+  font-size: 16px;
+}
+
+.content-line-support span p:hover {
+  text-decoration: underline solid 1px;
+  cursor: pointer;
+}
+
+.content-search-support {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.bloc-title-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bloc-title-middle h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.search-support {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  width: 70%;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: 1px solid #adadad;
+  color: #adadad;
+}
+
+/*********************************************** pub medias ***********************************************/
+
+
+.blocFlex-medias {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  height: 100vh;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+
+.content-medias {
+  display: flex;
+  width: calc(99%/2);
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-medias img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content-medias h2 {
+  margin: 0;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.content-medias p {
+  margin: 0;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/************************************************** iphone back paysage *************************************************************/
+
+.ip-back-bottom{
+  display: flex;
+  position: absolute;
+  left: 7%;
+  top: 20%;
+}
+
+.iphone-back-bottom-paysage {
+  display: flex;
+  width: 75vh;
+  height: 35vh;
+  border-radius: 5vh;
+  background-color: #0d0d0e;
+  border: 6px solid #505253;
+}
+
+.container-btn-back-bottom-paysage {
+  display: flex;
+  position: absolute;
+  width: 75vh;
+  height: 35vh;
+  z-index: 1;
+}
+
+
+.content-btn-lock-bottom-paysage {
+  display: flex;
+  justify-content: flex-start;
+  top: 70px;
+  left: -9px;
+  position: absolute;
+}
+
+.lock-btn-bottom-paysage {
+  width: 3px;
+  height: 55px;
+  background: linear-gradient(0deg, #000000 0%, #898d8d 7%, #626465 25%, #505253 75%, #797b7b 90%, #272727 100%);
+}
+
+/* .lock-btn-bottom-paysage:hover {
+  transform: translateX(1.1px);
+} */
+
+.content-btn-sound-bottom-paysage {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: -9px;
+  left: 10vh;
+}
+
+.sound-btn-bottom-paysage {
+  margin:0 1vh 0 1vh ;
+  width: 26px;
+  height: 3px;
+  background: linear-gradient(90deg, #000000 0%, #898d8d 7%, #626465 25%, #505253 75%, #797b7b 90%, #272727 100%);
+}
+
+/* .sound-btn-bottom-paysage:hover {
+  transform: translateY(-1.1px);
+} */
+
+.back-content-bottom-paysage {
+  display: flex;
+  position: relative;
+  width: 75vh;
+  height: 35vh;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.content-logo-bottom-paysage {
+  display: flex;
+  width: 45vh;
+  height: 100%;
+  justify-content: center;
+  background: linear-gradient(-90deg, #16141b, #505253);
+  align-items: center;
+}
+
+.content-logo-filter-bottom-paysage {
+  display: flex;
+  width: 45vh;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(210deg, #8181813d 0%, #fbe0dc25 100%);
+}
+
+.logo-apple-back-bottom-paysage {
+  font-size: 120px;
+  color: #424145;
+  transform: rotate(-90deg);
+}
+
+.content-objectif-bottom-paysage {
+  display: flex;
+  width: 15vh;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  align-items: end;
+}
+
+.objectif-back-bottom-paysage {
+  display: flex;
+  height: 12vh;
+  padding: 1vh;
+  justify-content: center;
+}
+
+.objectif-contenair-bottom-paysage {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  transform: rotate(-90deg);
+}
+
+.column-bottom-paysage {
+  display: flex;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-bottom-bottom-paysage {
+  display: flex;
+  width: 15vh;
+  height: 100%;
+  position: absolute;
+  right: 0;
+ align-items: center;
+}
+
+.objectif-cam-bottom-paysage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5vh;
+  height: 4.5vh;
+  border-radius: 50%;
+  background-color: #161616;
+  margin: 0.5vh 0 0.5vh 0;
+  border: 3px solid #424242;
+  box-shadow: 2px 2px 6px #000000b7, inset -2px -2px 6px #111;
+}
+
+.content-txt-iphone-bottom-paysage {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 25px;
+  gap: 3px;
+  color: #434046;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.txt-iphone-bottom-paysage {
+  color: #434046;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  transform: rotate(-90deg);
+}
+
+
+.style-picker {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.style-btn {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+
+.style-btn.active {
+  /* border: 2px solid var(--color-blue-apple); */
+  border: 2px solid #376eb4;
+}
+
+
+
+.theme-picker {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-bttn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.theme-bttn.active {
+  /* border: 2px solid var(--color-blue-apple); */
+  border: 2px solid #376eb4;
+}
+
+
+
+/************************************************** iphone coque *************************************************************/
+
+.contenair-bloc-select-color-2 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.bordure-bombee {
+  box-shadow:
+    inset 3px 3px 8px rgba(0, 0, 0, 0.25),
+    inset -3px -3px 8px rgba(255, 255, 255, 0.8);
+}
+
+
+/* THEME BLACK */
+body.theme-blackCoque .iphone-back-coque {
+  --coque-color: #414141;
+  --border-color-coque: #343434;
+  --coque-color-acc: #535354;
+  --logo-color-coque: #b9c933;
+  --btn-lock-coque: linear-gradient(90deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
+  --btn-cote-coque: linear-gradient(0deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
+}
+
+/* THEME ORANGE */
+body.theme-orangeCoque .iphone-back-coque {
+  --coque-color: #ff6d2b;
+  --border-color-coque: #f4520f;
+  --coque-color-acc: #ff8d5a;
+  --logo-color-coque: #616163;
+  --btn-lock-coque: linear-gradient(90deg, #2e2e2e 0%, #616163 7%, #616163 90%, #2e2e2e 100%);
+  --btn-cote-coque: linear-gradient(0deg, #2e2e2e 0%, #616163 7%, #616163 90%, #2e2e2e 100%);
+}
+
+/* THEME KAKI */
+body.theme-kakiCoque .iphone-back-coque {
+  --coque-color: #a7968b;
+  --border-color-coque: #796c62;
+  --coque-color-acc: #bbada6;
+  --logo-color-coque: #b9c933;
+  --btn-lock-coque: linear-gradient(90deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
+  --btn-cote-coque: linear-gradient(0deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
+}
+
+/* THEME BLEU */
+body.theme-azureCoque .iphone-back-coque {
+  --coque-color: #3c555a;
+  --border-color-coque: #22434a;
+  --coque-color-acc: #487581;
+  --logo-color-coque: #528ea1;
+  --btn-lock-coque: linear-gradient(90deg, #264149 0%, #528ea1 7%, #528ea1 90%, #264149 100%);
+  --btn-cote-coque: linear-gradient(0deg, #264149 0%, #528ea1 7%, #528ea1 90%, #264149 100%);
+}
+
+
+
+body.theme-jauneCoque .iphone-back-coque {
+  --coque-color: #f0f6a4;
+  --border-color-coque: #d9df6c;
+  --logo-color-coque: #e8ee7c;
+  --shadow-left-coque: #cacea0;
+  --shadow-right-coque: #cfd56e;
+  --btn-lock-coque: #cfd56e;
+  --btn-cote-coque:#cfd56e;
+}
+
+body.theme-bleuCoque .iphone-back-coque {
+  --coque-color: #7693b3;
+  --border-color-coque: #5f7493;
+  --logo-color-coque: #5f7493;
+  --shadow-left-coque: #a1bfdd;
+  --shadow-right-coque: #49657f;
+  --btn-lock-coque: #49657f ;
+  --btn-cote-coque: #49657f;
+}
+
+body.theme-blancCoque .iphone-back-coque {
+  --coque-color: #eeeeec;
+  --border-color-coque: #d4d4d2;
+  --logo-color-coque: #e4e4de;
+  --shadow-left-coque: #e7e7e2;
+  --shadow-right-coque: #dbdbda;
+  --btn-lock-coque: #dbdbda;
+  --btn-cote-coque: #dbdbda;
+}
+
+body.theme-noirCoque .iphone-back-coque {
+  --coque-color: #393b3a;
+  --border-color-coque: #484848;
+  --logo-color-coque: #2c2e2d;
+  --shadow-left-coque: #595d50;
+  --shadow-right-coque: #1c1f22;
+  --btn-lock-coque: #1c1f22 ;
+  --btn-cote-coque: #1c1f22;
+}
+
+
+
+
+.iphone-back-coque {
+  display: flex;
+  width: 35vh;
+  height: 75vh;
+  padding: 6px;
+  border-radius: 5vh;
+  background-color: var(--coque-color);
+  /* border: 6px solid var(--border-color); */
+  box-shadow:
+    inset 5px 5px 8px var(--shadow-left-coque),
+    inset -5px -5px 8px var(--shadow-right-coque);
+}
+
+.container-btn-back-coque {
+  display: flex;
+  position: absolute;
+  width: 35vh;
+  height: 75vh;
+  z-index: 1;
+}
+
+
+.content-btn-lock-back-coque {
+  display: flex;
+  justify-content: flex-start;
+  top: -9px;
+  left: 70px;
+  position: absolute;
+}
+
+.lock-btn-back-coque {
+  width: 55px;
+  height: 3px;
+  background: var(--btn-lock-coque);
+}
+
+.content-btn-sound-back-coque {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10vh;
+  left: 35.6vh;
+}
+
+.sound-btn-back-coque {
+  margin: 1vh 0 1vh 0;
+  width: 3px;
+  height: 26px;
+  background: var(--btn-cote-coque);
+  ;
+}
+
+.back-content-coque {
+  display: flex;
+  position: relative;
+  width: 35vh;
+  height: 75vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-logo-coque {
+  display: flex;
+  width: 100%;
+  height: 45vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-coque {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle, var(--logo-color-coque) 1.7px, #1616165d 2.4px, transparent 3.3px) 0 0 / 14.8px 14px;
+}
+
+.logo-apple-back-coque {
+  font-size: 120px;
+  color: var(--logo-color-coque);
+}
+
+.content-objectif-coque {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.objectif-back-coque {
+  display: flex;
+  width: 13.5vh;
+  padding: 1vh;
+  justify-content: center;
+}
+
+.objectif-contenair-coque {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #ebeff3;
+  border: 5px solid var(--border-color-coque);
+  box-shadow:
+    inset 2px 2px 3px rgba(35, 35, 35, 0.546),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.543);
+  border-radius: 30px;
+}
+
+
+.column-coque {
+  display: flex;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.objectif-cam-coque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.3vh;
+  height: 4.3vh;
+  border-radius: 50%;
+  background-color: #161616;
+  margin: 0.5vh 0 0.5vh 0;
+  border: 3px solid #919695;
+  box-shadow: 2px 2px 5px #000000b7, inset -2px -2px 5px #111;
+}
+
+.cam-int-coque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5vh;
+  height: 3.5vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #222 0%, #0a0a0a 100%);
+  box-shadow: inset 1px 1px 2px #000, inset -1px -1px 2px #2c2c2c;
+}
+
+.lentille-content-coque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2vh;
+  height: 2.2vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 60%, #202025 0%, #111 80%);
+  box-shadow: inset 0 0 8px #000, 0 0 6px #0c0c0c;
+}
+
+.lentille-coque {
+  width: 1.2vh;
+  height: 1.2vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+      #4a8eff 0%,
+      #1a2a60 25%,
+      #0a0a0a 80%);
+  box-shadow:
+    inset 0 0 2px #000,
+    0 0 4px rgba(50, 150, 255, 0.6),
+    0 0 8px rgba(100, 150, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.flash-coque {
+  width: 2.5vh;
+  height: 2.5vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%,
+      #ffffff 0%,
+      #f3f3f3 20%,
+      #d0d0d0 50%,
+      #a0a0a0 100%);
+  position: relative;
+  /* border: 2px solid var(--border-objectif); */
+}
+
+.objectif-black-coque {
+  display: flex;
+  width: 2.5vh;
+  height: 2.5vh;
+  border-radius: 6vh;
+  background-color: #000000;
+}
+
+.content-bottom-coque {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+}
+
+.content-txt-coque {
+  display: flex;
+  align-items: center;
+}
+
+.txt-coque {
+  margin-top: 10px;
+  color: var(--logo-color-coque);
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 
 
@@ -2486,7 +3175,6 @@ a {
     left: 10%;
     z-index: 300;
   }
-
 
 
 }
