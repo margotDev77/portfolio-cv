@@ -19,6 +19,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -55,7 +57,7 @@
             <li><a href="">AirPods</a></li>
             <li><a href="">TV & Home</a></li>
             <li><a href="">Entrainement</a></li>
-            <li><a href="">Accessories</a></li>
+            <li><a href="#ios-accessoire">Accessories</a></li>
             <li><a href="#ios-support">Support</a></li>
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
             <li><i class="fa-solid fa-bag-shopping"></i></li>
@@ -1553,8 +1555,8 @@
     </div>
 
 
-    <div class="blocFlex-simul" id="ios-simulation">
-        <section class="contenair-bloc-simul animBloc" data-anim="blocApparition">
+    <div class="blocFlex-simul" id="phone">
+        <section class="contenair-bloc-simul animBloc" data-anim="blocApparition" id="ios-simulation">
             <div class="bloc-title-simul">
                 <h2>Test moi</h2>
                 <p>joue avec l'interface</p>
@@ -5210,26 +5212,26 @@
         </section>
     </div>
 
-    <div class="blocFlex-simul">
+    <div class="blocFlex-simul" id="coque">
 
-        <section class="contenair-bloc-select-color-2">
+        <section class="contenair-bloc-select-color-2" id="ios-accessoire">
             <div class="controls">
 
                 <div class="style-picker">
-                    <div class="style-btn active" data-style="cuir">Cuir</div>
+                    <div class="style-btn active" data-style="beats">Silicone Beats</div>
                     <div class="style-btn" data-style="silicone">Silicone</div>
                 </div>
 
-                <h1 id="styleTitle">Coque Cuir</h1>
+                <h1 id="styleTitle">Coque silicone Beats</h1>
                 <div class="coque-color-name typo-1" id="coqueColorName">Coloris</div>
-                <div class="theme-picker cuir-theme">
+                <div class="theme-picker beats-theme">
                     <div class="theme-bttn" id="blackCoque" data-name="Black"
                         style="background: linear-gradient(135deg, #414141, #5e5e5e);" data-default="true"></div>
                     <div class="theme-bttn" id="orangeCoque" data-name="Orange"
                         style="background: linear-gradient(135deg, #ff6d2b, #ee8c59);"></div>
                     <div class="theme-bttn" id="kakiCoque" data-name="Kaki"
                         style="background: linear-gradient(135deg, #a7968b, #b0a59d);"></div>
-                    <div class="theme-bttn" id="azureCoque" data-name="Bleu azure"
+                    <div class="theme-bttn" id="bleuazureCoque" data-name="Bleu azure"
                         style="background: linear-gradient(135deg, #3c555a, #596f75);"></div>
                 </div>
 
@@ -5287,7 +5289,7 @@
                             </div>
                         </div>
                         <div class="content-logo-coque">
-                            <div class="logo-apple-back-coque" data-hide-on="cuir"><i class="fa-brands fa-apple"></i>
+                            <div class="logo-apple-back-coque" data-hide-on="beats"><i class="fa-brands fa-apple"></i>
                             </div>
                             <div class="dot-coque" data-hide-on="silicone"></div>
                         </div>
@@ -5448,17 +5450,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
             const styleBtns = document.querySelectorAll('.style-btn');
-            const cuirPicker = document.querySelector('.cuir-theme');
+            const beatsPicker = document.querySelector('.beats-theme');
             const siliconePicker = document.querySelector('.silicone-theme');
             const coqueColorName = document.getElementById('coqueColorName');
             const styleTitle = document.getElementById('styleTitle');
 
             const hideableItems = document.querySelectorAll('[data-hide-on]');
+            const coque = document.getElementById('coque');
 
-            function removeThemeClassesFromBody() {
-                document.body.classList.forEach(cls => {
-                    if (cls.startsWith('theme-')) document.body.classList.remove(cls);
+            function removeCoqueThemes() {
+                coque.classList.forEach(cls => {
+                    if (cls.startsWith('coque-theme-')) coque.classList.remove(cls);
                 });
             }
 
@@ -5468,47 +5472,41 @@
 
             function applyDefault(themeGroup) {
                 if (!themeGroup) return;
+
                 const def = themeGroup.querySelector('[data-default="true"]');
                 resetThemeButtons();
+
                 if (def) {
                     def.classList.add('active');
-                    removeThemeClassesFromBody();
-                    document.body.classList.add(`theme-${def.id}`);
+                    removeCoqueThemes();
+                    coque.classList.add(`coque-theme-${def.id}`);
                     coqueColorName.textContent = `Coloris - ${def.dataset.name}`;
                 }
             }
 
-            function updateHiddenItems(selectedStyle) {
+            function updateHiddenItems(style) {
                 hideableItems.forEach(item => {
-                    const styleToHide = item.dataset.hideOn;
-                    item.style.display = styleToHide === selectedStyle ? 'none' : '';
+                    const toHide = item.dataset.hideOn;
+                    item.style.display = (toHide === style) ? "none" : "";
                 });
-            }
-
-            function getCurrentStyle() {
-                const active = document.querySelector('.style-btn.active');
-                return active ? active.dataset.style : 'cuir';
             }
 
             styleBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
+
                     styleBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
 
-                    if (btn.dataset.style === 'cuir') {
-                        styleTitle.textContent = 'Coque Cuir';
-                        cuirPicker.style.display = 'flex';
+                    if (btn.dataset.style === 'beats') {
+                        styleTitle.textContent = 'Coque silicone Beats';
+                        beatsPicker.style.display = 'flex';
                         siliconePicker.style.display = 'none';
-                        removeThemeClassesFromBody();
-                        resetThemeButtons();
-                        applyDefault(cuirPicker);
-                        updateHiddenItems('cuir');
+                        applyDefault(beatsPicker);
+                        updateHiddenItems('beats');
                     } else {
                         styleTitle.textContent = 'Coque Silicone';
                         siliconePicker.style.display = 'flex';
-                        cuirPicker.style.display = 'none';
-                        removeThemeClassesFromBody();
-                        resetThemeButtons();
+                        beatsPicker.style.display = 'none';
                         applyDefault(siliconePicker);
                         updateHiddenItems('silicone');
                     }
@@ -5517,30 +5515,33 @@
 
             document.querySelectorAll('.theme-bttn').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    document.querySelectorAll('.theme-bttn').forEach(b => b.classList.remove('active'));
+
+                    resetThemeButtons();
                     btn.classList.add('active');
 
-                    removeThemeClassesFromBody();
-                    document.body.classList.add(`theme-${btn.id}`);
+                    removeCoqueThemes();
+                    coque.classList.add(`coque-theme-${btn.id}`);
                     coqueColorName.textContent = `Coloris - ${btn.dataset.name}`;
                 });
             });
 
-            const initialStyle = getCurrentStyle();
+            const initialStyle = document.querySelector('.style-btn.active')?.dataset.style || "beats";
 
-            if (initialStyle === 'cuir') {
-                cuirPicker.style.display = 'flex';
-                siliconePicker.style.display = 'none';
-                applyDefault(cuirPicker);
+            if (initialStyle === "beats") {
+                beatsPicker.style.display = "flex";
+                siliconePicker.style.display = "none";
+                applyDefault(beatsPicker);
+                updateHiddenItems("beats");
             } else {
-                siliconePicker.style.display = 'flex';
-                cuirPicker.style.display = 'none';
+                siliconePicker.style.display = "flex";
+                beatsPicker.style.display = "none";
                 applyDefault(siliconePicker);
+                updateHiddenItems("silicone");
             }
 
-            updateHiddenItems(initialStyle);
         });
     </script>
+
 
     <script>
         'use strict';
@@ -5719,8 +5720,10 @@
                 themeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                document.body.className = '';
-                document.body.classList.add(`theme-${btn.id}`);
+                // document.body.className = '';
+                // document.body.classList.add(`theme-${btn.id}`);
+                document.body.classList.remove(...[...document.body.classList].filter(c => c.startsWith("phone-theme-")));
+                document.body.classList.add(`phone-theme-${btn.id}`);
                 colorName.textContent = `Coloris - ${btn.dataset.name}`;
             });
         });

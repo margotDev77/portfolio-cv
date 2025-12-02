@@ -795,20 +795,3 @@ function afficherDate() {
     document.getElementById("date").innerText = dateTexte;
     document.getElementById("jour").innerText = jourTexte;
 }
-
-
-
-/**************************** vibr bouton neum ****************************/
-
-
-const vibrBtn = document.getElementById('moveVibr');
-let moved = false;
-
-vibrBtn.addEventListener('click', function () {
-    if (!moved) {
-        vibrBtn.style.left = '10px';
-    } else {
-        vibrBtn.style.left = '0px';
-    }
-    moved = !moved;
-});

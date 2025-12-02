@@ -2583,7 +2583,7 @@ a {
 
 /************************************************** iphone back paysage *************************************************************/
 
-.ip-back-bottom{
+.ip-back-bottom {
   display: flex;
   position: absolute;
   left: 7%;
@@ -2635,7 +2635,7 @@ a {
 }
 
 .sound-btn-bottom-paysage {
-  margin:0 1vh 0 1vh ;
+  margin: 0 1vh 0 1vh;
   width: 26px;
   height: 3px;
   background: linear-gradient(90deg, #000000 0%, #898d8d 7%, #626465 25%, #505253 75%, #797b7b 90%, #272727 100%);
@@ -2717,7 +2717,7 @@ a {
   height: 100%;
   position: absolute;
   right: 0;
- align-items: center;
+  align-items: center;
 }
 
 .objectif-cam-bottom-paysage {
@@ -2772,8 +2772,6 @@ a {
   border: 2px solid #376eb4;
 }
 
-
-
 .theme-picker {
   display: flex;
   gap: 10px;
@@ -2811,68 +2809,76 @@ a {
 
 
 /* THEME BLACK */
-body.theme-blackCoque .iphone-back-coque {
+.coque-theme-blackCoque {
   --coque-color: #414141;
   --border-color-coque: #343434;
   --coque-color-acc: #535354;
   --logo-color-coque: #b9c933;
   --btn-lock-coque: linear-gradient(90deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
   --btn-cote-coque: linear-gradient(0deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
+  --shadow-left-coque: #93958f;
+  --shadow-right-coque: #171717;
 }
 
 /* THEME ORANGE */
-body.theme-orangeCoque .iphone-back-coque {
+.coque-theme-orangeCoque {
   --coque-color: #ff6d2b;
   --border-color-coque: #f4520f;
   --coque-color-acc: #ff8d5a;
   --logo-color-coque: #616163;
   --btn-lock-coque: linear-gradient(90deg, #2e2e2e 0%, #616163 7%, #616163 90%, #2e2e2e 100%);
   --btn-cote-coque: linear-gradient(0deg, #2e2e2e 0%, #616163 7%, #616163 90%, #2e2e2e 100%);
+  --shadow-left-coque: #f99b6f;
+  --shadow-right-coque: #c44206;
 }
 
 /* THEME KAKI */
-body.theme-kakiCoque .iphone-back-coque {
+.coque-theme-kakiCoque {
   --coque-color: #a7968b;
   --border-color-coque: #796c62;
   --coque-color-acc: #bbada6;
   --logo-color-coque: #b9c933;
   --btn-lock-coque: linear-gradient(90deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
   --btn-cote-coque: linear-gradient(0deg, #696e3c 0%, #b9c933 7%, #b9c933 90%, #696e3c 100%);
+  --shadow-left-coque: #ddcac1;
+  --shadow-right-coque: #796c62;
 }
 
 /* THEME BLEU */
-body.theme-azureCoque .iphone-back-coque {
+.coque-theme-bleuazureCoque {
   --coque-color: #3c555a;
   --border-color-coque: #22434a;
   --coque-color-acc: #487581;
   --logo-color-coque: #528ea1;
   --btn-lock-coque: linear-gradient(90deg, #264149 0%, #528ea1 7%, #528ea1 90%, #264149 100%);
   --btn-cote-coque: linear-gradient(0deg, #264149 0%, #528ea1 7%, #528ea1 90%, #264149 100%);
+  --shadow-left-coque: #7598a0;
+  --shadow-right-coque: #24353a;
 }
 
 
 
-body.theme-jauneCoque .iphone-back-coque {
+.coque-theme-jauneCoque {
   --coque-color: #f0f6a4;
   --border-color-coque: #d9df6c;
   --logo-color-coque: #e8ee7c;
   --shadow-left-coque: #cacea0;
   --shadow-right-coque: #cfd56e;
   --btn-lock-coque: #cfd56e;
-  --btn-cote-coque:#cfd56e;
+  --btn-cote-coque: #cfd56e;
 }
 
-body.theme-bleuCoque .iphone-back-coque {
+.coque-theme-bleuCoque {
   --coque-color: #7693b3;
   --border-color-coque: #5f7493;
   --logo-color-coque: #5f7493;
   --shadow-left-coque: #a1bfdd;
   --shadow-right-coque: #49657f;
-  --btn-lock-coque: #49657f ;
+  --btn-lock-coque: #49657f;
   --btn-cote-coque: #49657f;
 }
 
-body.theme-blancCoque .iphone-back-coque {
+.coque-theme-blancCoque {
   --coque-color: #eeeeec;
   --border-color-coque: #d4d4d2;
   --logo-color-coque: #e4e4de;
@@ -2882,17 +2888,15 @@ body.theme-blancCoque .iphone-back-coque {
   --btn-cote-coque: #dbdbda;
 }
 
-body.theme-noirCoque .iphone-back-coque {
+.coque-theme-noirCoque {
   --coque-color: #393b3a;
   --border-color-coque: #484848;
   --logo-color-coque: #2c2e2d;
   --shadow-left-coque: #595d50;
   --shadow-right-coque: #1c1f22;
-  --btn-lock-coque: #1c1f22 ;
+  --btn-lock-coque: #1c1f22;
   --btn-cote-coque: #1c1f22;
 }
-
-
 
 
 .iphone-back-coque {

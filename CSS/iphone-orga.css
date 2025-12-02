@@ -37,7 +37,7 @@
   --color-minute-theme: #b2b2b3;
 }
 
-body.theme-or {
+.phone-theme-or {
   /*************** iphone back ************/
   --back-color: #ebeff3;
   --border-color: #c3b19a;
@@ -68,7 +68,7 @@ body.theme-or {
   --color-minute-theme: #b3a28d;
 }
 
-body.theme-rose {
+.phone-theme-rose {
   /*************** iphone back ************/
   --back-color: #ebeff3;
   --border-color: #d6aca8;
@@ -99,7 +99,7 @@ body.theme-rose {
   --color-minute-theme: #d4aca5;
 }
 
-body.theme-sideral {
+.phone-theme-sideral {
   /*************** iphone back ************/
   --back-color: #0d0d0e;
   --border-color: #505253;
@@ -130,7 +130,7 @@ body.theme-sideral {
   --color-minute-theme: #7f7f83;
 }
 
-body.theme-vert {
+.phone-theme-vert {
   /*************** iphone back ************/
   --back-color: #ebeff3;
   --border-color: #acd1be;
@@ -158,7 +158,7 @@ body.theme-vert {
   --color-minute-theme: #abd0bd;
 }
 
-body.theme-bleu {
+.phone-theme-bleu {
   /*************** iphone back ************/
   --back-color: #ebeff3;
   --border-color: #a4bed7;
@@ -186,7 +186,7 @@ body.theme-bleu {
   --color-minute-theme: #97b0c7;
 }
 
-body.theme-violet {
+.phone-theme-violet {
   /*************** iphone back ************/
   --back-color: #ebeff3;
   --border-color: #6e588c;
@@ -216,7 +216,7 @@ body.theme-violet {
   --color-minute-theme: #716283;
 }
 
-body.theme-noir {
+.phone-theme-noir {
   /*************** iphone back ************/
   --back-color: #0d0d0e;
   --border-color: #343137;
