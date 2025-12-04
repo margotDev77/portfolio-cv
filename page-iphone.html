@@ -20,11 +20,13 @@
         rel="stylesheet">
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -725,7 +727,7 @@
     </div>
 
     <div class="blocFlex">
-        <div class="container-pub-music animBloc" data-anim="blocApparition">
+        <div class="container-pub-music-page animBloc" data-anim="blocApparition">
             <div class="content-title-pub-music">
                 <h1 class="title">Nouveautés dans Music</h1>
                 <h2 class="inter-title">Comme un petit air de déjàs vu</h2>
@@ -5143,11 +5145,11 @@
                     <div class="color-name typo-1" id="colorName">Coloris</div>
                     <div class="themes">
                         <!-- COULEURS STANDARD -->
-                        <div class="theme-btn" id="vert" data-name="Vert" data-models="standard"
+                        <div class="theme-btn" id="vert" data-name="Vert Opaline" data-models="standard"
                             style="background: linear-gradient(135deg, #acd1be, #c2e0d0);"></div>
                         <div class="theme-btn" id="bleu" data-name="Bleu Alpin" data-models="standard"
                             style="background: linear-gradient(135deg, #98b0c8, #c3ddf3);"></div>
-                        <div class="theme-btn" id="violet" data-name="Violet" data-models="standard"
+                        <div class="theme-btn" id="violet" data-name="Violet Intense" data-models="standard"
                             style="background: linear-gradient(135deg, #655181, #8c78a5);"></div>
                         <div class="theme-btn" id="noir" data-name="Noir de Jai" data-models="standard"
                             style="background: linear-gradient(135deg, #16141b, #343137);"></div>
@@ -5189,7 +5191,7 @@
                 </div>
 
                 <div class="content-buy">
-                    <button class="btn-savoir">En savoir plus</button>
+                    <button class="btn-buy-color">En savoir plus</button>
                     <button class="btn-buy">Acheter</button>
                 </div>
 
@@ -5216,14 +5218,20 @@
 
         <section class="contenair-bloc-select-color-2" id="ios-accessoire">
             <div class="controls">
+                <h1>Coques et Protections</h1>
 
                 <div class="style-picker">
                     <div class="style-btn active" data-style="beats">Silicone Beats</div>
                     <div class="style-btn" data-style="silicone">Silicone</div>
+                    <div class="style-btn" data-style="magsafe">Magsafe</div>
                 </div>
 
-                <h1 id="styleTitle">Coque silicone Beats</h1>
+                <div class="content-title-coque">
+                    <p>Nouveau</p>
+                    <h1 id="styleTitle">Coque silicone Beats</h1>
+                </div>
                 <div class="coque-color-name typo-1" id="coqueColorName">Coloris</div>
+                <p class="color-accent" id="price">79.00€</p>
                 <div class="theme-picker beats-theme">
                     <div class="theme-bttn" id="blackCoque" data-name="Black"
                         style="background: linear-gradient(135deg, #414141, #5e5e5e);" data-default="true"></div>
@@ -5233,19 +5241,97 @@
                         style="background: linear-gradient(135deg, #a7968b, #b0a59d);"></div>
                     <div class="theme-bttn" id="bleuazureCoque" data-name="Bleu azure"
                         style="background: linear-gradient(135deg, #3c555a, #596f75);"></div>
+                    <div class="theme-bttn" id="purpleCoque" data-name="Rose"
+                        style="background: linear-gradient(135deg, #f3c8e2, #f4cce5);"></div>
+                    <div class="theme-bttn" id="whiteCoque" data-name="Blanc"
+                        style="background: linear-gradient(135deg, #eeeeec, #ffffff);"></div>
+                    <div class="theme-bttn" id="darkCoque" data-name="Noir"
+                        style="background: linear-gradient(135deg, #232323, #4c4e4d);"></div>
+                    <div class="theme-bttn" id="redCoque" data-name="Rouge"
+                        style="background: linear-gradient(135deg, #d01c22, #c03e46);">
+                    </div>
                 </div>
 
                 <div class="theme-picker silicone-theme" style="display:none;">
                     <div class="theme-bttn" id="jauneCoque" data-name="Jaune"
                         style="background: linear-gradient(135deg, #f0f6a4, #eff5a3);" data-default="true">
                     </div>
+                    <div class="theme-bttn" id="roseCoque" data-name="Rose"
+                        style="background: linear-gradient(135deg, #a8487a, #af7f88);">
+                    </div>
+                    <div class="theme-bttn" id="vertCoque" data-name="Vert"
+                        style="background: linear-gradient(135deg, #d6e4d8, #e3f1e5);">
+                    </div>
+                    <div class="theme-bttn" id="rougeCoque" data-name="Rouge"
+                        style="background: linear-gradient(135deg, #9f2c37, #c03e46);">
+                    </div>
                     <div class="theme-bttn" id="bleuCoque" data-name="Bleu"
                         style="background: linear-gradient(135deg, #7693b3, #87a9cd);"></div>
-
                     <div class="theme-bttn" id="blancCoque" data-name="Blanc"
                         style="background: linear-gradient(135deg, #eeeeec, #ffffff);"></div>
                     <div class="theme-bttn" id="noirCoque" data-name="Noir"
                         style="background: linear-gradient(135deg, #393b3a, #4c4e4d);"></div>
+                    <div class="theme-bttn" id="violetCoque" data-name="Violet"
+                        style="background: linear-gradient(135deg, #4a3647, #3d2f39);"></div>
+                    <div class="theme-bttn" id="orangesCoque" data-name="Orange"
+                        style="background: linear-gradient(135deg, #ec7d66, #f68f7b);"></div>
+                </div>
+
+                <div class="theme-picker magsafe-theme" style="display:none;">
+                    <div class="theme-bttn" id="jauneCoque" data-name="Jaune"
+                        style="background: linear-gradient(135deg, #f0f6a4, #eff5a3);" data-default="true">
+                    </div>
+                    <div class="theme-bttn" id="roseCoque" data-name="Rose"
+                        style="background: linear-gradient(135deg, #a8487a, #af7f88);">
+                    </div>
+                    <div class="theme-bttn" id="vertCoque" data-name="Vert"
+                        style="background: linear-gradient(135deg, #d6e4d8, #e3f1e5);">
+                    </div>
+                    <div class="theme-bttn" id="rougeCoque" data-name="Rouge"
+                        style="background: linear-gradient(135deg, #9f2c37, #c03e46);">
+                    </div>
+                    <div class="theme-bttn" id="bleuCoque" data-name="Bleu"
+                        style="background: linear-gradient(135deg, #7693b3, #87a9cd);"></div>
+                    <div class="theme-bttn" id="blancCoque" data-name="Blanc"
+                        style="background: linear-gradient(135deg, #eeeeec, #ffffff);"></div>
+                    <div class="theme-bttn" id="noirCoque" data-name="Noir"
+                        style="background: linear-gradient(135deg, #393b3a, #4c4e4d);"></div>
+                    <div class="theme-bttn" id="violetCoque" data-name="Violet"
+                        style="background: linear-gradient(135deg, #4a3647, #3d2f39);"></div>
+                    <div class="theme-bttn" id="orangesCoque" data-name="Orange"
+                        style="background: linear-gradient(135deg, #ec7d66, #f68f7b);"></div>
+                </div>
+
+                <div class="content-select-size">
+                    <label class="color-accent" for="size">Taille</label>
+                    <select name="size" id="size">
+                        <option value="pro">Pro</option>
+                        <option value="standard">Standard</option>
+                    </select>
+                </div>
+
+                <hr class="line-separ-apple">
+
+                <div class="content-info-livraison">
+                    <i class="fa-solid fa-truck"></i>
+                    <div class="content-txt-livraison">
+                        <p>Commandez aujourd'hui</p>
+                        <h3>Livraison sous 24h - Gratuite</h3>
+                    </div>
+                </div>
+
+                <div class="content-info-livraison">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="content-txt-livraison">
+                        <p>Commandez dès maintenant.</p>
+                        <p>Retrait en magasin :</p>
+                        <h3>Aujourd'hui à Apple Paris</h3>
+                    </div>
+                </div>
+
+                <div class="content-buy2">
+                    <button class="btn-buy-color">Ajouter au Panier</button>
+                    <button class="btn-buy-dark">Payer avec Apple Pay</button>
                 </div>
 
             </div>
@@ -5256,7 +5342,7 @@
                 <div class="iphone-back-coque">
                     <div class="back-content-coque">
                         <div class="content-objectif-coque">
-                            <div class="objectif-back-coque">
+                            <div class="objectif-back-coque show-pro">
                                 <div class="objectif-contenair-coque">
                                     <div class="column-coque">
                                         <div class="objectif-cam-coque">
@@ -5287,15 +5373,48 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="objectif-back-coque-2 show-standard">
+                                <div class="objectif-contenair-coque-2">
+                                    <div class="column-coque-2">
+                                        <div class="objectif-cam-coque">
+                                            <div class="cam-int-coque">
+                                                <div class="lentille-content-coque">
+                                                    <div class="lentille-coque"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objectif-cam-coque">
+                                            <div class="cam-int-coque">
+                                                <div class="lentille-content-coque">
+                                                    <div class="lentille-coque"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column-coque">
+                                        <div class="flash-coque"></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="content-logo-coque">
-                            <div class="logo-apple-back-coque" data-hide-on="beats"><i class="fa-brands fa-apple"></i>
+                            <div class="logo-apple-back-coque" data-hide-on="beats, magsafe"><i
+                                    class="fa-brands fa-apple"></i>
                             </div>
-                            <div class="dot-coque" data-hide-on="silicone"></div>
+                            <div class="dot-coque" data-hide-on="silicone, magsafe"></div>
+                            <div class="magsafe-border" data-hide-on="beats, silicone">
+                                <div class="logo-apple-back-coque"><i class="fa-brands fa-apple"></i>
+                                </div>
+                            </div>
                         </div>
                         <div class="content-bottom-coque">
                             <div class="content-txt-coque">
-                                <div class="txt-coque" data-hide-on="silicone">beats</div>
+                                <div class="txt-coque" data-hide-on="silicone, magsafe">beats</div>
+                            </div>
+                            <div class="content-magsafe-bottom" data-hide-on="beats, silicone">
+                                <div class="magsafe-bottom"></div>
                             </div>
                         </div>
                     </div>
@@ -5343,7 +5462,7 @@
                 </div>
 
                 <div class="content-line-support">
-                    <span><i class="fa-solid fa-chalkboard-user color-acc-screen"></i>
+                    <span><i class="fa-solid fa-chalkboard-user color-accent"></i>
                         <p class="color-blue-apple">Mot de passe oublié</p>
                     </span>
                     <span><i class="fa-solid fa-screwdriver color-accent"></i>
@@ -5403,14 +5522,14 @@
                                     </div>
                                     <div class="column-bottom-paysage">
                                         <div class="flash"></div>
-                                        <div class="objectif-cam-bottom-paysage phone-supp">
+                                        <div class="objectif-cam-bottom-paysage">
                                             <div class="cam-int">
                                                 <div class="lentille-content">
                                                     <div class="lentille"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="objectif-black phone-supp"></div>
+                                        <div class="objectif-black"></div>
                                     </div>
                                 </div>
                             </div>
@@ -5431,12 +5550,10 @@
                             <div class="lock-btn-bottom-paysage"></div>
                         </div>
                         <div class="content-btn-sound-bottom-paysage">
-                            <div class="sound-btn-bottom-paysage" data-switch="#switch-sonnerie"></div>
-                            <div class="sound-btn-bottom-paysage" onclick="showFloatingElement(),changeVolume(10)"
-                                data-id="1">
+                            <div class="sound-btn-bottom-paysage"></div>
+                            <div class="sound-btn-bottom-paysage" data-id="1">
                             </div>
-                            <div class="sound-btn-bottom-paysage" onclick="showFloatingElement(),changeVolume(-10)"
-                                data-id="1">
+                            <div class="sound-btn-bottom-paysage" data-id="1">
                             </div>
                         </div>
                     </div>
@@ -5448,17 +5565,59 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+
+    <script>
+        const select = document.getElementById("size");
+        const standardElements = document.querySelectorAll(".show-standard");
+        const proElements = document.querySelectorAll(".show-pro");
+
+        select.addEventListener("change", function () {
+
+            if (this.value === "standard") {
+                standardElements.forEach(el => el.classList.remove("hidden"));
+                proElements.forEach(el => el.classList.add("hidden"));
+            }
+
+            if (this.value === "pro") {
+                proElements.forEach(el => el.classList.remove("hidden"));
+                standardElements.forEach(el => el.classList.add("hidden"));
+            }
+
+            if (this.value === "") {
+                proElements.forEach(el => el.classList.remove("hidden"));
+                standardElements.forEach(el => el.classList.add("hidden"));
+            }
+        });
+
+        select.dispatchEvent(new Event("change"));
+    </script>
+
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
             const styleBtns = document.querySelectorAll('.style-btn');
             const beatsPicker = document.querySelector('.beats-theme');
             const siliconePicker = document.querySelector('.silicone-theme');
+            const magsafePicker = document.querySelector('.magsafe-theme');
             const coqueColorName = document.getElementById('coqueColorName');
             const styleTitle = document.getElementById('styleTitle');
+            const priceElement = document.getElementById('price');
 
             const hideableItems = document.querySelectorAll('[data-hide-on]');
             const coque = document.getElementById('coque');
+
+            const prices = {
+                beats: 79,
+                silicone: 39,
+                magsafe: 55
+            };
+
+            function updatePrice(style) {
+                priceElement.textContent = `${prices[style]}.00€`;
+            }
 
             function removeCoqueThemes() {
                 coque.classList.forEach(cls => {
@@ -5470,7 +5629,7 @@
                 document.querySelectorAll('.theme-bttn').forEach(b => b.classList.remove('active'));
             }
 
-            function applyDefault(themeGroup) {
+            function applyDefault(themeGroup, styleName) {
                 if (!themeGroup) return;
 
                 const def = themeGroup.querySelector('[data-default="true"]');
@@ -5482,14 +5641,18 @@
                     coque.classList.add(`coque-theme-${def.id}`);
                     coqueColorName.textContent = `Coloris - ${def.dataset.name}`;
                 }
+                updatePrice(styleName);
             }
 
             function updateHiddenItems(style) {
                 hideableItems.forEach(item => {
-                    const toHide = item.dataset.hideOn;
-                    item.style.display = (toHide === style) ? "none" : "";
+
+                    const list = item.dataset.hideOn.split(',').map(s => s.trim());
+
+                    item.style.display = list.includes(style) ? "none" : "";
                 });
             }
+
 
             styleBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -5497,19 +5660,21 @@
                     styleBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
 
-                    if (btn.dataset.style === 'beats') {
-                        styleTitle.textContent = 'Coque silicone Beats';
-                        beatsPicker.style.display = 'flex';
-                        siliconePicker.style.display = 'none';
-                        applyDefault(beatsPicker);
-                        updateHiddenItems('beats');
-                    } else {
-                        styleTitle.textContent = 'Coque Silicone';
-                        siliconePicker.style.display = 'flex';
-                        beatsPicker.style.display = 'none';
-                        applyDefault(siliconePicker);
-                        updateHiddenItems('silicone');
-                    }
+                    const style = btn.dataset.style;
+
+                    beatsPicker.style.display = (style === "beats") ? "flex" : "none";
+                    siliconePicker.style.display = (style === "silicone") ? "flex" : "none";
+                    magsafePicker.style.display = (style === "magsafe") ? "flex" : "none";
+
+                    if (style === "beats") styleTitle.textContent = "Coque silicone Beats";
+                    else if (style === "silicone") styleTitle.textContent = "Coque Silicone";
+                    else styleTitle.textContent = "Coque Magsafe";
+
+                    if (style === "beats") applyDefault(beatsPicker, "beats");
+                    if (style === "silicone") applyDefault(siliconePicker, "silicone");
+                    if (style === "magsafe") applyDefault(magsafePicker, "magsafe");
+
+                    updateHiddenItems(style);
                 });
             });
 
@@ -5527,17 +5692,15 @@
 
             const initialStyle = document.querySelector('.style-btn.active')?.dataset.style || "beats";
 
-            if (initialStyle === "beats") {
-                beatsPicker.style.display = "flex";
-                siliconePicker.style.display = "none";
-                applyDefault(beatsPicker);
-                updateHiddenItems("beats");
-            } else {
-                siliconePicker.style.display = "flex";
-                beatsPicker.style.display = "none";
-                applyDefault(siliconePicker);
-                updateHiddenItems("silicone");
-            }
+            beatsPicker.style.display = (initialStyle === "beats") ? "flex" : "none";
+            siliconePicker.style.display = (initialStyle === "silicone") ? "flex" : "none";
+            magsafePicker.style.display = (initialStyle === "magsafe") ? "flex" : "none";
+
+            if (initialStyle === "beats") applyDefault(beatsPicker, "beats");
+            if (initialStyle === "silicone") applyDefault(siliconePicker, "silicone");
+            if (initialStyle === "magsafe") applyDefault(magsafePicker, "magsafe");
+
+            updateHiddenItems(initialStyle);
 
         });
     </script>
@@ -5677,9 +5840,13 @@
             const defaultColorId = defaultColors[currentModel];
             const defaultBtn = document.getElementById(defaultColorId);
 
-            document.body.className = '';
+            document.body.classList.remove(
+                ...[...document.body.classList].filter(c => c.startsWith("phone-theme-"))
+            );
+
+
             if (defaultBtn) {
-                document.body.classList.add(`theme-${defaultBtn.id}`);
+                document.body.classList.add(`phone-theme-${defaultBtn.id}`);
             }
 
             colorName.textContent = "Coloris";

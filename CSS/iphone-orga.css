@@ -81,7 +81,7 @@
   --border-objectif: #cba09c;
   --color-graving-iphone: #565254;
   /*************** iphone side ************/
-  --back-color-side: linear-gradient(90deg, #76605f 0%, #d6aca8 20%, #d6aca8 80%, #6d5857 100%);
+  --back-color-side: linear-gradient(90deg, #7f6766 0%, #d6aca8 20%, #d6aca8 80%, #7f6766 100%);
   --back-color-side-filter: linear-gradient(0deg, #00000057 0%, #d5aca61a 3%, #dfb5b200 25%, #dfb5b200 85%, #d6aca825 97%, #0000003e 100%);
   --btn-side: linear-gradient(-45deg, #e7bebc 5%, #e2b7b3 50%, #cba09c9b 100%);
   --border-side-btn: #cba09c;
@@ -2419,7 +2419,7 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 9px;
+  padding: 7px;
   font-size: 13px;
   text-decoration: none;
   border-radius: 7px;
