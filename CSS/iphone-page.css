@@ -65,6 +65,19 @@
   transform: translateX(0);
 }
 
+
+.animTitle {
+  animation: droiteGauche 0.5s ease-in forwards;
+  opacity: 1;
+  transform: translateX(-150px);
+  transform: scale(2);
+}
+
+.animTitle.visible{
+    transform: translateX(0);
+    transform: scale(1);
+}
+
 :root {
   --color-icon: black;
   --bg-info-ban: rgb(202, 202, 202);
@@ -2012,7 +2025,7 @@ a {
 
 
 .blocFlex-parallax {
-  height: 200vh;
+  height: 300vh;
   position: relative;
   background-color: black;
 }
@@ -2032,9 +2045,19 @@ a {
 .parallax h1 {
   position: absolute;
   left: 70%;
-  transform: translateY(-1000%);
+  /* transform: translateY(-1000%); */
   margin: 0;
   color: #adadad;
+  font-size: 50px;
+}
+
+.parallax h2 {
+  position: absolute;
+  left: 20%;
+  top: 70%;
+  margin: 0;
+  color: #adadad;
+  font-size: 50px;
 }
 
 .parallax-1 {
@@ -2045,7 +2068,24 @@ a {
   background-image: url("../Medias/APP-Medias/puce-apple.png");
 }
 
+.container-parallax-phone{
+  display: flex;
+  position: absolute;
+}
 
+
+.container-parallax-video {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 75vh;
+  height: 35vh;
+  bottom: 0;
+}
+
+.container-parallax-video video {
+  width: 100%;
+}
 /*********************************************** simulation music ***********************************************/
 
 
@@ -2775,6 +2815,7 @@ a {
 .theme-picker {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .theme-bttn {
@@ -2807,7 +2848,7 @@ a {
 }
 
 
-/* THEME BLACK */
+/* THEME Black */
 .coque-theme-blackCoque {
   --coque-color: #414141;
   --border-color-coque: #343434;
@@ -2819,20 +2860,8 @@ a {
   --shadow-right-coque: #171717;
 }
 
-/* THEME ORANGE */
-.coque-theme-orangeCoque {
-  --coque-color: #ff6d2b;
-  --border-color-coque: #f4520f;
-  --coque-color-acc: #ff8d5a;
-  --logo-color-coque: #616163;
-  --btn-lock-coque: linear-gradient(90deg, #2e2e2e 0%, #616163 7%, #616163 90%, #2e2e2e 100%);
-  --btn-cote-coque: linear-gradient(0deg, #2e2e2e 0%, #616163 7%, #616163 90%, #2e2e2e 100%);
-  --shadow-left-coque: #f99b6f;
-  --shadow-right-coque: #c44206;
-}
-
-/* THEME KAKI */
-.coque-theme-kakiCoque {
+/* THEME Sable */
+.coque-theme-sableCoque {
   --coque-color: #a7968b;
   --border-color-coque: #796c62;
   --coque-color-acc: #bbada6;
@@ -2843,8 +2872,8 @@ a {
   --shadow-right-coque: #796c62;
 }
 
-/* THEME BLEU */
-.coque-theme-bleuazureCoque {
+/* THEME Bleu */
+.coque-theme-bleupetroleCoque {
   --coque-color: #3c555a;
   --border-color-coque: #22434a;
   --coque-color-acc: #487581;
@@ -2856,7 +2885,7 @@ a {
 }
 
 /* THEME Rose */
-.coque-theme-purpleCoque {
+.coque-theme-roseCoque {
   --coque-color: #f3c8e2;
   --border-color-coque: #cd8eac;
   --coque-color-acc: #ec74a6;
@@ -2917,7 +2946,7 @@ a {
   --btn-cote-coque: #cfd56e;
 }
 
-.coque-theme-roseCoque {
+.coque-theme-fuchsiaCoque {
   --coque-color: #a8487a;
   --border-color-coque: #8f3567;
   --logo-color-coque: #913466;
@@ -2927,7 +2956,7 @@ a {
   --btn-cote-coque: #702646;
 }
 
-.coque-theme-violetCoque {
+.coque-theme-pruneCoque {
   --coque-color: #4a3647;
   --border-color-coque: #3a2a38;
   --logo-color-coque: #3d2f39;
@@ -2947,7 +2976,7 @@ a {
   --btn-cote-coque: #a2aea3;
 }
 
-.coque-theme-orangesCoque {
+.coque-theme-corailCoque {
   --coque-color: #ec7d66;
   --border-color-coque: #e4654a;
   --logo-color-coque: #eb6f52;
@@ -2965,6 +2994,16 @@ a {
   --shadow-right-coque: #7b2228;
   --btn-lock-coque: #7b2228;
   --btn-cote-coque: #7b2228;
+}
+
+.coque-theme-vertlacCoque {
+  --coque-color: #4d5c5c;
+  --border-color-coque: #404849;
+  --logo-color-coque: #454d4e;
+  --shadow-left-coque: #6f8182;
+  --shadow-right-coque: #2e3c3c;
+  --btn-lock-coque: #2e3c3c;
+  --btn-cote-coque: #2e3c3c;
 }
 
 .coque-theme-bleuCoque {
@@ -2995,6 +3034,16 @@ a {
   --shadow-right-coque: #1c1f22;
   --btn-lock-coque: #1c1f22;
   --btn-cote-coque: #1c1f22;
+}
+
+.coque-theme-bleumineralCoque {
+  --coque-color: #465366;
+  --border-color-coque: #333952;
+  --logo-color-coque: #3b4250;
+  --shadow-left-coque: #768091;
+  --shadow-right-coque: #293446;
+  --btn-lock-coque: #293446;
+  --btn-cote-coque: #293446;
 }
 
 
@@ -3072,7 +3121,7 @@ a {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle, var(--logo-color-coque) 1.7px, #1616165d 2.4px, transparent 3.3px) 0 0 / 14.8px 14px;
+    radial-gradient(circle, var(--logo-color-coque) 1.1px, #1616165d 2px, transparent 3.2px) 0 0 / 10px 9.5px;
 }
 
 .logo-apple-back-coque {
@@ -3087,7 +3136,7 @@ a {
   aspect-ratio: 1/1;
   justify-content: center;
   align-items: center;
-  border: 20px solid var(--border-color-coque);
+  border: 17px solid var(--border-color-coque);
 }
 
 .content-magsafe-bottom {
@@ -3098,7 +3147,7 @@ a {
 
 .magsafe-bottom {
   display: flex;
-  width: 25px;
+  width: 20px;
   height: 70px;
   border-radius: 40px;
   background-color: var(--border-color-coque);
@@ -3281,7 +3330,7 @@ a {
 
 .content-select-size {
   display: flex;
-  margin: 40px 0 0 0;
+  margin: 0 0 40px 0;
   width: 260px;
   position: relative;
   flex-direction: column;

@@ -57,9 +57,9 @@
             <li><a href="">Watch</a></li>
             <li><a href="">Vision</a></li>
             <li><a href="">AirPods</a></li>
-            <li><a href="">TV & Home</a></li>
-            <li><a href="">Entrainement</a></li>
-            <li><a href="#ios-accessoire">Accessories</a></li>
+            <li><a href="">TV</a></li>
+            <li><a href="">Divertissement</a></li>
+            <li><a href="#ios-accessoire">Accessoires</a></li>
             <li><a href="#ios-support">Support</a></li>
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
             <li><i class="fa-solid fa-bag-shopping"></i></li>
@@ -718,10 +718,41 @@
     <div class="blocFlex-parallax">
         <div>
             <div class="parallax parallax-1">
-                <h1>Nouvelle Puce</h1>
+                <h1 class="animBloc animTitle">Nouvelle Puce</h1>
             </div>
             <div class="parallax parallax-2">
-                <h1>Plus puissante, plus efficiente</h1>
+                <h1 class="animBloc animTitle">Plus puissante, plus efficiente</h1>
+            </div>
+            <div class="parallax parallax-3">
+                <h2 class="animBloc animTitle">Conçue pour les jeux</h2>
+                <div class="container-parallax-phone animBloc animTitle">
+                    <div class="iphone-paysage-face">
+                        <div class="container-info-paysage-face">
+                            <div class="container-info-cam-paysage-face">
+                                <div class="face-cam-paysage-face">
+                                    <div class="objectif-paysage-face"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-btn-paysage-face">
+                            <div class="content-btn-lock-paysage-face">
+                                <div class="lock-btn-paysage-face"></div>
+                            </div>
+                            <div class="content-btn-sound-paysage-face">
+                                <div class="sound-btn-paysage-face"></div>
+                                <div class="sound-btn-paysage-face"></div>
+                                <div class="sound-btn-paysage-face"></div>
+                            </div>
+                        </div>
+
+                        <div class="screen-content-paysage-face color-fd-video">
+                            <div class="container-parallax-video">
+                                <video src="Medias/APP-Medias/foule-contact-capture-jeu.mp4" autoplay muted loop></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -5230,18 +5261,25 @@
                     <p>Nouveau</p>
                     <h1 id="styleTitle">Coque silicone Beats</h1>
                 </div>
-                <div class="coque-color-name typo-1" id="coqueColorName">Coloris</div>
                 <p class="color-accent" id="price">79.00€</p>
+
+                <div class="content-select-size">
+                    <label class="color-accent" for="size">Taille</label>
+                    <select name="size" id="size">
+                        <option value="pro">Pro</option>
+                        <option value="standard">Standard</option>
+                    </select>
+                </div>
+
+                <div class="coque-color-name typo-1" id="coqueColorName">Coloris</div>
                 <div class="theme-picker beats-theme">
                     <div class="theme-bttn" id="blackCoque" data-name="Black"
                         style="background: linear-gradient(135deg, #414141, #5e5e5e);" data-default="true"></div>
-                    <div class="theme-bttn" id="orangeCoque" data-name="Orange"
-                        style="background: linear-gradient(135deg, #ff6d2b, #ee8c59);"></div>
-                    <div class="theme-bttn" id="kakiCoque" data-name="Kaki"
+                    <div class="theme-bttn" id="sableCoque" data-name="Sable"
                         style="background: linear-gradient(135deg, #a7968b, #b0a59d);"></div>
-                    <div class="theme-bttn" id="bleuazureCoque" data-name="Bleu azure"
+                    <div class="theme-bttn" id="bleupetroleCoque" data-name="Bleu Pétrole"
                         style="background: linear-gradient(135deg, #3c555a, #596f75);"></div>
-                    <div class="theme-bttn" id="purpleCoque" data-name="Rose"
+                    <div class="theme-bttn" id="roseCoque" data-name="Rose"
                         style="background: linear-gradient(135deg, #f3c8e2, #f4cce5);"></div>
                     <div class="theme-bttn" id="whiteCoque" data-name="Blanc"
                         style="background: linear-gradient(135deg, #eeeeec, #ffffff);"></div>
@@ -5253,61 +5291,61 @@
                 </div>
 
                 <div class="theme-picker silicone-theme" style="display:none;">
-                    <div class="theme-bttn" id="jauneCoque" data-name="Jaune"
+                    <div class="theme-bttn" id="jauneCoque" data-name="Jaune Fluo"
                         style="background: linear-gradient(135deg, #f0f6a4, #eff5a3);" data-default="true">
                     </div>
-                    <div class="theme-bttn" id="roseCoque" data-name="Rose"
+                    <div class="theme-bttn" id="fuchsiaCoque" data-name="Fuchsia"
                         style="background: linear-gradient(135deg, #a8487a, #af7f88);">
                     </div>
-                    <div class="theme-bttn" id="vertCoque" data-name="Vert"
+                    <div class="theme-bttn" id="vertCoque" data-name="Vert d'Eau"
                         style="background: linear-gradient(135deg, #d6e4d8, #e3f1e5);">
                     </div>
                     <div class="theme-bttn" id="rougeCoque" data-name="Rouge"
                         style="background: linear-gradient(135deg, #9f2c37, #c03e46);">
                     </div>
-                    <div class="theme-bttn" id="bleuCoque" data-name="Bleu"
+                    <div class="theme-bttn" id="bleuCoque" data-name="Bleu Pastel"
                         style="background: linear-gradient(135deg, #7693b3, #87a9cd);"></div>
                     <div class="theme-bttn" id="blancCoque" data-name="Blanc"
                         style="background: linear-gradient(135deg, #eeeeec, #ffffff);"></div>
                     <div class="theme-bttn" id="noirCoque" data-name="Noir"
                         style="background: linear-gradient(135deg, #393b3a, #4c4e4d);"></div>
-                    <div class="theme-bttn" id="violetCoque" data-name="Violet"
+                    <div class="theme-bttn" id="pruneCoque" data-name="Prune"
                         style="background: linear-gradient(135deg, #4a3647, #3d2f39);"></div>
-                    <div class="theme-bttn" id="orangesCoque" data-name="Orange"
+                    <div class="theme-bttn" id="corailCoque" data-name="Corail"
                         style="background: linear-gradient(135deg, #ec7d66, #f68f7b);"></div>
+                    <div class="theme-bttn" id="bleumineralCoque" data-name="Bleu Minéral"
+                        style="background: linear-gradient(135deg, #465366, #57667e);"></div>
+                    <div class="theme-bttn" id="vertlacCoque" data-name="Vert Lac"
+                        style="background: linear-gradient(135deg, #4d5c5c, #607171);"></div>
                 </div>
 
                 <div class="theme-picker magsafe-theme" style="display:none;">
-                    <div class="theme-bttn" id="jauneCoque" data-name="Jaune"
+                    <div class="theme-bttn" id="jauneCoque" data-name="Jaune Fluo"
                         style="background: linear-gradient(135deg, #f0f6a4, #eff5a3);" data-default="true">
                     </div>
-                    <div class="theme-bttn" id="roseCoque" data-name="Rose"
+                    <div class="theme-bttn" id="fuchsiaCoque" data-name="Fuchsia"
                         style="background: linear-gradient(135deg, #a8487a, #af7f88);">
                     </div>
-                    <div class="theme-bttn" id="vertCoque" data-name="Vert"
+                    <div class="theme-bttn" id="vertCoque" data-name="Vert d'Eau"
                         style="background: linear-gradient(135deg, #d6e4d8, #e3f1e5);">
                     </div>
                     <div class="theme-bttn" id="rougeCoque" data-name="Rouge"
                         style="background: linear-gradient(135deg, #9f2c37, #c03e46);">
                     </div>
-                    <div class="theme-bttn" id="bleuCoque" data-name="Bleu"
+                    <div class="theme-bttn" id="bleuCoque" data-name="Bleu Pastel"
                         style="background: linear-gradient(135deg, #7693b3, #87a9cd);"></div>
                     <div class="theme-bttn" id="blancCoque" data-name="Blanc"
                         style="background: linear-gradient(135deg, #eeeeec, #ffffff);"></div>
                     <div class="theme-bttn" id="noirCoque" data-name="Noir"
                         style="background: linear-gradient(135deg, #393b3a, #4c4e4d);"></div>
-                    <div class="theme-bttn" id="violetCoque" data-name="Violet"
+                    <div class="theme-bttn" id="pruneCoque" data-name="Prune"
                         style="background: linear-gradient(135deg, #4a3647, #3d2f39);"></div>
-                    <div class="theme-bttn" id="orangesCoque" data-name="Orange"
+                    <div class="theme-bttn" id="corailCoque" data-name="Corail"
                         style="background: linear-gradient(135deg, #ec7d66, #f68f7b);"></div>
-                </div>
-
-                <div class="content-select-size">
-                    <label class="color-accent" for="size">Taille</label>
-                    <select name="size" id="size">
-                        <option value="pro">Pro</option>
-                        <option value="standard">Standard</option>
-                    </select>
+                    <div class="theme-bttn" id="bleumineralCoque" data-name="Bleu Minéral"
+                        style="background: linear-gradient(135deg, #465366, #57667e);"></div>
+                    <div class="theme-bttn" id="vertlacCoque" data-name="Vert Lac"
+                        style="background: linear-gradient(135deg, #4d5c5c, #607171);"></div>
                 </div>
 
                 <hr class="line-separ-apple">
@@ -5592,9 +5630,6 @@
         select.dispatchEvent(new Event("change"));
     </script>
 
-
-
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -5705,7 +5740,6 @@
         });
     </script>
 
-
     <script>
         'use strict';
         const slidebar = document.querySelectorAll("[data-id^='bloc-']");
@@ -5731,8 +5765,6 @@
         });
     </script>
 
-
-
     <script>
         const videoBlocks = document.querySelectorAll('.content-video');
 
@@ -5754,8 +5786,6 @@
             });
         });
     </script>
-
-
 
     <script>
         $(document).ready(function () {
@@ -5797,8 +5827,6 @@
             });
         });
     </script>
-
-
 
     <script>
         const modelBtns = document.querySelectorAll('.model-btn');
@@ -5887,8 +5915,6 @@
                 themeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                // document.body.className = '';
-                // document.body.classList.add(`theme-${btn.id}`);
                 document.body.classList.remove(...[...document.body.classList].filter(c => c.startsWith("phone-theme-")));
                 document.body.classList.add(`phone-theme-${btn.id}`);
                 colorName.textContent = `Coloris - ${btn.dataset.name}`;
@@ -5904,7 +5930,6 @@
             });
         });
     </script>
-
 
     <script>
         const engravingBtns = document.querySelectorAll('.engraving-btn');
@@ -5958,7 +5983,6 @@
         engravingInput2.addEventListener('input', updateEngraving);
     </script>
 
-
     <script>
         //------------------------- flash ------------------------------------//
         const btnFlashAcc = document.getElementById('btnFlashAcc');
@@ -5980,8 +6004,6 @@
         btnFlashNotif.addEventListener('click', toggleFlash);
 
     </script>
-
-
 
     <script>
         "use strict"
@@ -6132,7 +6154,6 @@
         });
     </script>
 
-
     <script>
         function filterProducts(category) {
             let product = document.querySelectorAll(".product article");
@@ -6148,8 +6169,6 @@
             });
         }
     </script>
-
-
 
     <script>
         const progressBars = document.querySelectorAll(".progress-barSound");
@@ -6220,7 +6239,6 @@
         updateVolumeUI(false);
     </script>
 
-
     <script>
         document.querySelectorAll(".slider-block").forEach(block => {
             const progressContainer = block.querySelector(".progress-container-light");
@@ -6263,7 +6281,6 @@
         });
     </script>
 
-
     <script>
 
         /************************** caroussel music ***********************/
@@ -6290,7 +6307,6 @@
 
 
     </script>
-
 
     <script>
         /**************************** calculette ****************************/
@@ -6333,7 +6349,6 @@
         }
 
     </script>
-
 
     <script>
 
@@ -6388,8 +6403,6 @@
             });
         });
     </script>
-
-
 
 </body>
 
